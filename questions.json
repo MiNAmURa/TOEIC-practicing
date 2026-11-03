@@ -1059,7 +1059,7 @@
     "id": 133,
     "word": "deposit",
     "pos": "(v. / n.)",
-    "meaning": "留下、存放、存（錢）；沉澱物",
+    "meaning": "留下、存放、存（錢）、預繳費用；定金、沉澱物",
     "sentenceEn": "Please ____ the signed documents with the receptionist.",
     "sentenceZh": "請將簽好的文件交由接待人員保管。"
   },
@@ -1067,7 +1067,7 @@
     "id": 134,
     "word": "deposited",
     "pos": "(v. 過去式)",
-    "meaning": "留下、存放、存（錢）（過去式）",
+    "meaning": "留下、存放、存（錢）、預繳費用（過去式）；定金",
     "sentenceEn": "The customer ____ the payment at the bank yesterday.",
     "sentenceZh": "這位顧客昨天在銀行存入了款項。"
   },
@@ -1075,7 +1075,7 @@
     "id": 135,
     "word": "deposited",
     "pos": "(v. 過去分詞)",
-    "meaning": "留下、存放、存（錢）（過去分詞）",
+    "meaning": "留下、存放、存（錢）、預繳費用（過去分詞）；定金",
     "sentenceEn": "The funds have been ____ into the company's account.",
     "sentenceZh": "款項已存入公司的帳戶。"
   },
@@ -1270,5 +1270,61 @@
     "meaning": "擁擠的",
     "sentenceEn": "The train was too ____ to find an available seat.",
     "sentenceZh": "火車上太擁擠，找不到空位。"
+  },
+  {
+    "id": 160,
+    "word": "happen",
+    "pos": "(v.)",
+    "meaning": "碰巧；發生",
+    "sentenceEn": "Did you ____ to see the announcement on the bulletin board?",
+    "sentenceZh": "你碰巧有看到公告欄上的通知嗎？"
+  },
+  {
+    "id": 161,
+    "word": "folks",
+    "pos": "(n. 複數)",
+    "meaning": "（尤指某一群體或類型的）人們",
+    "sentenceEn": "The event is designed for local ____ interested in small businesses.",
+    "sentenceZh": "這場活動是為對小型企業有興趣的當地民眾所舉辦。"
+  },
+  {
+    "id": 162,
+    "word": "citizens",
+    "pos": "(n. 複數)",
+    "meaning": "公民；市民、城鎮居民",
+    "sentenceEn": "The city invited ____ to share their opinions on the new transit plan.",
+    "sentenceZh": "市政府邀請市民分享他們對新交通計畫的看法。"
+  },
+  {
+    "id": 163,
+    "word": "configure",
+    "pos": "(v.)",
+    "meaning": "設定、配置",
+    "sentenceEn": "A technician will ____ the new computers before delivery.",
+    "sentenceZh": "技術人員會在交付前設定新電腦。"
+  },
+  {
+    "id": 164,
+    "word": "configuration",
+    "pos": "(n.)",
+    "meaning": "（電腦的）配置；佈局、格局；結構、構造",
+    "sentenceEn": "The software supports a custom network ____ for each office.",
+    "sentenceZh": "這套軟體支援為每間辦公室自訂網路配置。"
+  },
+  {
+    "id": 165,
+    "word": "improper",
+    "pos": "(adj.)",
+    "meaning": "違法的、違規的",
+    "sentenceEn": "The audit found evidence of ____ use of company funds.",
+    "sentenceZh": "稽核發現了不當使用公司資金的證據。"
+  },
+  {
+    "id": 166,
+    "word": "improperly",
+    "pos": "(adv.)",
+    "meaning": "違規地、違法地、不正當地",
+    "sentenceEn": "The documents were ____ stored and could not be located.",
+    "sentenceZh": "這些文件存放不當，因此無法找到。"
   }
 ]
