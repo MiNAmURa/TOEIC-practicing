@@ -1054,5 +1054,221 @@
     "meaning": "實際上的",
     "sentenceEn": "The ____ cost of the repairs was lower than the original estimate.",
     "sentenceZh": "實際維修費用比最初估算的低。"
+  },
+  {
+    "id": 133,
+    "word": "deposit",
+    "pos": "(v. / n.)",
+    "meaning": "留下、存放、存（錢）；沉澱物",
+    "sentenceEn": "Please ____ the signed documents with the receptionist.",
+    "sentenceZh": "請將簽好的文件交由接待人員保管。"
+  },
+  {
+    "id": 134,
+    "word": "deposited",
+    "pos": "(v. 過去式)",
+    "meaning": "留下、存放、存（錢）（過去式）",
+    "sentenceEn": "The customer ____ the payment at the bank yesterday.",
+    "sentenceZh": "這位顧客昨天在銀行存入了款項。"
+  },
+  {
+    "id": 135,
+    "word": "deposited",
+    "pos": "(v. 過去分詞)",
+    "meaning": "留下、存放、存（錢）（過去分詞）",
+    "sentenceEn": "The funds have been ____ into the company's account.",
+    "sentenceZh": "款項已存入公司的帳戶。"
+  },
+  {
+    "id": 136,
+    "word": "sight",
+    "pos": "(n.)",
+    "meaning": "景點、景象",
+    "sentenceEn": "The historic lighthouse is a popular ____ for visitors.",
+    "sentenceZh": "這座歷史悠久的燈塔是遊客喜愛的景點。"
+  },
+  {
+    "id": 137,
+    "word": "exhibition",
+    "pos": "(n.)",
+    "meaning": "展覽",
+    "sentenceEn": "The design ____ will be open to the public through Friday.",
+    "sentenceZh": "這場設計展覽將開放至星期五。"
+  },
+  {
+    "id": 138,
+    "word": "auction",
+    "pos": "(n.)",
+    "meaning": "拍賣會",
+    "sentenceEn": "The antique desk will be sold at an online ____ next week.",
+    "sentenceZh": "這張古董書桌下週將在網路拍賣會上出售。"
+  },
+  {
+    "id": 139,
+    "word": "accommodation",
+    "pos": "(n.)",
+    "meaning": "住宿",
+    "sentenceEn": "The conference organizer arranged ____ for all visiting speakers.",
+    "sentenceZh": "會議主辦方為所有來訪講者安排了住宿。"
+  },
+  {
+    "id": 140,
+    "word": "tractor",
+    "pos": "(n.)",
+    "meaning": "拖拉機",
+    "sentenceEn": "The farmer used a ____ to prepare the field for planting.",
+    "sentenceZh": "農夫使用拖拉機整地，以便播種。"
+  },
+  {
+    "id": 141,
+    "word": "attraction",
+    "pos": "(n.)",
+    "meaning": "吸引力、觀光景點、吸引人之物、萬有引力",
+    "sentenceEn": "The renovated museum has become a major tourist ____.",
+    "sentenceZh": "整修後的博物館已成為重要的觀光景點。"
+  },
+  {
+    "id": 142,
+    "word": "excursion",
+    "pos": "(n.)",
+    "meaning": "遠足、短程旅行",
+    "sentenceEn": "The hotel offers a guided ____ to the nearby national park.",
+    "sentenceZh": "飯店提供前往附近國家公園的導覽短程旅行。"
+  },
+  {
+    "id": 143,
+    "word": "voucher",
+    "pos": "(n.)",
+    "meaning": "禮券；折價券",
+    "sentenceEn": "Each attendee received a dining ____ worth twenty dollars.",
+    "sentenceZh": "每位出席者都收到一張價值二十美元的餐飲禮券。"
+  },
+  {
+    "id": 144,
+    "word": "shelf",
+    "pos": "(n. 單數)",
+    "meaning": "架子；書架",
+    "sentenceEn": "Please place the new catalog on the top ____.",
+    "sentenceZh": "請將新型錄放在最上層的架子上。"
+  },
+  {
+    "id": 145,
+    "word": "shelves",
+    "pos": "(n. 複數)",
+    "meaning": "架子；書架（複數）",
+    "sentenceEn": "The store added several ____ to display its new products.",
+    "sentenceZh": "商店增設了幾個架子來展示新產品。"
+  },
+  {
+    "id": 146,
+    "word": "leaf",
+    "pos": "(n. 單數)",
+    "meaning": "葉子",
+    "sentenceEn": "A yellow ____ fell onto the garden path.",
+    "sentenceZh": "一片黃色的葉子落在花園小徑上。"
+  },
+  {
+    "id": 147,
+    "word": "leaves",
+    "pos": "(n. 複數)",
+    "meaning": "葉子（複數）",
+    "sentenceEn": "In autumn, the ____ on these trees turn bright red.",
+    "sentenceZh": "秋天時，這些樹上的葉子會轉為鮮紅色。"
+  },
+  {
+    "id": 148,
+    "word": "knife",
+    "pos": "(n. 單數)",
+    "meaning": "刀子",
+    "sentenceEn": "The chef used a sharp ____ to slice the vegetables.",
+    "sentenceZh": "主廚用一把鋒利的刀切蔬菜。"
+  },
+  {
+    "id": 149,
+    "word": "knives",
+    "pos": "(n. 複數)",
+    "meaning": "刀子（複數）",
+    "sentenceEn": "All kitchen ____ must be stored in a locked drawer.",
+    "sentenceZh": "所有廚房刀具都必須收在上鎖的抽屜裡。"
+  },
+  {
+    "id": 150,
+    "word": "life",
+    "pos": "(n. 單數)",
+    "meaning": "生命",
+    "sentenceEn": "The emergency team worked quickly to save a ____.",
+    "sentenceZh": "緊急救援小組迅速行動以挽救一條生命。"
+  },
+  {
+    "id": 151,
+    "word": "lives",
+    "pos": "(n. 複數)",
+    "meaning": "生命（複數）",
+    "sentenceEn": "The new safety system has helped protect many ____.",
+    "sentenceZh": "新的安全系統已協助保護許多人的生命。"
+  },
+  {
+    "id": 152,
+    "word": "half",
+    "pos": "(n. 單數)",
+    "meaning": "一半",
+    "sentenceEn": "Please pay ____ of the total cost in advance.",
+    "sentenceZh": "請先支付總費用的一半。"
+  },
+  {
+    "id": 153,
+    "word": "halves",
+    "pos": "(n. 複數)",
+    "meaning": "一半（複數）",
+    "sentenceEn": "Cut the sandwiches into two equal ____ before serving.",
+    "sentenceZh": "上桌前請將三明治切成大小相等的兩半。"
+  },
+  {
+    "id": 154,
+    "word": "pedestrians",
+    "pos": "(n. 複數)",
+    "meaning": "行人",
+    "sentenceEn": "Drivers should watch carefully for ____ near the school.",
+    "sentenceZh": "駕駛人在學校附近應留意行人。"
+  },
+  {
+    "id": 155,
+    "word": "ladder",
+    "pos": "(n.)",
+    "meaning": "梯子",
+    "sentenceEn": "A maintenance worker used a ____ to replace the ceiling light.",
+    "sentenceZh": "維修人員使用梯子更換天花板上的燈具。"
+  },
+  {
+    "id": 156,
+    "word": "invisible",
+    "pos": "(adj.)",
+    "meaning": "看不見的",
+    "sentenceEn": "The security system uses ____ beams to detect movement.",
+    "sentenceZh": "這套安全系統使用看不見的光束偵測移動。"
+  },
+  {
+    "id": 157,
+    "word": "lifetime",
+    "pos": "(n.)",
+    "meaning": "有生之年",
+    "sentenceEn": "The author received several awards during her ____.",
+    "sentenceZh": "這位作家有生之年獲得了多項獎項。"
+  },
+  {
+    "id": 158,
+    "word": "patrons",
+    "pos": "(n. 複數)",
+    "meaning": "顧客、常客；贊助人",
+    "sentenceEn": "The café offers free Wi-Fi to its regular ____.",
+    "sentenceZh": "這家咖啡館為常客提供免費無線網路。"
+  },
+  {
+    "id": 159,
+    "word": "crowded",
+    "pos": "(adj.)",
+    "meaning": "擁擠的",
+    "sentenceEn": "The train was too ____ to find an available seat.",
+    "sentenceZh": "火車上太擁擠，找不到空位。"
   }
 ]

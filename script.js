@@ -19,11 +19,13 @@ import defaultQuizQuestions from './questions.json' with { type: 'json' };
     let answeredState = [];
     let userWrongQuestions = [];
     let selectedQuestionCount = 40;
+    let selectedQuestionOrder = 'random';
     let wordStats = {};
     let statsRecordedForQuiz = false;
     let wordStatsStorageReady = true;
     const WORD_STATS_STORAGE_KEY = 'toeicVocabularyStats';
-    const availableQuestionCounts = [20, 40, 50, 80, 100];
+    const availableQuestionCounts = [20, 40, 50, 80, 100, 150, 200];
+    const allQuestionsOption = 'all';
 
     function loadWordStats() {
       try {
@@ -172,18 +174,50 @@ import defaultQuizQuestions from './questions.json' with { type: 'json' };
         }`;
       });
 
+      const allQuestionsButton = document.getElementById('questionCountAllBtn');
+      const allQuestionsSelected = selectedQuestionCount === allQuestionsOption;
+      allQuestionsButton.setAttribute('aria-pressed', String(allQuestionsSelected));
+      allQuestionsButton.className = `question-count-btn px-3 py-3 rounded-xl border font-bold transition-all focus:outline-none focus:ring-2 focus:ring-brand-500 ${
+        allQuestionsSelected
+            ? 'bg-brand-600 border-brand-600 text-white shadow-md shadow-brand-500/20'
+            : 'bg-white dark:bg-slate-700 border-slate-200 dark:border-slate-600 text-slate-700 dark:text-slate-200 hover:border-brand-500 hover:text-brand-600 dark:hover:text-brand-400'
+      }`;
+
       const unavailableCounts = availableQuestionCounts.filter(count => count > defaultQuizQuestions.length);
       document.getElementById('questionCountHint').innerText = unavailableCounts.length
         ? `目前題庫共 ${defaultQuizQuestions.length} 題，${unavailableCounts.join('、')} 題選項暫不可用。`
         : `目前題庫共 ${defaultQuizQuestions.length} 題。`;
-      document.getElementById('restartQuizText').innerText = `再次挑戰 ${selectedQuestionCount} 題`;
+      document.getElementById('restartQuizText').innerText = selectedQuestionCount === allQuestionsOption
+        ? '再次挑戰全題庫'
+        : `再次挑戰 ${selectedQuestionCount} 題`;
     }
 
     function selectQuestionCount(count) {
+      if (count === allQuestionsOption) {
+        selectedQuestionCount = allQuestionsOption;
+        updateQuestionCountButtons();
+        return;
+      }
+
       if (!availableQuestionCounts.includes(count) || count > defaultQuizQuestions.length) return;
 
       selectedQuestionCount = count;
       updateQuestionCountButtons();
+    }
+
+    function selectQuestionOrder(order) {
+      if (!['random', 'accuracy', 'fixed'].includes(order)) return;
+
+      selectedQuestionOrder = order;
+      document.querySelectorAll('.question-order-btn').forEach(button => {
+        const isSelected = button.id === `questionOrder${order.charAt(0).toUpperCase()}${order.slice(1)}Btn`;
+        button.setAttribute('aria-pressed', String(isSelected));
+        button.className = `question-order-btn px-3 py-3 rounded-xl border font-semibold transition-all focus:outline-none focus:ring-2 focus:ring-brand-500 ${
+          isSelected
+            ? 'bg-brand-600 border-brand-600 text-white shadow-md shadow-brand-500/20'
+            : 'bg-white dark:bg-slate-700 border-slate-200 dark:border-slate-600 text-slate-700 dark:text-slate-200 hover:border-brand-500 hover:text-brand-600 dark:hover:text-brand-400'
+        }`;
+      });
     }
 
     // Theme toggle function
@@ -238,8 +272,27 @@ import defaultQuizQuestions from './questions.json' with { type: 'json' };
       if (customQuestions) {
         quizQuestions = shuffleArray(customQuestions);
       } else {
-        const shuffledAll = shuffleArray(defaultQuizQuestions);
-        quizQuestions = shuffledAll.slice(0, selectedQuestionCount);
+        let orderedQuestions;
+        if (selectedQuestionOrder === 'random') {
+          orderedQuestions = shuffleArray(defaultQuizQuestions);
+        } else if (selectedQuestionOrder === 'accuracy') {
+          orderedQuestions = defaultQuizQuestions
+            .map((question, index) => {
+              const stats = wordStats[String(question.id)] || { correct: 0, wrong: 0 };
+              const attempts = stats.correct + stats.wrong;
+              const accuracy = attempts ? stats.correct / attempts : 0;
+              return { question, index, accuracy };
+            })
+            .sort((a, b) => a.accuracy - b.accuracy || a.index - b.index)
+            .map(({ question }) => question);
+        } else {
+          orderedQuestions = [...defaultQuizQuestions];
+        }
+
+        const questionCount = selectedQuestionCount === allQuestionsOption
+          ? orderedQuestions.length
+          : selectedQuestionCount;
+        quizQuestions = orderedQuestions.slice(0, questionCount);
       }
       currentIndex = 0;
       score = 0;
@@ -546,6 +599,7 @@ import defaultQuizQuestions from './questions.json' with { type: 'json' };
     }
 
     updateQuestionCountButtons();
+    selectQuestionOrder(selectedQuestionOrder);
     loadWordStats();
 
     Object.assign(window, {
@@ -559,6 +613,7 @@ import defaultQuizQuestions from './questions.json' with { type: 'json' };
       reviewWrongQuestions,
       handleFormSubmit,
       playAnswerPronunciation,
+      selectQuestionOrder,
       showWordStats,
       hideWordStats,
       filterWordStats
