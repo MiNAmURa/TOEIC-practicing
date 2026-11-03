@@ -1,0 +1,1058 @@
+[
+  {
+    "id": 1,
+    "word": "postpone",
+    "pos": "(v.)",
+    "meaning": "延後",
+    "sentenceEn": "We had to ____ the meeting until next week due to the heavy rain.",
+    "sentenceZh": "由於大雨，我們不得不將會議延後到下週。"
+  },
+  {
+    "id": 2,
+    "word": "postponed",
+    "pos": "(v. 過去式/過分)",
+    "meaning": "延後（已延期/被延期）",
+    "sentenceEn": "The conference was ____ due to unforeseen circumstances.",
+    "sentenceZh": "該會議因不可預見的情況而被延期了。"
+  },
+  {
+    "id": 3,
+    "word": "hold",
+    "pos": "(v.)",
+    "meaning": "舉辦，抓住",
+    "sentenceEn": "The company will ____ an annual seminar next month.",
+    "sentenceZh": "公司下個月將舉辦年度研討會。"
+  },
+  {
+    "id": 4,
+    "word": "held",
+    "pos": "(v. 過去式/過分)",
+    "meaning": "舉辦（過去/被舉辦）",
+    "sentenceEn": "The annual banquet was ____ at a luxury hotel last night.",
+    "sentenceZh": "年度宴會昨晚在一間奢華飯店舉辦。"
+  },
+  {
+    "id": 5,
+    "word": "submit",
+    "pos": "(v.)",
+    "meaning": "繳交",
+    "sentenceEn": "All applicants must ____ their resumes before Friday.",
+    "sentenceZh": "所有應徵者必須在星期五之前繳交履歷。"
+  },
+  {
+    "id": 6,
+    "word": "submitted",
+    "pos": "(v. 過去式/過分)",
+    "meaning": "繳交（已繳交）",
+    "sentenceEn": "She already ____ the project proposal yesterday morning.",
+    "sentenceZh": "她昨天早上已經繳交了專案提案。"
+  },
+  {
+    "id": 7,
+    "word": "attend",
+    "pos": "(v.)",
+    "meaning": "參加",
+    "sentenceEn": "More than fifty employees will ____ the training workshop.",
+    "sentenceZh": "五十多位員工將參加培訓工作坊。"
+  },
+  {
+    "id": 8,
+    "word": "attended",
+    "pos": "(v. 過去式/過分)",
+    "meaning": "參加（已參加）",
+    "sentenceEn": "Many international guests ____ the ceremony last week.",
+    "sentenceZh": "上週有許多國際賓客參加了典禮。"
+  },
+  {
+    "id": 9,
+    "word": "receive",
+    "pos": "(v.)",
+    "meaning": "接受、收到",
+    "sentenceEn": "She was thrilled to ____ the job offer from the tech firm.",
+    "sentenceZh": "她很高興能接受這家科技公司的錄用通知。"
+  },
+  {
+    "id": 10,
+    "word": "received",
+    "pos": "(v. 過去式/過分)",
+    "meaning": "接受、收到（已收到）",
+    "sentenceEn": "We ____ your payment confirmation earlier this morning.",
+    "sentenceZh": "我們今天早些時候收到了您的付款確認。"
+  },
+  {
+    "id": 11,
+    "word": "dock",
+    "pos": "(v.)",
+    "meaning": "停靠（港口）",
+    "sentenceEn": "The cargo ship is scheduled to ____ at the port this afternoon.",
+    "sentenceZh": "貨輪預定今天下午在港口停靠。"
+  },
+  {
+    "id": 12,
+    "word": "docked",
+    "pos": "(v. 過去式/過分)",
+    "meaning": "停靠（已停靠）",
+    "sentenceEn": "The vessel ____ safely at Pier 9 two hours ago.",
+    "sentenceZh": "該船隻兩小時前已安全停靠在 9 號碼頭。"
+  },
+  {
+    "id": 13,
+    "word": "interact",
+    "pos": "(v.)",
+    "meaning": "互動",
+    "sentenceEn": "The manager encourages staff to ____ with clients proactively.",
+    "sentenceZh": "經理鼓勵員工積極與客戶互動。"
+  },
+  {
+    "id": 14,
+    "word": "interacted",
+    "pos": "(v. 過去式/過分)",
+    "meaning": "互動（已互動）",
+    "sentenceEn": "The speakers ____ with the audience during the Q&A session.",
+    "sentenceZh": "演講者在問答環節中與聽眾進行了互動。"
+  },
+  {
+    "id": 15,
+    "word": "traffic",
+    "pos": "(v. / n.)",
+    "meaning": "走私交易",
+    "sentenceEn": "Customs officers cracked down on illegal drug ____ at the border.",
+    "sentenceZh": "海關官員強力取締邊境的非法毒品走私交易。"
+  },
+  {
+    "id": 16,
+    "word": "trafficked",
+    "pos": "(v. 過去式/過分)",
+    "meaning": "走私交易（非法交易過）",
+    "sentenceEn": "The rare artifacts were illegally ____ across international borders.",
+    "sentenceZh": "這些稀有文物曾被非法走私穿過國際國界。"
+  },
+  {
+    "id": 17,
+    "word": "light",
+    "pos": "(v.)",
+    "meaning": "點燃、照亮",
+    "sentenceEn": "Streetlights automatically ____ as soon as dusk falls.",
+    "sentenceZh": "天色一黑，路燈就會自動點燃／照亮。"
+  },
+  {
+    "id": 18,
+    "word": "lit",
+    "pos": "(v. 過去式/過分)",
+    "meaning": "點燃、照亮（已點燃/被照亮）",
+    "sentenceEn": "The courtyard was brilliantly ____ up by fairy lights for the evening event.",
+    "sentenceZh": "庭院在晚間活動中被裝飾燈光燦爛地照亮了。"
+  },
+  {
+    "id": 19,
+    "word": "increase",
+    "pos": "(v. / n.)",
+    "meaning": "增加",
+    "sentenceEn": "The new marketing strategy helped ____ online sales by 20%.",
+    "sentenceZh": "新的行銷策略助長網路銷售額增加了 20% 幅度。"
+  },
+  {
+    "id": 20,
+    "word": "increased",
+    "pos": "(v. 過去式/過分)",
+    "meaning": "增加（已增加/上升）",
+    "sentenceEn": "Production efficiency ____ significantly after the automated software upgrade.",
+    "sentenceZh": "自動化軟體升級後，生產效率顯著增加了。"
+  },
+  {
+    "id": 21,
+    "word": "board",
+    "pos": "(v.)",
+    "meaning": "登上（飛機、火車、船）",
+    "sentenceEn": "Passengers are requested to ____ Flight 302 at Gate B4.",
+    "sentenceZh": "請旅客至 B4 登機門登上 302 航班。"
+  },
+  {
+    "id": 22,
+    "word": "boarded",
+    "pos": "(v. 過去式/過分)",
+    "meaning": "登上（已登機/登船）",
+    "sentenceEn": "All passengers have ____ the train and it is ready to depart.",
+    "sentenceZh": "所有乘客皆已登上火車，準備出發。"
+  },
+  {
+    "id": 23,
+    "word": "locate",
+    "pos": "(v.)",
+    "meaning": "找到，位於",
+    "sentenceEn": "GPS technology makes it easy to ____ lost luggage.",
+    "sentenceZh": "GPS 技術讓找到遺失的行李變得十分容易。"
+  },
+  {
+    "id": 24,
+    "word": "located",
+    "pos": "(v. 過去式/過分/adj.)",
+    "meaning": "位於（已定位/坐落於）",
+    "sentenceEn": "Our new branch office is conveniently ____ near the central station.",
+    "sentenceZh": "我們的新分公司方便地位於中央車站附近。"
+  },
+  {
+    "id": 25,
+    "word": "depart",
+    "pos": "(v.)",
+    "meaning": "出發、分離",
+    "sentenceEn": "The shuttle bus will ____ from the hotel lobby every thirty minutes.",
+    "sentenceZh": "接駁車每三十分鐘將從飯店大廳出發。"
+  },
+  {
+    "id": 26,
+    "word": "departed",
+    "pos": "(v. 過去式/過分)",
+    "meaning": "出發（已離去）",
+    "sentenceEn": "The flight ____ on schedule despite the heavy fog.",
+    "sentenceZh": "儘管大霧瀰漫，班機仍按計畫時間出發了。"
+  },
+  {
+    "id": 27,
+    "word": "load",
+    "pos": "(v.)",
+    "meaning": "裝載（行李裝上飛機/車）",
+    "sentenceEn": "Workers need to ____ the remaining cargo onto the truck immediately.",
+    "sentenceZh": "工人需要立即將剩餘的貨物裝載到卡車上。"
+  },
+  {
+    "id": 28,
+    "word": "loaded",
+    "pos": "(v. 過去式/過分)",
+    "meaning": "裝載（已裝載完畢）",
+    "sentenceEn": "All baggage has been safely ____ onto the airplane.",
+    "sentenceZh": "所有行李都已經安全地裝載到飛機上了。"
+  },
+  {
+    "id": 29,
+    "word": "promote",
+    "pos": "(v.)",
+    "meaning": "促進、晉升",
+    "sentenceEn": "The manager wants to ____ teamwork across different departments.",
+    "sentenceZh": "經理希望能促進跨部門的團隊合作。"
+  },
+  {
+    "id": 30,
+    "word": "promoted",
+    "pos": "(v. 過去式/過分)",
+    "meaning": "晉升（已獲得晉升）",
+    "sentenceEn": "She was ____ to senior sales executive after closing the major deal.",
+    "sentenceZh": "在談成那筆大訂單後，她被晉升為資深銷售主管。"
+  },
+  {
+    "id": 31,
+    "word": "proposal",
+    "pos": "(n.)",
+    "meaning": "建議；計劃；提案，求婚",
+    "sentenceEn": "The board of directors reviewed the new business ____ during the meeting.",
+    "sentenceZh": "董事會在會議期間審閱了新的商業提案。"
+  },
+  {
+    "id": 32,
+    "word": "author",
+    "pos": "(n.)",
+    "meaning": "（書本）作者",
+    "sentenceEn": "The famous novel ____ will hold a book-signing event this weekend.",
+    "sentenceZh": "這位著名的小說作者將於本週末舉辦簽書會。"
+  },
+  {
+    "id": 33,
+    "word": "banquet",
+    "pos": "(n.)",
+    "meaning": "宴會",
+    "sentenceEn": "A grand ____ was held to celebrate the company's 30th anniversary.",
+    "sentenceZh": "舉辦了一場盛大的宴會來慶祝公司成立 30 週年。"
+  },
+  {
+    "id": 34,
+    "word": "attendee",
+    "pos": "(n.)",
+    "meaning": "參加者",
+    "sentenceEn": "Every conference ____ received a welcome gift bag.",
+    "sentenceZh": "每位會議參加者都收到了一個迎賓禮品袋。"
+  },
+  {
+    "id": 35,
+    "word": "refreshment",
+    "pos": "(n.)",
+    "meaning": "茶點",
+    "sentenceEn": "Coffee, tea, and light ____ will be served during the afternoon break.",
+    "sentenceZh": "下午休息時間將供應咖啡、茶以及輕便茶點。"
+  },
+  {
+    "id": 36,
+    "word": "maintenance",
+    "pos": "(n.)",
+    "meaning": "維修",
+    "sentenceEn": "The elevator is currently out of service for routine ____.",
+    "sentenceZh": "電梯目前因例行維修而暫停使用。"
+  },
+  {
+    "id": 37,
+    "word": "congestion",
+    "pos": "(n.)",
+    "meaning": "擁擠，阻塞",
+    "sentenceEn": "Traffic ____ on the highway caused many commuters to arrive late.",
+    "sentenceZh": "高速公路上的交通擁擠導致許多通勤族遲到。"
+  },
+  {
+    "id": 38,
+    "word": "intersection",
+    "pos": "(n.)",
+    "meaning": "十字路口",
+    "sentenceEn": "Turn left at the next ____, and you will see the post office.",
+    "sentenceZh": "在下一個十字路口向左轉，你就會看到郵局。"
+  },
+  {
+    "id": 39,
+    "word": "interaction",
+    "pos": "(n.)",
+    "meaning": "交流、互動",
+    "sentenceEn": "Social media fosters quick ____ between brands and customers.",
+    "sentenceZh": "社群媒體促進了品牌與顧客之間的快速交流。"
+  },
+  {
+    "id": 40,
+    "word": "skyscraper",
+    "pos": "(n.)",
+    "meaning": "高樓大廈",
+    "sentenceEn": "The city skyline is dominated by a modern 80-story ____.",
+    "sentenceZh": "城市的天際線被一座現代化的 80 層高樓大廈所主導。"
+  },
+  {
+    "id": 41,
+    "word": "architecture",
+    "pos": "(n.)",
+    "meaning": "建築（學、風格）",
+    "sentenceEn": "Tourists admire the gothic ____ of the historic cathedral.",
+    "sentenceZh": "遊客們讚賞這座歷史悠久的大教堂之哥德式建築風格。"
+  },
+  {
+    "id": 42,
+    "word": "tourists",
+    "pos": "(n. 複數)",
+    "meaning": "遊客",
+    "sentenceEn": "Thousands of international ____ visit the museum every week.",
+    "sentenceZh": "每週有成千上萬的國際遊客參觀該博物館。"
+  },
+  {
+    "id": 43,
+    "word": "pothole",
+    "pos": "(n.)",
+    "meaning": "小坑洞",
+    "sentenceEn": "The driver slowed down to avoid hitting a deep ____ in the street.",
+    "sentenceZh": "司機減慢車速以避開街道上的一個深小坑洞。"
+  },
+  {
+    "id": 44,
+    "word": "passenger",
+    "pos": "(n.)",
+    "meaning": "乘客",
+    "sentenceEn": "Every ____ must fasten their seatbelt before takeoff.",
+    "sentenceZh": "每位乘客在起飛前都必須繫好安全帶。"
+  },
+  {
+    "id": 45,
+    "word": "boarding gate",
+    "pos": "(n. 複合名詞)",
+    "meaning": "登機門",
+    "sentenceEn": "Please proceed to ____ B12 immediately for final departure.",
+    "sentenceZh": "請立即前往 B12 登機門進行最終登機處理。"
+  },
+  {
+    "id": 46,
+    "word": "luggage",
+    "pos": "(n. 不可數)",
+    "meaning": "行李",
+    "sentenceEn": "Airline staff helped passengers carry their heavy ____.",
+    "sentenceZh": "航空公司工作人員協助乘客搬運他們沉重的行李。"
+  },
+  {
+    "id": 47,
+    "word": "baggage",
+    "pos": "(n. 不可數)",
+    "meaning": "行李",
+    "sentenceEn": "Please claim your ____ at Carousel 3 after landing.",
+    "sentenceZh": "降落後請在 3 號轉盤處領取您的行李。"
+  },
+  {
+    "id": 48,
+    "word": "souvenir",
+    "pos": "(n.)",
+    "meaning": "紀念品",
+    "sentenceEn": "She bought a handmade wooden magnet as a ____ of her trip.",
+    "sentenceZh": "她買了一個手工木製磁鐵作為旅行的紀念品。"
+  },
+  {
+    "id": 49,
+    "word": "terminal",
+    "pos": "(n.)",
+    "meaning": "航廈",
+    "sentenceEn": "International flights depart from ____ 2.",
+    "sentenceZh": "國際航班從第 2 航廈出發。"
+  },
+  {
+    "id": 50,
+    "word": "shuttle",
+    "pos": "(n.)",
+    "meaning": "接駁車",
+    "sentenceEn": "Complimentary hotel ____ services operate every hour.",
+    "sentenceZh": "免費的飯店接駁車服務每小時營運一班。"
+  },
+  {
+    "id": 51,
+    "word": "groceries",
+    "pos": "(n. 複數)",
+    "meaning": "雜貨",
+    "sentenceEn": "He stopped by the supermarket to buy some daily ____.",
+    "sentenceZh": "他在超市停留了一下，購買了一些日常雜貨。"
+  },
+  {
+    "id": 52,
+    "word": "reservation",
+    "pos": "(n.)",
+    "meaning": "預約、訂位",
+    "sentenceEn": "I would like to make a table ____ for four people at 7 PM.",
+    "sentenceZh": "我想預約今晚 7 點四個人的餐桌。"
+  },
+  {
+    "id": 53,
+    "word": "novel",
+    "pos": "(n.)",
+    "meaning": "小說",
+    "sentenceEn": "The author spent two years writing her latest bestseller ____.",
+    "sentenceZh": "作者花了兩年時間撰寫她最新的暢銷小說。"
+  },
+  {
+    "id": 54,
+    "word": "several",
+    "pos": "(adj. / pron.)",
+    "meaning": "好幾個",
+    "sentenceEn": "The manager has received ____ complaints regarding the service delay.",
+    "sentenceZh": "經理收到了好幾個關於服務延誤的抱怨。"
+  },
+  {
+    "id": 55,
+    "word": "a number of",
+    "pos": "(phr.)",
+    "meaning": "有一些、許多的",
+    "sentenceEn": "____ clients have registered for the free online webinar.",
+    "sentenceZh": "有一些／許多客戶已經報名參加了免費的線上研討會。"
+  },
+  {
+    "id": 56,
+    "word": "a few",
+    "pos": "(phr. / adj.)",
+    "meaning": "少的，（但還有）",
+    "sentenceEn": "We still have ____ minutes left before the presentation starts.",
+    "sentenceZh": "在簡報開始之前，我們還有少的（但還有幾分鐘）時間。"
+  },
+  {
+    "id": 57,
+    "word": "few",
+    "pos": "(adj. / pron.)",
+    "meaning": "幾乎沒有",
+    "sentenceEn": "____ candidates met all the strict requirements for the position.",
+    "sentenceZh": "幾乎沒有候選人滿足該職位的所有嚴格要求。"
+  },
+  {
+    "id": 58,
+    "word": "within",
+    "pos": "(prep.)",
+    "meaning": "在…之內",
+    "sentenceEn": "Please reply to this email ____ 24 hours.",
+    "sentenceZh": "請在 24 小時之內回覆這封電子郵件。"
+  },
+  {
+    "id": 59,
+    "word": "therefore",
+    "pos": "(adv.)",
+    "meaning": "因此",
+    "sentenceEn": "Sales dropped drastically; ____, we need to adjust our strategy.",
+    "sentenceZh": "銷售額大幅下滑；因此，我們需要調整我們的策略。"
+  },
+  {
+    "id": 60,
+    "word": "applicant",
+    "pos": "(n.)",
+    "meaning": "應徵者",
+    "sentenceEn": "Each ____ must submit a resume and cover letter.",
+    "sentenceZh": "每位應徵者都必須提交履歷和求職信。"
+  },
+  {
+    "id": 61,
+    "word": "apply",
+    "pos": "(v.)",
+    "meaning": "同意、申請、適用",
+    "sentenceEn": "Employees can ____ for reimbursement through the company portal.",
+    "sentenceZh": "員工可以透過公司入口網站申請費用報銷。"
+  },
+  {
+    "id": 62,
+    "word": "application",
+    "pos": "(n.)",
+    "meaning": "申請書、應用程式（App）",
+    "sentenceEn": "Please complete the online job ____ by Friday.",
+    "sentenceZh": "請在星期五前填寫線上工作申請書。"
+  },
+  {
+    "id": 63,
+    "word": "appliance",
+    "pos": "(n.)",
+    "meaning": "器具、（小型）電器",
+    "sentenceEn": "The store offers a two-year warranty on every kitchen ____.",
+    "sentenceZh": "這家商店為每件廚房電器提供兩年保固。"
+  },
+  {
+    "id": 64,
+    "word": "requirement",
+    "pos": "(n.)",
+    "meaning": "必要條件",
+    "sentenceEn": "A valid driver's license is a ____ for this position.",
+    "sentenceZh": "有效的駕照是這個職位的必要條件。"
+  },
+  {
+    "id": 65,
+    "word": "require",
+    "pos": "(v.)",
+    "meaning": "要求",
+    "sentenceEn": "All visitors ____ a security badge to enter the building.",
+    "sentenceZh": "所有訪客都需要安全識別證才能進入大樓。"
+  },
+  {
+    "id": 66,
+    "word": "prerequisite",
+    "pos": "(n.)",
+    "meaning": "先決條件、前提、必備條件",
+    "sentenceEn": "Previous management experience is a ____ for the role.",
+    "sentenceZh": "具備管理經驗是擔任此職務的先決條件。"
+  },
+  {
+    "id": 67,
+    "word": "qualified",
+    "pos": "(adj.)",
+    "meaning": "有資格的、勝任的",
+    "sentenceEn": "Only ____ candidates will be invited for an interview.",
+    "sentenceZh": "只有符合資格的候選者會受邀參加面試。"
+  },
+  {
+    "id": 68,
+    "word": "certified",
+    "pos": "(adj.)",
+    "meaning": "有保證的、經證明的",
+    "sentenceEn": "The company only purchases ____ organic coffee.",
+    "sentenceZh": "公司只採購經認證的有機咖啡。"
+  },
+  {
+    "id": 69,
+    "word": "certification",
+    "pos": "(n.)",
+    "meaning": "證照",
+    "sentenceEn": "The technician earned a professional ____ in network security.",
+    "sentenceZh": "這位技術人員取得了網路安全專業證照。"
+  },
+  {
+    "id": 70,
+    "word": "competent",
+    "pos": "(adj.)",
+    "meaning": "勝任的、稱職的",
+    "sentenceEn": "We are looking for a ____ assistant with strong communication skills.",
+    "sentenceZh": "我們正在尋找一位稱職且溝通能力出色的助理。"
+  },
+  {
+    "id": 71,
+    "word": "candidate",
+    "pos": "(n.)",
+    "meaning": "候選者、應徵者、被考量者",
+    "sentenceEn": "The hiring committee interviewed each ____ for the position.",
+    "sentenceZh": "招聘委員會為這個職位面試了每位候選者。"
+  },
+  {
+    "id": 72,
+    "word": "degree",
+    "pos": "(n.)",
+    "meaning": "學位",
+    "sentenceEn": "She earned a bachelor's ____ in business administration.",
+    "sentenceZh": "她取得了企業管理學士學位。"
+  },
+  {
+    "id": 73,
+    "word": "bachelor",
+    "pos": "(n.)",
+    "meaning": "學士（學位專有名詞）",
+    "sentenceEn": "He received a ____ of Science from the university.",
+    "sentenceZh": "他取得了該大學的理學學士學位。"
+  },
+  {
+    "id": 74,
+    "word": "college",
+    "pos": "(n.)",
+    "meaning": "大學機構",
+    "sentenceEn": "The ____ offers evening courses for working adults.",
+    "sentenceZh": "這所大學為在職成人開設夜間課程。"
+  },
+  {
+    "id": 75,
+    "word": "university",
+    "pos": "(n.)",
+    "meaning": "大學機構",
+    "sentenceEn": "The ____ plans to open a new research center next year.",
+    "sentenceZh": "這所大學計畫明年設立新的研究中心。"
+  },
+  {
+    "id": 76,
+    "word": "undergraduate",
+    "pos": "(adj. / n.)",
+    "meaning": "大學部的，大學級別的",
+    "sentenceEn": "The ____ program includes a one-year internship.",
+    "sentenceZh": "這項大學部課程包含一年的實習。"
+  },
+  {
+    "id": 77,
+    "word": "master",
+    "pos": "(n.)",
+    "meaning": "碩士（學位專有名詞）",
+    "sentenceEn": "She plans to pursue a ____ of Public Health next fall.",
+    "sentenceZh": "她計畫明年秋季攻讀公共衛生碩士學位。"
+  },
+  {
+    "id": 78,
+    "word": "graduate",
+    "pos": "(adj. / n. / v.)",
+    "meaning": "研究生、研究所的",
+    "sentenceEn": "The ____ program accepts applications from international students.",
+    "sentenceZh": "這項研究所課程接受國際學生申請。"
+  },
+  {
+    "id": 79,
+    "word": "magisterial",
+    "pos": "(adj.)",
+    "meaning": "碩士級別的",
+    "sentenceEn": "The institute offers ____ studies in medieval history at the master's level.",
+    "sentenceZh": "該研究所提供中世紀歷史的碩士級別研究課程。"
+  },
+  {
+    "id": 80,
+    "word": "doctor",
+    "pos": "(n.)",
+    "meaning": "博士、醫生",
+    "sentenceEn": "After completing her studies, she became a ____ of philosophy.",
+    "sentenceZh": "完成學業後，她取得了哲學博士學位。"
+  },
+  {
+    "id": 81,
+    "word": "doctoral",
+    "pos": "(adj.)",
+    "meaning": "博士級別的",
+    "sentenceEn": "He received a scholarship to support his ____ research.",
+    "sentenceZh": "他獲得獎學金以支持博士級別的研究。"
+  },
+  {
+    "id": 82,
+    "word": "doctorate",
+    "pos": "(n.)",
+    "meaning": "博士（學位專有名詞）",
+    "sentenceEn": "She completed her ____ in engineering at a leading university.",
+    "sentenceZh": "她在一所知名大學完成了工程學博士學位。"
+  },
+  {
+    "id": 83,
+    "word": "achievement",
+    "pos": "(n.)",
+    "meaning": "成就",
+    "sentenceEn": "The award recognizes a significant ____ in medical research.",
+    "sentenceZh": "這個獎項表揚醫學研究上的重大成就。"
+  },
+  {
+    "id": 84,
+    "word": "eligible",
+    "pos": "(adj.)",
+    "meaning": "符合資格、門檻的",
+    "sentenceEn": "Full-time employees are ____ for the annual bonus.",
+    "sentenceZh": "全職員工符合領取年度獎金的資格。"
+  },
+  {
+    "id": 85,
+    "word": "dissertation",
+    "pos": "(n.)",
+    "meaning": "專題論文",
+    "sentenceEn": "She submitted her doctoral ____ to the review committee.",
+    "sentenceZh": "她將博士專題論文提交給審查委員會。"
+  },
+  {
+    "id": 86,
+    "word": "thesis",
+    "pos": "(n.)",
+    "meaning": "論文、（哲學的）命題",
+    "sentenceEn": "Each student must defend a ____ before graduating.",
+    "sentenceZh": "每位學生都必須在畢業前口頭答辯論文。"
+  },
+  {
+    "id": 87,
+    "word": "annual",
+    "pos": "(adj. / n.)",
+    "meaning": "一年一度的、每年的、年刊（n.）",
+    "sentenceEn": "The company will hold its ____ meeting in June.",
+    "sentenceZh": "公司將於六月舉行年度會議。"
+  },
+  {
+    "id": 88,
+    "word": "alumni",
+    "pos": "(n.)",
+    "meaning": "校友（已經畢業的）",
+    "sentenceEn": "The university invited its ____ to a networking event.",
+    "sentenceZh": "這所大學邀請校友參加交流活動。"
+  },
+  {
+    "id": 89,
+    "word": "prohibit",
+    "pos": "(v.)",
+    "meaning": "禁止",
+    "sentenceEn": "Company policy ____ employees from sharing confidential files.",
+    "sentenceZh": "公司政策禁止員工分享機密檔案。"
+  },
+  {
+    "id": 90,
+    "word": "variety",
+    "pos": "(n.)",
+    "meaning": "多樣化",
+    "sentenceEn": "The catalog features a wide ____ of office supplies.",
+    "sentenceZh": "這份型錄展示了各式各樣的辦公用品。"
+  },
+  {
+    "id": 91,
+    "word": "various",
+    "pos": "(adj.)",
+    "meaning": "多樣化的",
+    "sentenceEn": "The training covers ____ topics related to workplace safety.",
+    "sentenceZh": "這項訓練涵蓋各種職場安全相關主題。"
+  },
+  {
+    "id": 92,
+    "word": "advanced",
+    "pos": "(adj.)",
+    "meaning": "進階的、先進的",
+    "sentenceEn": "The laboratory uses ____ equipment to analyze samples.",
+    "sentenceZh": "這間實驗室使用先進設備分析樣本。"
+  },
+  {
+    "id": 93,
+    "word": "regulation",
+    "pos": "(n.)",
+    "meaning": "規則、法規、條例",
+    "sentenceEn": "The company updated its safety ____ to meet new standards.",
+    "sentenceZh": "公司更新了安全規定，以符合新標準。"
+  },
+  {
+    "id": 94,
+    "word": "strictly",
+    "pos": "(adv.)",
+    "meaning": "嚴格地、確切地",
+    "sentenceEn": "All applicants must ____ follow the submission guidelines.",
+    "sentenceZh": "所有申請者都必須嚴格遵守提交指南。"
+  },
+  {
+    "id": 95,
+    "word": "mandatory",
+    "pos": "(adj.)",
+    "meaning": "強制的、法定的",
+    "sentenceEn": "Attendance at the safety briefing is ____ for all staff.",
+    "sentenceZh": "所有員工都必須參加安全說明會。"
+  },
+  {
+    "id": 96,
+    "word": "identify",
+    "pos": "(v.)",
+    "meaning": "辨認、認出",
+    "sentenceEn": "The security system can ____ visitors using facial recognition.",
+    "sentenceZh": "這套安全系統可以透過臉部辨識認出訪客。"
+  },
+  {
+    "id": 97,
+    "word": "identity",
+    "pos": "(n.)",
+    "meaning": "身份",
+    "sentenceEn": "Please verify your ____ before accessing the account.",
+    "sentenceZh": "存取帳戶前請先確認您的身份。"
+  },
+  {
+    "id": 98,
+    "word": "identification",
+    "pos": "(n.)",
+    "meaning": "身分證、識別證",
+    "sentenceEn": "Visitors must show photo ____ at the front desk.",
+    "sentenceZh": "訪客必須在櫃檯出示附照片的身分證明。"
+  },
+  {
+    "id": 99,
+    "word": "associate",
+    "pos": "(v. / adj. / n.)",
+    "meaning": "使…有關聯；副的、準（會員）；同事、合夥人",
+    "sentenceEn": "Many customers ____ the brand with reliable service.",
+    "sentenceZh": "許多顧客會將這個品牌與可靠的服務聯想在一起。"
+  },
+  {
+    "id": 100,
+    "word": "employment",
+    "pos": "(n.)",
+    "meaning": "雇用",
+    "sentenceEn": "The agency helps job seekers find ____ in the technology sector.",
+    "sentenceZh": "這家機構協助求職者在科技業找到工作。"
+  },
+  {
+    "id": 101,
+    "word": "employ",
+    "pos": "(v.)",
+    "meaning": "雇用",
+    "sentenceEn": "The company plans to ____ additional staff for the new branch.",
+    "sentenceZh": "公司計畫為新分店增聘員工。"
+  },
+  {
+    "id": 102,
+    "word": "employee",
+    "pos": "(n.)",
+    "meaning": "雇員、員工",
+    "sentenceEn": "Every ____ is required to attend the orientation session.",
+    "sentenceZh": "每位員工都必須參加新進人員說明會。"
+  },
+  {
+    "id": 103,
+    "word": "employer",
+    "pos": "(n.)",
+    "meaning": "雇主",
+    "sentenceEn": "The ____ provides health insurance for all full-time staff.",
+    "sentenceZh": "雇主為所有全職員工提供健康保險。"
+  },
+  {
+    "id": 104,
+    "word": "layoff",
+    "pos": "(n.)",
+    "meaning": "裁員",
+    "sentenceEn": "The company announced a ____ affecting 120 employees.",
+    "sentenceZh": "公司宣布裁員，影響 120 名員工。"
+  },
+  {
+    "id": 105,
+    "word": "lay off",
+    "pos": "(phr. v.)",
+    "meaning": "裁員、解僱",
+    "sentenceEn": "The company may ____ several workers if sales do not improve.",
+    "sentenceZh": "如果銷售沒有改善，公司可能會解僱幾名員工。"
+  },
+  {
+    "id": 106,
+    "word": "dismiss",
+    "pos": "(v.)",
+    "meaning": "解僱、駁回、不予理會",
+    "sentenceEn": "The manager had to ____ an employee for repeated policy violations.",
+    "sentenceZh": "經理不得不解僱一名屢次違反政策的員工。"
+  },
+  {
+    "id": 107,
+    "word": "dismissal",
+    "pos": "(n.)",
+    "meaning": "解僱、免職",
+    "sentenceEn": "The employee appealed the ____ through the company's review process.",
+    "sentenceZh": "這名員工透過公司的審查程序對解僱處分提出申訴。"
+  },
+  {
+    "id": 108,
+    "word": "terminate",
+    "pos": "(v.)",
+    "meaning": "（合約）終止",
+    "sentenceEn": "Either party may ____ the agreement with 30 days' written notice.",
+    "sentenceZh": "任一方都可以提前 30 天以書面通知終止合約。"
+  },
+  {
+    "id": 109,
+    "word": "lack",
+    "pos": "(n. / v.)",
+    "meaning": "缺乏",
+    "sentenceEn": "The report cites a ____ of qualified applicants as a major concern.",
+    "sentenceZh": "報告指出，合格申請者不足是主要問題。"
+  },
+  {
+    "id": 110,
+    "word": "managerial",
+    "pos": "(adj.)",
+    "meaning": "管理的",
+    "sentenceEn": "The position requires strong technical and ____ skills.",
+    "sentenceZh": "這個職位需要出色的技術與管理能力。"
+  },
+  {
+    "id": 111,
+    "word": "practical",
+    "pos": "(adj.)",
+    "meaning": "有實際經驗的、實際的",
+    "sentenceEn": "The workshop gives participants ____ experience with the new software.",
+    "sentenceZh": "這場工作坊讓參與者實際操作新軟體，累積實務經驗。"
+  },
+  {
+    "id": 112,
+    "word": "major",
+    "pos": "(adj. / n. / v.)",
+    "meaning": "主要的、主修的",
+    "sentenceEn": "A ____ change to the hiring policy will take effect next month.",
+    "sentenceZh": "招聘政策的一項重大變更將於下個月生效。"
+  },
+  {
+    "id": 113,
+    "word": "actually",
+    "pos": "(adv.)",
+    "meaning": "其實",
+    "sentenceEn": "The meeting was ____ shorter than we had expected.",
+    "sentenceZh": "這場會議其實比我們預期的短。"
+  },
+  {
+    "id": 114,
+    "word": "due to",
+    "pos": "(prep. phr.)",
+    "meaning": "由於",
+    "sentenceEn": "The outdoor event was postponed ____ heavy rain.",
+    "sentenceZh": "戶外活動由於大雨而延期。"
+  },
+  {
+    "id": 115,
+    "word": "come",
+    "pos": "(v. 原形)",
+    "meaning": "來（原形）",
+    "sentenceEn": "Please ____ to the front desk if you need assistance.",
+    "sentenceZh": "如果需要協助，請到服務櫃檯。"
+  },
+  {
+    "id": 116,
+    "word": "came",
+    "pos": "(v. 過去式)",
+    "meaning": "來（過去式）",
+    "sentenceEn": "The regional manager ____ to our office for a visit yesterday.",
+    "sentenceZh": "區域經理昨天來我們辦公室拜訪。"
+  },
+  {
+    "id": 117,
+    "word": "come",
+    "pos": "(v. 過去分詞)",
+    "meaning": "來（過去分詞）",
+    "sentenceEn": "Several new orders have ____ in since the promotion began.",
+    "sentenceZh": "促銷活動開始後，已經收到幾筆新訂單。"
+  },
+  {
+    "id": 118,
+    "word": "settle",
+    "pos": "(v. 原形)",
+    "meaning": "安頓下來、安排",
+    "sentenceEn": "The new employees need a few days to ____ into their roles.",
+    "sentenceZh": "新員工需要幾天時間熟悉並適應自己的職務。"
+  },
+  {
+    "id": 119,
+    "word": "settled",
+    "pos": "(v. 過去式)",
+    "meaning": "安頓下來、安排（過去式）",
+    "sentenceEn": "The company ____ in its new office earlier this year.",
+    "sentenceZh": "公司今年稍早搬進新辦公室並安頓下來。"
+  },
+  {
+    "id": 120,
+    "word": "settled",
+    "pos": "(v. 過去分詞)",
+    "meaning": "安頓下來、安排（過去分詞）",
+    "sentenceEn": "The payment has been ____ in full.",
+    "sentenceZh": "款項已經全額結清。"
+  },
+  {
+    "id": 121,
+    "word": "offer",
+    "pos": "(v. 原形)",
+    "meaning": "提議",
+    "sentenceEn": "The company plans to ____ free training to all staff.",
+    "sentenceZh": "公司計畫為所有員工提供免費培訓。"
+  },
+  {
+    "id": 122,
+    "word": "offered",
+    "pos": "(v. 過去式)",
+    "meaning": "提議（過去式）",
+    "sentenceEn": "The supplier ____ us a lower price for the bulk order.",
+    "sentenceZh": "供應商曾為這筆大量訂單提供較低的價格。"
+  },
+  {
+    "id": 123,
+    "word": "offered",
+    "pos": "(v. 過去分詞)",
+    "meaning": "提議（過去分詞）",
+    "sentenceEn": "A full refund has been ____ to every affected customer.",
+    "sentenceZh": "已向每位受影響的顧客提供全額退款。"
+  },
+  {
+    "id": 124,
+    "word": "exhibit",
+    "pos": "(v. 原形)",
+    "meaning": "展出、展示",
+    "sentenceEn": "The museum will ____ rare artifacts from its collection.",
+    "sentenceZh": "博物館將展出館藏中的稀有文物。"
+  },
+  {
+    "id": 125,
+    "word": "exhibited",
+    "pos": "(v. 過去式)",
+    "meaning": "展出、展示（過去式）",
+    "sentenceEn": "The local artist ____ her paintings at the gallery last month.",
+    "sentenceZh": "這位當地藝術家上個月在畫廊展出了她的畫作。"
+  },
+  {
+    "id": 126,
+    "word": "exhibited",
+    "pos": "(v. 過去分詞)",
+    "meaning": "展出、展示（過去分詞）",
+    "sentenceEn": "The photographs have been ____ at the city museum.",
+    "sentenceZh": "這些照片曾在市立博物館展出。"
+  },
+  {
+    "id": 127,
+    "word": "reserve",
+    "pos": "(v. 原形)",
+    "meaning": "保留",
+    "sentenceEn": "Please ____ a seat near the front for the guest speaker.",
+    "sentenceZh": "請為演講嘉賓保留前排附近的座位。"
+  },
+  {
+    "id": 128,
+    "word": "reserved",
+    "pos": "(v. 過去式)",
+    "meaning": "保留（過去式）",
+    "sentenceEn": "The assistant ____ a conference room for the afternoon meeting.",
+    "sentenceZh": "助理為下午的會議預訂了一間會議室。"
+  },
+  {
+    "id": 129,
+    "word": "reserved",
+    "pos": "(v. 過去分詞)",
+    "meaning": "保留（過去分詞）",
+    "sentenceEn": "Two seats have been ____ for the visiting executives.",
+    "sentenceZh": "已為來訪主管保留兩個座位。"
+  },
+  {
+    "id": 130,
+    "word": "empty",
+    "pos": "(adj.)",
+    "meaning": "空的",
+    "sentenceEn": "Please return the ____ boxes to the storage room.",
+    "sentenceZh": "請將空箱子送回儲藏室。"
+  },
+  {
+    "id": 131,
+    "word": "philharmonic",
+    "pos": "(adj.)",
+    "meaning": "愛樂的",
+    "sentenceEn": "The ____ orchestra will perform at the city concert hall this weekend.",
+    "sentenceZh": "愛樂管弦樂團本週末將在市立音樂廳演出。"
+  },
+  {
+    "id": 132,
+    "word": "actual",
+    "pos": "(adj.)",
+    "meaning": "實際上的",
+    "sentenceEn": "The ____ cost of the repairs was lower than the original estimate.",
+    "sentenceZh": "實際維修費用比最初估算的低。"
+  }
+]

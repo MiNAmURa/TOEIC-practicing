@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="zh-TW" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>多益互動式單字測驗</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', '"Noto Sans TC"', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#eff6ff',
+              100: '#dbeafe',
+              500: '#3b82f6',
+              600: '#2563eb',
+              700: '#1d4ed8',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', 'Noto Sans TC', sans-serif;
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 6px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background-color: rgba(156, 163, 175, 0.4);
+      border-radius: 20px;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-900 dark:text-slate-100 min-h-screen flex flex-col transition-colors duration-300">
+
+  <!-- Header Section -->
+  <header class="w-full bg-white dark:bg-slate-800 border-b border-slate-200 dark:border-slate-700 sticky top-0 z-50 backdrop-blur-md bg-opacity-90 dark:bg-opacity-90">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 to-indigo-500 flex items-center justify-center text-white shadow-md shadow-brand-500/20">
+          <i class="fa-solid fa-graduation-cap text-lg"></i>
+        </div>
+        <div>
+          <h1 class="font-bold text-lg leading-tight">TOEIC 多益核心單字</h1>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-2">
+        <button id="themeToggleBtn" onclick="toggleTheme()" class="p-2.5 rounded-xl bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-600 transition-all">
+          <i id="themeIcon" class="fa-solid fa-sun"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="flex-1 max-w-4xl w-full mx-auto p-4 sm:p-6 flex flex-col justify-center">
+
+    <!-- Start Screen Card -->
+    <div id="startCard" class="bg-white dark:bg-slate-800 rounded-2xl p-6 sm:p-10 shadow-xl border border-slate-100 dark:border-slate-700/60 text-center max-w-2xl mx-auto w-full transition-all">
+      <div class="w-20 h-20 bg-brand-50 dark:bg-brand-900/30 text-brand-600 dark:text-brand-400 rounded-full flex items-center justify-center mx-auto mb-6">
+        <i class="fa-solid fa-keyboard text-3xl"></i>
+      </div>
+      <h2 class="text-2xl sm:text-3xl font-bold mb-3">多益單字拼字實戰特訓</h2>
+      <p class="text-slate-600 dark:text-slate-300 mb-6 leading-relaxed">
+        本測驗無選擇題選項！你需要根據**中文意思**、**詞性**與**挖空英文例句**，在輸入框中手動拼出正確的英文單字（不區分大小寫）。
+      </p>
+
+      <div class="mb-8">
+        <p class="text-sm font-semibold text-slate-600 dark:text-slate-300 mb-3">選擇測驗題數</p>
+        <div class="grid grid-cols-2 sm:grid-cols-5 gap-3">
+          <button id="questionCount20Btn" type="button" onclick="selectQuestionCount(20)" aria-pressed="false" class="question-count-btn px-3 py-3 rounded-xl border font-bold transition-all focus:outline-none focus:ring-2 focus:ring-brand-500">20 題</button>
+          <button id="questionCount40Btn" type="button" onclick="selectQuestionCount(40)" aria-pressed="true" class="question-count-btn px-3 py-3 rounded-xl border font-bold transition-all focus:outline-none focus:ring-2 focus:ring-brand-500">40 題</button>
+          <button id="questionCount50Btn" type="button" onclick="selectQuestionCount(50)" aria-pressed="false" class="question-count-btn px-3 py-3 rounded-xl border font-bold transition-all focus:outline-none focus:ring-2 focus:ring-brand-500">50 題</button>
+          <button id="questionCount80Btn" type="button" onclick="selectQuestionCount(80)" aria-pressed="false" class="question-count-btn px-3 py-3 rounded-xl border font-bold transition-all focus:outline-none focus:ring-2 focus:ring-brand-500">80 題</button>
+          <button id="questionCount100Btn" type="button" onclick="selectQuestionCount(100)" aria-pressed="false" class="question-count-btn px-3 py-3 rounded-xl border font-bold transition-all focus:outline-none focus:ring-2 focus:ring-brand-500">100 題</button>
+        </div>
+        <p id="questionCountHint" class="text-xs text-slate-500 dark:text-slate-400 mt-3"></p>
+      </div>
+
+      <button onclick="startQuiz()" class="w-full py-4 bg-brand-600 hover:bg-brand-700 text-white font-bold rounded-xl shadow-lg shadow-brand-500/25 transition-all text-lg flex items-center justify-center gap-2">
+        <span>開始拼字測驗</span>
+        <i class="fa-solid fa-pen-to-square text-sm"></i>
+      </button>
+      <button onclick="showWordStats()" class="w-full mt-3 py-3 bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 text-slate-700 dark:text-slate-200 font-semibold rounded-xl transition-all flex items-center justify-center gap-2">
+        <i class="fa-solid fa-chart-column"></i>
+        <span>單字學習統計</span>
+      </button>
+      <p id="wordStatsStatus" class="text-xs text-rose-500 mt-3" role="status"></p>
+    </div>
+
+    <!-- Quiz Screen -->
+    <div id="quizScreen" class="hidden flex-col gap-6">
+
+      <!-- Progress & Status Bar -->
+      <div class="bg-white dark:bg-slate-800 rounded-2xl p-4 sm:p-5 shadow-sm border border-slate-100 dark:border-slate-700 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-3 w-full sm:w-auto">
+          <span id="questionCounter" class="text-sm font-semibold px-3 py-1 bg-brand-50 dark:bg-brand-900/40 text-brand-600 dark:text-brand-300 rounded-lg">
+            1 / 40
+          </span>
+          <div class="w-full sm:w-48 bg-slate-100 dark:bg-slate-700 h-2.5 rounded-full overflow-hidden">
+            <div id="progressBar" class="bg-brand-600 h-full w-0 transition-all duration-300"></div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-between w-full sm:w-auto gap-4 text-sm">
+          <div class="flex items-center gap-2">
+            <i class="fa-solid fa-circle-check text-emerald-500"></i>
+            <span class="text-slate-500 dark:text-slate-400">得分:</span>
+            <span id="scoreDisplay" class="font-bold text-slate-800 dark:text-slate-100">0</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <button onclick="confirmRestart()" class="text-xs text-slate-400 hover:text-rose-500 transition-colors flex items-center gap-1">
+              <i class="fa-solid fa-rotate-right"></i>
+              <span>重新開始</span>
+            </button>
+            <button onclick="exitQuiz()" class="text-xs text-slate-400 hover:text-brand-600 dark:hover:text-brand-400 transition-colors flex items-center gap-1">
+              <i class="fa-solid fa-right-from-bracket"></i>
+              <span>退出測驗</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Question Card -->
+      <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 sm:p-8 shadow-xl border border-slate-100 dark:border-slate-700/60 transition-all">
+        <!-- Question Meta -->
+        <div class="flex items-center gap-2 mb-4">
+          <span id="posBadge" class="text-xs font-bold px-2.5 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-md">
+            (v.)
+          </span>
+          <span class="text-xs font-medium text-slate-400">手動輸入拼音題</span>
+        </div>
+
+        <!-- Target Word Chinese Meaning -->
+        <h2 id="targetChinese" class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mb-6">
+          延後
+        </h2>
+
+        <!-- Context Sentence Box -->
+        <div class="bg-slate-50 dark:bg-slate-900/50 p-4 sm:p-5 rounded-xl border border-slate-200/60 dark:border-slate-700/70 mb-6">
+          <p id="sentenceEn" class="text-base sm:text-lg font-medium text-slate-800 dark:text-slate-200 mb-2 leading-relaxed">
+            We had to <span class="underline underline-offset-4 decoration-brand-500 font-bold text-brand-600 dark:text-brand-400">____</span> the meeting until next week due to the heavy rain.
+          </p>
+          <p id="sentenceZh" class="text-sm text-slate-500 dark:text-slate-400">
+            由於大雨，我們不得不將會議延後到下週。
+          </p>
+        </div>
+
+        <!-- Spelling Input Form -->
+        <form id="spellingForm" onsubmit="handleFormSubmit(event)" class="mb-6">
+          <div class="flex flex-col sm:flex-row gap-3">
+            <div class="relative flex-1">
+              <input
+                type="text"
+                id="wordInput"
+                placeholder="請在此輸入英文單字..."
+                autocomplete="off"
+                spellcheck="false"
+                class="w-full px-4 py-3.5 rounded-xl bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-700 text-slate-800 dark:text-slate-100 font-semibold focus:border-brand-500 focus:outline-none transition-all text-base placeholder:font-normal placeholder:text-slate-400"
+              />
+            </div>
+            <button
+              type="submit"
+              id="submitAnswerBtn"
+              class="px-8 py-3.5 bg-brand-600 hover:bg-brand-700 text-white font-bold rounded-xl shadow-md shadow-brand-500/20 transition-all flex items-center justify-center gap-2 whitespace-nowrap"
+            >
+              <span id="submitBtnText">送出核對</span>
+              <i id="submitBtnIcon" class="fa-solid fa-paper-plane text-xs"></i>
+            </button>
+          </div>
+        </form>
+
+        <!-- Feedback & Explanation Box -->
+        <div id="feedbackBox" class="hidden rounded-xl p-5 mb-4 border transition-all">
+          <div class="flex items-center gap-2 mb-2 font-bold text-base" id="feedbackTitle">
+            <!-- Icon and Title -->
+          </div>
+          <div id="feedbackText" class="text-sm leading-relaxed">
+            <!-- Explanation content -->
+          </div>
+          <div id="pronunciationStatus" class="text-xs mt-2" aria-live="polite"></div>
+        </div>
+
+        <!-- Next / Submit Action -->
+        <div class="flex justify-end pt-2">
+          <button id="nextBtn" onclick="nextQuestion()" class="hidden px-6 py-3 bg-brand-600 hover:bg-brand-700 text-white font-bold rounded-xl shadow-md shadow-brand-500/20 transition-all items-center gap-2">
+            <span>下一題</span>
+            <i class="fa-solid fa-chevron-right text-xs"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Result Screen -->
+    <div id="resultScreen" class="hidden flex-col gap-6">
+      <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 sm:p-8 shadow-xl border border-slate-100 dark:border-slate-700/60 text-center">
+        <div id="resultIcon" class="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 text-3xl">
+          🎯
+        </div>
+        <h2 id="resultTitle" class="text-2xl sm:text-3xl font-bold mb-2">測驗完成！</h2>
+        <p id="resultSubtitle" class="text-slate-500 dark:text-slate-400 mb-6">以下是你的多益單字特訓成績報告</p>
+
+        <!-- Score Ring / Box -->
+        <div class="bg-slate-50 dark:bg-slate-900/50 p-6 rounded-2xl border border-slate-100 dark:border-slate-700 max-w-sm mx-auto mb-8">
+          <div class="text-xs uppercase tracking-wider text-slate-400 font-semibold mb-1">最終答對率</div>
+          <div id="finalScorePercent" class="text-4xl font-extrabold text-brand-600 dark:text-brand-400 mb-2">85%</div>
+          <div class="text-sm text-slate-600 dark:text-slate-300">
+            答對 <span id="finalCorrectCount" class="font-bold text-emerald-600 dark:text-emerald-400">34</span> / <span id="finalTotalCount">40</span> 題
+          </div>
+        </div>
+
+        <div class="flex flex-col sm:flex-row gap-3 justify-center">
+          <button onclick="startQuiz()" class="px-6 py-3.5 bg-brand-600 hover:bg-brand-700 text-white font-bold rounded-xl shadow-md shadow-brand-500/20 transition-all flex items-center justify-center gap-2">
+            <i class="fa-solid fa-rotate-right"></i>
+            <span id="restartQuizText">再次挑戰 40 題</span>
+          </button>
+          <button id="reviewWrongBtn" onclick="reviewWrongQuestions()" class="px-6 py-3.5 bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 text-slate-700 dark:text-slate-200 font-bold rounded-xl transition-all flex items-center justify-center gap-2">
+            <i class="fa-solid fa-circle-xmark text-rose-500"></i>
+            <span>特訓複習錯題 (<span id="wrongCountBadge">0</span>)</span>
+          </button>
+          <button onclick="returnToHome()" class="px-6 py-3.5 bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 text-slate-700 dark:text-slate-200 font-bold rounded-xl transition-all flex items-center justify-center gap-2">
+            <i class="fa-solid fa-house"></i>
+            <span>返回首頁</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Wrong Questions List Section -->
+      <div id="wrongListSection" class="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-md border border-slate-100 dark:border-slate-700">
+        <h3 class="text-lg font-bold mb-4 flex items-center gap-2 text-slate-800 dark:text-slate-100">
+          <i class="fa-solid fa-list-check text-brand-500"></i>
+          <span>錯題與重點單字複習</span>
+        </h3>
+        <div id="wrongListContainer" class="space-y-4 max-h-96 overflow-y-auto pr-2 custom-scrollbar">
+          <!-- Wrong items injected here -->
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <div id="wordStatsModal" class="hidden fixed inset-0 z-50 bg-slate-950/70 p-3 sm:p-6" role="dialog" aria-modal="true" aria-labelledby="wordStatsTitle" onclick="if (event.target === this) hideWordStats()">
+    <div class="bg-white dark:bg-slate-800 w-full max-w-5xl max-h-full mx-auto rounded-2xl shadow-2xl flex flex-col overflow-hidden">
+      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 p-5 border-b border-slate-200 dark:border-slate-700">
+        <div>
+          <h2 id="wordStatsTitle" class="text-xl font-bold text-slate-900 dark:text-white">單字學習統計</h2>
+          <p id="wordStatsSummary" class="text-sm text-slate-500 dark:text-slate-400 mt-1"></p>
+        </div>
+        <div class="flex items-center gap-2">
+          <label class="relative flex-1 sm:w-64 sm:flex-none">
+            <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-slate-400"></i>
+            <input id="wordStatsSearch" type="search" oninput="filterWordStats(this.value)" aria-label="搜尋單字、詞性或中文意思" placeholder="搜尋單字或中文意思" class="w-full pl-9 pr-3 py-2 rounded-lg border border-slate-200 dark:border-slate-600 bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-100 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-500">
+          </label>
+          <button type="button" onclick="hideWordStats()" aria-label="關閉統計視窗" class="p-2 rounded-lg text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-700">
+            <i class="fa-solid fa-xmark text-lg"></i>
+          </button>
+        </div>
+      </div>
+      <div id="wordStatsTable" class="overflow-auto p-4 sm:p-5"></div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="mt-auto py-4 text-center text-xs text-slate-400 dark:text-slate-500">
+    TOEIC® Vocabulary Master Quiz App •
+  </footer>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
