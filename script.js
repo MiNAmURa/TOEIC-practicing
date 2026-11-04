@@ -258,14 +258,14 @@ import defaultQuizQuestions from './questions.json' with { type: 'json' };
       );
 
       document.getElementById('wordStatsTable').innerHTML = `
-        <table class="w-full text-sm text-left border-collapse">
-          <thead class="sticky top-0 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-200">
+        <table class="w-full text-sm text-left border-separate border-spacing-0">
+          <thead class="text-slate-600 dark:text-slate-200">
             <tr>
-              <th class="p-3 whitespace-nowrap">單字</th>
-              <th class="p-3">詞性／意思</th>
-              <th class="p-3 text-right whitespace-nowrap">答對</th>
-              <th class="p-3 text-right whitespace-nowrap">答錯</th>
-              <th class="p-3 text-right whitespace-nowrap">正確率</th>
+              <th class="sticky top-0 z-10 bg-slate-100 p-3 text-left shadow-[0_1px_0_0_rgba(148,163,184,0.3)] dark:bg-slate-700 dark:shadow-[0_1px_0_0_rgba(71,85,105,0.7)]">單字</th>
+              <th class="sticky top-0 z-10 bg-slate-100 p-3 text-left shadow-[0_1px_0_0_rgba(148,163,184,0.3)] dark:bg-slate-700 dark:shadow-[0_1px_0_0_rgba(71,85,105,0.7)]">詞性／意思</th>
+              <th class="sticky top-0 z-10 whitespace-nowrap bg-slate-100 p-3 text-right shadow-[0_1px_0_0_rgba(148,163,184,0.3)] dark:bg-slate-700 dark:shadow-[0_1px_0_0_rgba(71,85,105,0.7)]">答對</th>
+              <th class="sticky top-0 z-10 whitespace-nowrap bg-slate-100 p-3 text-right shadow-[0_1px_0_0_rgba(148,163,184,0.3)] dark:bg-slate-700 dark:shadow-[0_1px_0_0_rgba(71,85,105,0.7)]">答錯</th>
+              <th class="sticky top-0 z-10 whitespace-nowrap bg-slate-100 p-3 text-right shadow-[0_1px_0_0_rgba(148,163,184,0.3)] dark:bg-slate-700 dark:shadow-[0_1px_0_0_rgba(71,85,105,0.7)]">正確率</th>
             </tr>
           </thead>
           <tbody>
