@@ -1,0 +1,876 @@
+{
+  "format": "toeic-vocabulary-progress",
+  "version": 1,
+  "exportedAt": "2026-11-04T15:00:40.617Z",
+  "wordStats": {
+    "1": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "2": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "3": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "4": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "5": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "6": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "7": {
+      "correct": 1,
+      "wrong": 1
+    },
+    "8": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "9": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "10": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "11": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "12": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "13": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "14": {
+      "correct": 1,
+      "wrong": 1
+    },
+    "15": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "16": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "17": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "18": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "19": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "20": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "21": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "22": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "23": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "24": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "25": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "26": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "27": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "28": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "29": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "30": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "31": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "32": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "33": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "34": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "35": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "36": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "37": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "38": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "39": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "40": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "41": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "42": {
+      "correct": 1,
+      "wrong": 1
+    },
+    "43": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "44": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "45": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "46": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "47": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "48": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "49": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "50": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "51": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "52": {
+      "correct": 1,
+      "wrong": 1
+    },
+    "53": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "54": {
+      "correct": 1,
+      "wrong": 1
+    },
+    "55": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "56": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "57": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "58": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "59": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "60": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "61": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "62": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "63": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "64": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "65": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "66": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "67": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "68": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "69": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "70": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "71": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "72": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "73": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "74": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "75": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "76": {
+      "correct": 1,
+      "wrong": 1
+    },
+    "77": {
+      "correct": 1,
+      "wrong": 1
+    },
+    "78": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "79": {
+      "correct": 1,
+      "wrong": 1
+    },
+    "80": {
+      "correct": 1,
+      "wrong": 1
+    },
+    "81": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "82": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "83": {
+      "correct": 1,
+      "wrong": 1
+    },
+    "84": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "85": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "86": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "87": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "88": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "89": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "90": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "91": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "92": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "93": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "94": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "95": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "96": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "97": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "98": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "99": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "100": {
+      "correct": 1,
+      "wrong": 1
+    },
+    "101": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "102": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "103": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "104": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "105": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "106": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "107": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "108": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "109": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "110": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "111": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "112": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "113": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "114": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "115": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "116": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "117": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "118": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "119": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "120": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "121": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "122": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "123": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "124": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "125": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "126": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "127": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "128": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "129": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "130": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "131": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "132": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "133": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "134": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "135": {
+      "correct": 1,
+      "wrong": 1
+    },
+    "136": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "137": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "138": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "139": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "140": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "141": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "142": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "143": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "144": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "145": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "146": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "147": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "148": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "149": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "150": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "151": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "152": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "153": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "154": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "155": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "156": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "157": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "158": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "159": {
+      "correct": 1,
+      "wrong": 1
+    },
+    "160": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "161": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "162": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "163": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "164": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "165": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "166": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "167": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "168": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "169": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "170": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "171": {
+      "correct": 1,
+      "wrong": 1
+    },
+    "172": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "173": {
+      "correct": 2,
+      "wrong": 0
+    },
+    "174": {
+      "correct": 1,
+      "wrong": 0
+    },
+    "175": {
+      "correct": 1,
+      "wrong": 0
+    },
+    "176": {
+      "correct": 1,
+      "wrong": 0
+    },
+    "177": {
+      "correct": 0,
+      "wrong": 1
+    },
+    "178": {
+      "correct": 0,
+      "wrong": 1
+    },
+    "179": {
+      "correct": 1,
+      "wrong": 0
+    },
+    "180": {
+      "correct": 0,
+      "wrong": 1
+    },
+    "181": {
+      "correct": 1,
+      "wrong": 0
+    },
+    "182": {
+      "correct": 1,
+      "wrong": 0
+    },
+    "183": {
+      "correct": 1,
+      "wrong": 0
+    },
+    "184": {
+      "correct": 1,
+      "wrong": 0
+    },
+    "185": {
+      "correct": 1,
+      "wrong": 0
+    },
+    "186": {
+      "correct": 1,
+      "wrong": 0
+    },
+    "187": {
+      "correct": 1,
+      "wrong": 0
+    },
+    "188": {
+      "correct": 1,
+      "wrong": 0
+    },
+    "189": {
+      "correct": 0,
+      "wrong": 1
+    },
+    "190": {
+      "correct": 0,
+      "wrong": 1
+    },
+    "191": {
+      "correct": 1,
+      "wrong": 0
+    },
+    "192": {
+      "correct": 1,
+      "wrong": 0
+    },
+    "193": {
+      "correct": 1,
+      "wrong": 0
+    },
+    "194": {
+      "correct": 0,
+      "wrong": 1
+    },
+    "195": {
+      "correct": 1,
+      "wrong": 0
+    },
+    "196": {
+      "correct": 1,
+      "wrong": 0
+    },
+    "197": {
+      "correct": 1,
+      "wrong": 0
+    },
+    "198": {
+      "correct": 0,
+      "wrong": 1
+    },
+    "199": {
+      "correct": 1,
+      "wrong": 0
+    },
+    "200": {
+      "correct": 0,
+      "wrong": 1
+    },
+    "201": {
+      "correct": 1,
+      "wrong": 0
+    },
+    "202": {
+      "correct": 0,
+      "wrong": 1
+    },
+    "203": {
+      "correct": 1,
+      "wrong": 0
+    },
+    "204": {
+      "correct": 1,
+      "wrong": 0
+    },
+    "205": {
+      "correct": 1,
+      "wrong": 0
+    },
+    "206": {
+      "correct": 1,
+      "wrong": 0
+    },
+    "207": {
+      "correct": 1,
+      "wrong": 0
+    },
+    "208": {
+      "correct": 1,
+      "wrong": 0
+    },
+    "209": {
+      "correct": 1,
+      "wrong": 0
+    },
+    "210": {
+      "correct": 1,
+      "wrong": 0
+    },
+    "211": {
+      "correct": 1,
+      "wrong": 0
+    },
+    "212": {
+      "correct": 1,
+      "wrong": 0
+    }
+  },
+  "quizHistory": [
+    {
+      "completedAt": "2026-11-04T11:31:14.828Z",
+      "questionCount": 173,
+      "order": "隨機抽題",
+      "correct": 165,
+      "wrong": 8,
+      "accuracy": 95,
+      "durationMs": 1051010
+    },
+    {
+      "completedAt": "2026-11-04T15:00:25.378Z",
+      "questionCount": 212,
+      "order": "隨機抽題",
+      "correct": 197,
+      "wrong": 15,
+      "accuracy": 93,
+      "durationMs": 1598278
+    }
+  ],
+  "timerEnabled": true
+}
