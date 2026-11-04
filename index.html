@@ -46,6 +46,23 @@
       background-color: rgba(156, 163, 175, 0.4);
       border-radius: 20px;
     }
+    .timer-toggle-input:checked + .timer-toggle-card {
+      border-color: #3b82f6;
+      background-color: #eff6ff;
+    }
+    .dark .timer-toggle-input:checked + .timer-toggle-card {
+      background-color: rgba(30, 58, 138, 0.25);
+    }
+    .timer-toggle-input:checked + .timer-toggle-card .timer-toggle-track {
+      background-color: #2563eb;
+    }
+    .timer-toggle-input:checked + .timer-toggle-card .timer-toggle-knob {
+      transform: translateX(1.25rem);
+    }
+    .timer-toggle-input:focus-visible + .timer-toggle-card {
+      outline: 2px solid #3b82f6;
+      outline-offset: 2px;
+    }
   </style>
 </head>
 <body class="bg-slate-50 text-slate-800 dark:bg-slate-900 dark:text-slate-100 min-h-screen flex flex-col transition-colors duration-300">
@@ -78,9 +95,13 @@
       <div class="w-20 h-20 bg-brand-50 dark:bg-brand-900/30 text-brand-600 dark:text-brand-400 rounded-full flex items-center justify-center mx-auto mb-6">
         <i class="fa-solid fa-keyboard text-3xl"></i>
       </div>
-      <h2 class="text-2xl sm:text-3xl font-bold mb-3">多益單字拼字實戰特訓</h2>
+      <h2 class="text-2xl sm:text-3xl font-bold mb-3">多益單字拼字特訓</h2>
       <p class="text-slate-600 dark:text-slate-300 mb-6 leading-relaxed">
-        本測驗無選擇題選項！你需要根據**中文意思**、**詞性**與**挖空英文例句**，在輸入框中手動拼出正確的英文單字（不區分大小寫）。
+        本測驗無選擇題選項！
+        <br/>
+        你需要根據「中文意思」、「詞性」與「挖空英文例句」，
+        <br/>
+        在輸入框中手動拼出正確的英文單字（不區分大小寫）。
       </p>
 
       <div class="mb-8">
@@ -93,6 +114,10 @@
           <button id="questionCount100Btn" type="button" onclick="selectQuestionCount(100)" aria-pressed="false" class="question-count-btn px-3 py-3 rounded-xl border font-bold transition-all focus:outline-none focus:ring-2 focus:ring-brand-500">100 題</button>
           <button id="questionCount150Btn" type="button" onclick="selectQuestionCount(150)" aria-pressed="false" class="question-count-btn px-3 py-3 rounded-xl border font-bold transition-all focus:outline-none focus:ring-2 focus:ring-brand-500">150 題</button>
           <button id="questionCount200Btn" type="button" onclick="selectQuestionCount(200)" aria-pressed="false" class="question-count-btn px-3 py-3 rounded-xl border font-bold transition-all focus:outline-none focus:ring-2 focus:ring-brand-500">200 題</button>
+          <button id="questionCount400Btn" type="button" onclick="selectQuestionCount(400)" aria-pressed="false" class="question-count-btn px-3 py-3 rounded-xl border font-bold transition-all focus:outline-none focus:ring-2 focus:ring-brand-500">400 題</button>
+          <button id="questionCount600Btn" type="button" onclick="selectQuestionCount(600)" aria-pressed="false" class="question-count-btn px-3 py-3 rounded-xl border font-bold transition-all focus:outline-none focus:ring-2 focus:ring-brand-500">600 題</button>
+          <button id="questionCount800Btn" type="button" onclick="selectQuestionCount(800)" aria-pressed="false" class="question-count-btn px-3 py-3 rounded-xl border font-bold transition-all focus:outline-none focus:ring-2 focus:ring-brand-500">800 題</button>
+          <button id="questionCount1000Btn" type="button" onclick="selectQuestionCount(1000)" aria-pressed="false" class="question-count-btn px-3 py-3 rounded-xl border font-bold transition-all focus:outline-none focus:ring-2 focus:ring-brand-500">1000 題</button>
           <button id="questionCountAllBtn" type="button" onclick="selectQuestionCount('all')" aria-pressed="false" class="question-count-btn px-3 py-3 rounded-xl border font-bold transition-all focus:outline-none focus:ring-2 focus:ring-brand-500">全題庫</button>
         </div>
         <p id="questionCountHint" class="text-xs text-slate-500 dark:text-slate-400 mt-3"></p>
@@ -115,6 +140,27 @@
         <i class="fa-solid fa-chart-column"></i>
         <span>單字學習統計</span>
       </button>
+      <button onclick="showQuizHistory()" class="w-full mt-3 py-3 bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 text-slate-700 dark:text-slate-200 font-semibold rounded-xl transition-all flex items-center justify-center gap-2">
+        <i class="fa-solid fa-clock-rotate-left"></i>
+        <span>歷史測驗資料</span>
+      </button>
+      <div class="mt-4">
+        <input id="timerEnabled" type="checkbox" onchange="setTimerEnabled(this.checked)" class="timer-toggle-input sr-only">
+        <label for="timerEnabled" class="timer-toggle-card flex cursor-pointer items-center justify-between gap-4 rounded-xl border border-slate-200 bg-white px-4 py-3 text-left transition-colors dark:border-slate-600 dark:bg-slate-700">
+          <span class="flex items-center gap-3">
+            <span class="flex h-10 w-10 items-center justify-center rounded-lg bg-brand-50 text-brand-600 dark:bg-brand-900/40 dark:text-brand-300">
+              <i class="fa-solid fa-stopwatch"></i>
+            </span>
+            <span>
+              <span class="block text-sm font-semibold text-slate-700 dark:text-slate-100">測驗計時器</span>
+              <span class="block text-xs text-slate-500 dark:text-slate-400">記錄每次測驗的作答時間</span>
+            </span>
+          </span>
+          <span aria-hidden="true" class="timer-toggle-track flex h-6 w-11 shrink-0 items-center rounded-full bg-slate-300 p-1 transition-colors dark:bg-slate-500">
+            <span class="timer-toggle-knob h-4 w-4 rounded-full bg-white shadow transition-transform"></span>
+          </span>
+        </label>
+      </div>
       <p id="wordStatsStatus" class="text-xs text-rose-500 mt-3" role="status"></p>
     </div>
 
@@ -137,6 +183,10 @@
             <i class="fa-solid fa-circle-check text-emerald-500"></i>
             <span class="text-slate-500 dark:text-slate-400">得分:</span>
             <span id="scoreDisplay" class="font-bold text-slate-800 dark:text-slate-100">0</span>
+          </div>
+          <div id="quizTimer" class="hidden items-center gap-2 font-semibold text-slate-600 dark:text-slate-300" role="timer" aria-live="off">
+            <i class="fa-solid fa-stopwatch text-brand-500"></i>
+            <span id="quizTimerValue">00:00</span>
           </div>
           <div class="flex items-center gap-3">
             <button onclick="confirmRestart()" class="text-xs text-slate-400 hover:text-rose-500 transition-colors flex items-center gap-1">
@@ -237,6 +287,7 @@
           <div class="text-sm text-slate-600 dark:text-slate-300">
             答對 <span id="finalCorrectCount" class="font-bold text-emerald-600 dark:text-emerald-400">34</span> / <span id="finalTotalCount">40</span> 題
           </div>
+          <p id="finalDuration" class="hidden mt-2 text-sm font-semibold text-slate-600 dark:text-slate-300"></p>
         </div>
 
         <div class="flex flex-col sm:flex-row gap-3 justify-center">
@@ -287,6 +338,21 @@
         </div>
       </div>
       <div id="wordStatsTable" class="overflow-auto p-4 sm:p-5"></div>
+    </div>
+  </div>
+
+  <div id="quizHistoryModal" class="hidden fixed inset-0 z-50 bg-slate-950/70 p-3 sm:p-6" role="dialog" aria-modal="true" aria-labelledby="quizHistoryTitle" onclick="if (event.target === this) hideQuizHistory()">
+    <div class="bg-white dark:bg-slate-800 w-full max-w-4xl max-h-full mx-auto rounded-2xl shadow-2xl flex flex-col overflow-hidden">
+      <div class="flex items-center justify-between gap-4 p-5 border-b border-slate-200 dark:border-slate-700">
+        <div>
+          <h2 id="quizHistoryTitle" class="text-xl font-bold text-slate-900 dark:text-white">歷史測驗資料</h2>
+          <p id="quizHistorySummary" class="text-sm text-slate-500 dark:text-slate-400 mt-1"></p>
+        </div>
+        <button type="button" onclick="hideQuizHistory()" aria-label="關閉歷史測驗資料" class="p-2 rounded-lg text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-700">
+          <i class="fa-solid fa-xmark text-lg"></i>
+        </button>
+      </div>
+      <div id="quizHistoryList" class="overflow-auto p-4 sm:p-5 space-y-3"></div>
     </div>
   </div>
 

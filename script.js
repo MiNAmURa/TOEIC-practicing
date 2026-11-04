@@ -23,9 +23,23 @@ import defaultQuizQuestions from './questions.json' with { type: 'json' };
     let wordStats = {};
     let statsRecordedForQuiz = false;
     let wordStatsStorageReady = true;
+    let quizHistory = [];
+    let timerEnabled = false;
+    let quizTimerStartedAt = null;
+    let quizTimerInterval = null;
+    let completedDurationMs = null;
+    let quizHistoryRecordedForQuiz = false;
+    let activeQuizOrder = '隨機';
     const WORD_STATS_STORAGE_KEY = 'toeicVocabularyStats';
-    const availableQuestionCounts = [20, 40, 50, 80, 100, 150, 200];
+    const QUIZ_HISTORY_STORAGE_KEY = 'toeicQuizHistory';
+    const TIMER_PREFERENCE_STORAGE_KEY = 'toeicQuizTimerEnabled';
+    const availableQuestionCounts = [20, 40, 50, 80, 100, 150, 200, 400, 600, 800, 1000];
     const allQuestionsOption = 'all';
+    const questionOrderLabels = {
+      random: '隨機',
+      accuracy: '按照答題機率升冪',
+      fixed: '固定排序'
+    };
 
     function loadWordStats() {
       try {
@@ -90,6 +104,128 @@ import defaultQuizQuestions from './questions.json' with { type: 'json' };
     function getWordAccuracy(stats) {
       const attempts = stats.correct + stats.wrong;
       return attempts ? `${Math.round((stats.correct / attempts) * 100)}%` : '—';
+    }
+
+    function formatDuration(durationMs) {
+      const totalSeconds = Math.floor(durationMs / 1000);
+      const seconds = String(totalSeconds % 60).padStart(2, '0');
+      const minutes = String(Math.floor(totalSeconds / 60) % 60).padStart(2, '0');
+      const hours = Math.floor(totalSeconds / 3600);
+      return hours ? `${String(hours).padStart(2, '0')}:${minutes}:${seconds}` : `${minutes}:${seconds}`;
+    }
+
+    function updateQuizTimer() {
+      if (quizTimerStartedAt === null) return;
+      document.getElementById('quizTimerValue').innerText = formatDuration(Date.now() - quizTimerStartedAt);
+    }
+
+    function stopQuizTimer() {
+      if (quizTimerInterval !== null) {
+        clearInterval(quizTimerInterval);
+        quizTimerInterval = null;
+      }
+    }
+
+    function setTimerEnabled(enabled) {
+      timerEnabled = enabled;
+      try {
+        localStorage.setItem(TIMER_PREFERENCE_STORAGE_KEY, String(timerEnabled));
+        document.getElementById('wordStatsStatus').innerText = '';
+      } catch (error) {
+        document.getElementById('wordStatsStatus').innerText = '計時器設定無法儲存，請確認瀏覽器儲存空間設定。';
+        console.error('Unable to save quiz timer preference:', error);
+      }
+    }
+
+    function loadTimerPreference() {
+      try {
+        const savedPreference = localStorage.getItem(TIMER_PREFERENCE_STORAGE_KEY);
+        if (savedPreference !== null && savedPreference !== 'true' && savedPreference !== 'false') {
+          throw new Error('Stored timer preference has an invalid format.');
+        }
+
+        timerEnabled = savedPreference === 'true';
+        document.getElementById('timerEnabled').checked = timerEnabled;
+      } catch (error) {
+        document.getElementById('wordStatsStatus').innerText = '無法讀取計時器設定，請確認瀏覽器儲存空間設定。';
+        console.error('Unable to load quiz timer preference:', error);
+      }
+    }
+
+    function isValidQuizHistoryEntry(entry) {
+      const validOrders = [...Object.values(questionOrderLabels), '錯題複習（隨機）'];
+      return entry &&
+        typeof entry.completedAt === 'string' &&
+        !Number.isNaN(Date.parse(entry.completedAt)) &&
+        Number.isInteger(entry.questionCount) && entry.questionCount > 0 &&
+        Number.isInteger(entry.correct) && entry.correct >= 0 &&
+        Number.isInteger(entry.wrong) && entry.wrong >= 0 &&
+        entry.correct + entry.wrong === entry.questionCount &&
+        Number.isInteger(entry.accuracy) && entry.accuracy >= 0 && entry.accuracy <= 100 &&
+        validOrders.includes(entry.order) &&
+        (entry.durationMs === null || (Number.isInteger(entry.durationMs) && entry.durationMs >= 0));
+    }
+
+    function loadQuizHistory() {
+      try {
+        const savedHistory = localStorage.getItem(QUIZ_HISTORY_STORAGE_KEY);
+        if (savedHistory === null) return;
+
+        const parsedHistory = JSON.parse(savedHistory);
+        if (!Array.isArray(parsedHistory) || !parsedHistory.every(isValidQuizHistoryEntry)) {
+          throw new Error('Stored quiz history has an invalid format.');
+        }
+        quizHistory = parsedHistory;
+      } catch (error) {
+        document.getElementById('wordStatsStatus').innerText = '無法讀取歷史測驗資料，請確認瀏覽器儲存空間設定。';
+        console.error('Unable to load quiz history:', error);
+      }
+    }
+
+    function saveQuizHistory() {
+      try {
+        localStorage.setItem(QUIZ_HISTORY_STORAGE_KEY, JSON.stringify(quizHistory));
+        document.getElementById('wordStatsStatus').innerText = '';
+      } catch (error) {
+        document.getElementById('wordStatsStatus').innerText = '歷史測驗資料儲存失敗，請確認瀏覽器儲存空間設定。';
+        console.error('Unable to save quiz history:', error);
+      }
+    }
+
+    function showQuizHistory() {
+      document.getElementById('quizHistorySummary').innerText = `總測驗次數：${quizHistory.length} 次`;
+      document.getElementById('quizHistoryList').innerHTML = quizHistory.length
+        ? [...quizHistory].reverse().map((entry, index) => {
+          const date = new Date(entry.completedAt).toLocaleString('zh-TW');
+          const attemptNumber = quizHistory.length - index;
+          const duration = entry.durationMs === null
+            ? ''
+            : `<p class="text-sm text-slate-600 dark:text-slate-300"><i class="fa-solid fa-stopwatch mr-1 text-brand-500"></i>作答時間：${formatDuration(entry.durationMs)}</p>`;
+          return `
+            <article class="rounded-xl border border-slate-200 dark:border-slate-700 p-4">
+              <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-3">
+                <h3 class="font-bold text-slate-900 dark:text-white">第 ${attemptNumber} 次測驗</h3>
+                <time class="text-xs text-slate-500 dark:text-slate-400">${date}</time>
+              </div>
+              <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-sm">
+                <p class="text-slate-600 dark:text-slate-300">題數：<strong>${entry.questionCount} 題</strong></p>
+                <p class="text-slate-600 dark:text-slate-300">排序：<strong>${entry.order}</strong></p>
+                <p class="text-emerald-600 dark:text-emerald-400">答對：<strong>${entry.correct} 題</strong></p>
+                <p class="text-rose-600 dark:text-rose-400">答錯：<strong>${entry.wrong} 題</strong></p>
+              </div>
+              <div class="mt-3 flex flex-wrap items-center gap-x-5 gap-y-2">
+                <p class="text-sm font-bold text-brand-600 dark:text-brand-400">總正確率：${entry.accuracy}%</p>
+                ${duration}
+              </div>
+            </article>
+          `;
+        }).join('')
+        : '<p class="py-10 text-center text-slate-500 dark:text-slate-400">尚無已完成的測驗紀錄。</p>';
+      document.getElementById('quizHistoryModal').classList.remove('hidden');
+    }
+
+    function hideQuizHistory() {
+      document.getElementById('quizHistoryModal').classList.add('hidden');
     }
 
     function showWordStats() {
@@ -269,6 +405,7 @@ import defaultQuizQuestions from './questions.json' with { type: 'json' };
 
     // Start Quiz Function
     function startQuiz(customQuestions = null) {
+      stopQuizTimer();
       if (customQuestions) {
         quizQuestions = shuffleArray(customQuestions);
       } else {
@@ -294,25 +431,45 @@ import defaultQuizQuestions from './questions.json' with { type: 'json' };
           : selectedQuestionCount;
         quizQuestions = orderedQuestions.slice(0, questionCount);
       }
+      const quizOrder = customQuestions
+        ? '錯題複習（隨機）'
+        : questionOrderLabels[selectedQuestionOrder];
       currentIndex = 0;
       score = 0;
       answeredState = new Array(quizQuestions.length).fill(null);
       userWrongQuestions = [];
       statsRecordedForQuiz = false;
+      quizHistoryRecordedForQuiz = false;
+      completedDurationMs = null;
+      quizTimerStartedAt = timerEnabled ? Date.now() : null;
+      activeQuizOrder = quizOrder;
 
       document.getElementById('startCard').classList.add('hidden');
       document.getElementById('resultScreen').classList.add('hidden');
       document.getElementById('quizScreen').classList.remove('hidden');
       document.getElementById('quizScreen').classList.add('flex');
+      const timerElement = document.getElementById('quizTimer');
+      timerElement.classList.toggle('hidden', !timerEnabled);
+      timerElement.classList.toggle('flex', timerEnabled);
+      document.getElementById('quizTimerValue').innerText = '00:00';
 
       updateScoreDisplay();
       renderQuestion();
+      if (timerEnabled) {
+        updateQuizTimer();
+        quizTimerInterval = setInterval(updateQuizTimer, 1000);
+      }
+
     }
 
     // Global keydown handler for seamless Enter key navigation
     document.addEventListener('keydown', function(e) {
       if (e.key === 'Escape' && !document.getElementById('wordStatsModal').classList.contains('hidden')) {
         hideWordStats();
+        return;
+      }
+      if (e.key === 'Escape' && !document.getElementById('quizHistoryModal').classList.contains('hidden')) {
+        hideQuizHistory();
         return;
       }
       if (e.key === 'Enter') {
@@ -478,17 +635,39 @@ import defaultQuizQuestions from './questions.json' with { type: 'json' };
 
     // Show Results
     function showResults() {
+      if (quizHistoryRecordedForQuiz) return;
       recordQuizStats();
+      stopQuizTimer();
+      if (quizTimerStartedAt !== null) {
+        completedDurationMs = Date.now() - quizTimerStartedAt;
+        quizTimerStartedAt = null;
+      }
+      const total = quizQuestions.length;
+      const percentage = Math.round((score / total) * 100);
+      quizHistory.push({
+        completedAt: new Date().toISOString(),
+        questionCount: total,
+        order: activeQuizOrder,
+        correct: score,
+        wrong: total - score,
+        accuracy: percentage,
+        durationMs: completedDurationMs
+      });
+      quizHistoryRecordedForQuiz = true;
+      saveQuizHistory();
+
       document.getElementById('quizScreen').classList.add('hidden');
       document.getElementById('resultScreen').classList.remove('hidden');
       document.getElementById('resultScreen').classList.add('flex');
 
-      const total = quizQuestions.length;
-      const percentage = Math.round((score / total) * 100);
-
       document.getElementById('finalScorePercent').innerText = `${percentage}%`;
       document.getElementById('finalCorrectCount').innerText = score;
       document.getElementById('finalTotalCount').innerText = total;
+      const finalDuration = document.getElementById('finalDuration');
+      finalDuration.classList.toggle('hidden', completedDurationMs === null);
+      if (completedDurationMs !== null) {
+        finalDuration.innerText = `作答時間：${formatDuration(completedDurationMs)}`;
+      }
 
       const resultIcon = document.getElementById('resultIcon');
       const resultTitle = document.getElementById('resultTitle');
@@ -577,6 +756,8 @@ import defaultQuizQuestions from './questions.json' with { type: 'json' };
     }
 
     function returnToHome() {
+      stopQuizTimer();
+      quizTimerStartedAt = null;
       quizQuestions = [];
       currentIndex = 0;
       score = 0;
@@ -601,6 +782,8 @@ import defaultQuizQuestions from './questions.json' with { type: 'json' };
     updateQuestionCountButtons();
     selectQuestionOrder(selectedQuestionOrder);
     loadWordStats();
+    loadTimerPreference();
+    loadQuizHistory();
 
     Object.assign(window, {
       toggleTheme,
@@ -616,5 +799,8 @@ import defaultQuizQuestions from './questions.json' with { type: 'json' };
       selectQuestionOrder,
       showWordStats,
       hideWordStats,
-      filterWordStats
+      filterWordStats,
+      showQuizHistory,
+      hideQuizHistory,
+      setTimerEnabled
     });
