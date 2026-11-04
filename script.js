@@ -41,10 +41,14 @@ import defaultQuizQuestions from './questions.json' with { type: 'json' };
     const availableQuestionCounts = [20, 40, 50, 80, 100, 150, 200, 400, 600, 800, 1000];
     const allQuestionsOption = 'all';
     const questionOrderLabels = {
-      random: '隨機',
-      accuracy: '按照答題機率升冪',
+      random: '隨機抽題',
+      accuracy: '錯題優先',
       fixed: '固定排序',
       newest: '由新到舊'
+    };
+    const legacyQuestionOrderLabels = {
+      隨機: questionOrderLabels.random,
+      按照答題機率升冪: questionOrderLabels.accuracy
     };
 
     function loadWordStats() {
@@ -164,7 +168,11 @@ import defaultQuizQuestions from './questions.json' with { type: 'json' };
     }
 
     function isValidQuizHistoryEntry(entry) {
-      const validOrders = [...Object.values(questionOrderLabels), WRONG_REVIEW_ORDER_LABEL];
+      const validOrders = [
+        ...Object.values(questionOrderLabels),
+        ...Object.keys(legacyQuestionOrderLabels),
+        WRONG_REVIEW_ORDER_LABEL
+      ];
       return entry &&
         typeof entry.completedAt === 'string' &&
         !Number.isNaN(Date.parse(entry.completedAt)) &&
@@ -186,8 +194,13 @@ import defaultQuizQuestions from './questions.json' with { type: 'json' };
         if (!Array.isArray(parsedHistory) || !parsedHistory.every(isValidQuizHistoryEntry)) {
           throw new Error('Stored quiz history has an invalid format.');
         }
-        quizHistory = parsedHistory.filter(entry => entry.order !== WRONG_REVIEW_ORDER_LABEL);
-        if (quizHistory.length !== parsedHistory.length) {
+        quizHistory = parsedHistory
+          .filter(entry => entry.order !== WRONG_REVIEW_ORDER_LABEL)
+          .map(entry => ({
+            ...entry,
+            order: legacyQuestionOrderLabels[entry.order] || entry.order
+          }));
+        if (JSON.stringify(quizHistory) !== JSON.stringify(parsedHistory)) {
           saveQuizHistory();
         }
       } catch (error) {
@@ -233,7 +246,12 @@ import defaultQuizQuestions from './questions.json' with { type: 'json' };
 
       return {
         wordStats: backup.wordStats,
-        quizHistory: backup.quizHistory.filter(entry => entry.order !== WRONG_REVIEW_ORDER_LABEL),
+        quizHistory: backup.quizHistory
+          .filter(entry => entry.order !== WRONG_REVIEW_ORDER_LABEL)
+          .map(entry => ({
+            ...entry,
+            order: legacyQuestionOrderLabels[entry.order] || entry.order
+          })),
         timerEnabled: backup.timerEnabled
       };
     }
@@ -272,7 +290,7 @@ import defaultQuizQuestions from './questions.json' with { type: 'json' };
 
     function exportProgressBackup() {
       if (!wordStatsStorageReady || !quizHistoryStorageReady || !timerPreferenceStorageReady) {
-        document.getElementById('wordStatsStatus').innerText = '目前無法讀取完整統計資料，請先確認瀏覽器儲存空間設定。';
+        document.getElementById('backupStatus').innerText = '目前無法讀取完整統計資料，請先確認瀏覽器儲存空間設定。';
         return;
       }
 
@@ -295,9 +313,10 @@ import defaultQuizQuestions from './questions.json' with { type: 'json' };
         downloadLink.click();
         downloadLink.remove();
         setTimeout(() => URL.revokeObjectURL(blobUrl), 1000);
-        document.getElementById('wordStatsStatus').innerText = '紀錄備份檔已匯出。';
+        document.getElementById('backupStatus').className = 'text-sm text-emerald-600 dark:text-emerald-400';
+        document.getElementById('backupStatus').innerText = '紀錄備份檔已匯出。';
       } catch (error) {
-        document.getElementById('wordStatsStatus').innerText = '匯出失敗，請確認瀏覽器是否允許下載檔案。';
+        document.getElementById('backupStatus').innerText = '匯出失敗，請確認瀏覽器是否允許下載檔案。';
         console.error('Unable to export progress backup:', error);
       }
     }
@@ -321,9 +340,10 @@ import defaultQuizQuestions from './questions.json' with { type: 'json' };
         quizHistoryStorageReady = true;
         timerPreferenceStorageReady = true;
         document.getElementById('timerEnabled').checked = timerEnabled;
-        document.getElementById('wordStatsStatus').innerText = '紀錄已成功匯入並取代本機資料。';
+        document.getElementById('backupStatus').className = 'text-sm text-emerald-600 dark:text-emerald-400';
+        document.getElementById('backupStatus').innerText = '紀錄已成功匯入並取代本機資料。';
       } catch (error) {
-        document.getElementById('wordStatsStatus').innerText =
+        document.getElementById('backupStatus').innerText =
           error instanceof SyntaxError
             ? '匯入失敗：檔案不是有效的 JSON 備份。'
             : `匯入失敗：${error.message}`;
@@ -367,6 +387,16 @@ import defaultQuizQuestions from './questions.json' with { type: 'json' };
 
     function hideQuizHistory() {
       document.getElementById('quizHistoryModal').classList.add('hidden');
+    }
+
+    function showBackupModal() {
+      document.getElementById('backupStatus').innerText = '';
+      document.getElementById('backupStatus').className = 'text-sm text-rose-500';
+      document.getElementById('backupModal').classList.remove('hidden');
+    }
+
+    function hideBackupModal() {
+      document.getElementById('backupModal').classList.add('hidden');
     }
 
     function showWordStats() {
@@ -497,17 +527,6 @@ import defaultQuizQuestions from './questions.json' with { type: 'json' };
       });
     }
 
-    // Theme toggle function
-    function toggleTheme() {
-      document.documentElement.classList.toggle('dark');
-      const themeIcon = document.getElementById('themeIcon');
-      if (document.documentElement.classList.contains('dark')) {
-        themeIcon.className = 'fa-solid fa-sun';
-      } else {
-        themeIcon.className = 'fa-solid fa-moon';
-      }
-    }
-
     function playAnswerPronunciation() {
       const status = document.getElementById('pronunciationStatus');
       if (!('speechSynthesis' in window) || !('SpeechSynthesisUtterance' in window)) {
@@ -613,6 +632,10 @@ import defaultQuizQuestions from './questions.json' with { type: 'json' };
       }
       if (e.key === 'Escape' && !document.getElementById('quizHistoryModal').classList.contains('hidden')) {
         hideQuizHistory();
+        return;
+      }
+      if (e.key === 'Escape' && !document.getElementById('backupModal').classList.contains('hidden')) {
+        hideBackupModal();
         return;
       }
       if (e.key === 'Enter') {
@@ -931,7 +954,6 @@ import defaultQuizQuestions from './questions.json' with { type: 'json' };
     loadQuizHistory();
 
     Object.assign(window, {
-      toggleTheme,
       selectQuestionCount,
       startQuiz,
       confirmRestart,
@@ -947,6 +969,8 @@ import defaultQuizQuestions from './questions.json' with { type: 'json' };
       filterWordStats,
       showQuizHistory,
       hideQuizHistory,
+      showBackupModal,
+      hideBackupModal,
       setTimerEnabled,
       exportProgressBackup,
       importProgressBackup

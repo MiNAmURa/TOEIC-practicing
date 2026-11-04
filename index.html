@@ -75,13 +75,14 @@
           <i class="fa-solid fa-graduation-cap text-lg"></i>
         </div>
         <div>
-          <h1 class="font-bold text-lg leading-tight">TOEIC 多益核心單字</h1>
+          <h1 class="font-bold text-lg leading-tight">TOEIC 多益單字測驗</h1>
         </div>
       </div>
 
       <div class="flex items-center gap-2">
-        <button id="themeToggleBtn" onclick="toggleTheme()" class="p-2.5 rounded-xl bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-600 transition-all">
-          <i id="themeIcon" class="fa-solid fa-sun"></i>
+        <button type="button" onclick="showBackupModal()" aria-label="開啟備份管理" class="inline-flex items-center gap-2 rounded-xl bg-slate-100 px-3 py-2.5 text-sm font-semibold text-slate-600 transition-all hover:bg-slate-200 dark:bg-slate-700 dark:text-slate-200 dark:hover:bg-slate-600">
+          <i class="fa-solid fa-arrow-right-arrow-left"></i>
+          <span>備份管理</span>
         </button>
       </div>
     </div>
@@ -92,9 +93,6 @@
 
     <!-- Start Screen Card -->
     <div id="startCard" class="bg-white dark:bg-slate-800 rounded-2xl p-6 sm:p-10 shadow-xl border border-slate-100 dark:border-slate-700/60 text-center max-w-2xl mx-auto w-full transition-all">
-      <div class="w-20 h-20 bg-brand-50 dark:bg-brand-900/30 text-brand-600 dark:text-brand-400 rounded-full flex items-center justify-center mx-auto mb-6">
-        <i class="fa-solid fa-keyboard text-3xl"></i>
-      </div>
       <h2 class="text-2xl sm:text-3xl font-bold mb-3">多益單字拼字特訓</h2>
       <p class="text-slate-600 dark:text-slate-300 mb-6 leading-relaxed">
         本測驗無選擇題選項！
@@ -125,9 +123,9 @@
 
       <div class="mb-8 text-left">
         <p class="text-sm font-semibold text-slate-600 dark:text-slate-300 mb-3">排序題庫</p>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-          <button id="questionOrderRandomBtn" type="button" onclick="selectQuestionOrder('random')" aria-pressed="true" class="question-order-btn px-3 py-3 rounded-xl border font-semibold transition-all focus:outline-none focus:ring-2 focus:ring-brand-500">隨機</button>
-          <button id="questionOrderAccuracyBtn" type="button" onclick="selectQuestionOrder('accuracy')" aria-pressed="false" class="question-order-btn px-3 py-3 rounded-xl border font-semibold transition-all focus:outline-none focus:ring-2 focus:ring-brand-500">按照答題機率升冪</button>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+          <button id="questionOrderRandomBtn" type="button" onclick="selectQuestionOrder('random')" aria-pressed="true" class="question-order-btn px-3 py-3 rounded-xl border font-semibold transition-all focus:outline-none focus:ring-2 focus:ring-brand-500">隨機抽題</button>
+          <button id="questionOrderAccuracyBtn" type="button" onclick="selectQuestionOrder('accuracy')" aria-pressed="false" class="question-order-btn px-3 py-3 rounded-xl border font-semibold transition-all focus:outline-none focus:ring-2 focus:ring-brand-500">錯題優先</button>
           <button id="questionOrderFixedBtn" type="button" onclick="selectQuestionOrder('fixed')" aria-pressed="false" class="question-order-btn px-3 py-3 rounded-xl border font-semibold transition-all focus:outline-none focus:ring-2 focus:ring-brand-500">固定排序</button>
           <button id="questionOrderNewestBtn" type="button" onclick="selectQuestionOrder('newest')" aria-pressed="false" class="question-order-btn px-3 py-3 rounded-xl border font-semibold transition-all focus:outline-none focus:ring-2 focus:ring-brand-500">由新到舊</button>
         </div>
@@ -137,24 +135,16 @@
         <span>開始拼字測驗</span>
         <i class="fa-solid fa-pen-to-square text-sm"></i>
       </button>
-      <button onclick="showWordStats()" class="w-full mt-3 py-3 bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 text-slate-700 dark:text-slate-200 font-semibold rounded-xl transition-all flex items-center justify-center gap-2">
-        <i class="fa-solid fa-chart-column"></i>
-        <span>單字學習統計</span>
-      </button>
-      <button onclick="showQuizHistory()" class="w-full mt-3 py-3 bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 text-slate-700 dark:text-slate-200 font-semibold rounded-xl transition-all flex items-center justify-center gap-2">
-        <i class="fa-solid fa-clock-rotate-left"></i>
-        <span>歷史測驗資料</span>
-      </button>
       <div class="mt-3 grid grid-cols-2 gap-3">
-        <button type="button" onclick="exportProgressBackup()" class="py-3 rounded-xl border border-brand-200 bg-brand-50 text-brand-700 font-semibold transition-colors hover:bg-brand-100 dark:border-brand-800 dark:bg-brand-900/30 dark:text-brand-300 dark:hover:bg-brand-900/50">
-          <i class="fa-solid fa-file-export mr-2"></i>匯出紀錄
+        <button onclick="showWordStats()" class="py-3 bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 text-slate-700 dark:text-slate-200 font-semibold rounded-xl transition-all flex items-center justify-center gap-2">
+          <i class="fa-solid fa-chart-column"></i>
+          <span>單字學習統計</span>
         </button>
-        <label for="progressImportFile" class="cursor-pointer rounded-xl border border-slate-200 bg-slate-50 py-3 text-center font-semibold text-slate-700 transition-colors hover:bg-slate-100 dark:border-slate-600 dark:bg-slate-700 dark:text-slate-200 dark:hover:bg-slate-600">
-          <i class="fa-solid fa-file-import mr-2"></i>匯入紀錄
-        </label>
-        <input id="progressImportFile" type="file" accept=".json,application/json" onchange="importProgressBackup(event)" class="sr-only">
+        <button onclick="showQuizHistory()" class="py-3 bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 text-slate-700 dark:text-slate-200 font-semibold rounded-xl transition-all flex items-center justify-center gap-2">
+          <i class="fa-solid fa-clock-rotate-left"></i>
+          <span>歷史測驗資料</span>
+        </button>
       </div>
-      <p class="mt-2 text-xs text-slate-500 dark:text-slate-400">匯入紀錄會取代這台裝置目前的學習統計、歷史測驗資料與計時器設定。</p>
       <div class="mt-4">
         <input id="timerEnabled" type="checkbox" onchange="setTimerEnabled(this.checked)" class="timer-toggle-input sr-only">
         <label for="timerEnabled" class="timer-toggle-card flex cursor-pointer items-center justify-between gap-4 rounded-xl border border-slate-200 bg-white px-4 py-3 text-left transition-colors dark:border-slate-600 dark:bg-slate-700">
@@ -364,6 +354,43 @@
         </button>
       </div>
       <div id="quizHistoryList" class="overflow-auto p-4 sm:p-5 space-y-3"></div>
+    </div>
+  </div>
+
+  <div id="backupModal" class="hidden fixed inset-0 z-50 bg-slate-950/70 p-3 sm:p-6" role="dialog" aria-modal="true" aria-labelledby="backupModalTitle" onclick="if (event.target === this) hideBackupModal()">
+    <div class="bg-white dark:bg-slate-800 w-full max-w-lg max-h-full mx-auto rounded-2xl shadow-2xl flex flex-col overflow-hidden">
+      <div class="flex items-center justify-between gap-4 p-5 border-b border-slate-200 dark:border-slate-700">
+        <div>
+          <h2 id="backupModalTitle" class="text-xl font-bold text-slate-900 dark:text-white">備份管理</h2>
+          <p class="mt-1 text-sm text-slate-500 dark:text-slate-400">在不同裝置間轉移學習統計與測驗紀錄。</p>
+        </div>
+        <button type="button" onclick="hideBackupModal()" aria-label="關閉備份管理" class="p-2 rounded-lg text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-700">
+          <i class="fa-solid fa-xmark text-lg"></i>
+        </button>
+      </div>
+      <div class="space-y-4 p-5">
+        <button type="button" onclick="exportProgressBackup()" class="w-full rounded-xl border border-brand-200 bg-brand-50 p-4 text-left text-brand-700 transition-colors hover:bg-brand-100 dark:border-brand-800 dark:bg-brand-900/30 dark:text-brand-300 dark:hover:bg-brand-900/50">
+          <span class="flex items-center gap-3">
+            <i class="fa-solid fa-file-export text-xl"></i>
+            <span>
+              <span class="block font-semibold">匯出紀錄</span>
+              <span class="mt-1 block text-xs opacity-80">下載包含單字統計、歷史測驗與計時器設定的備份檔</span>
+            </span>
+          </span>
+        </button>
+        <label for="progressImportFile" class="block cursor-pointer rounded-xl border border-slate-200 bg-slate-50 p-4 text-slate-700 transition-colors hover:bg-slate-100 dark:border-slate-600 dark:bg-slate-700 dark:text-slate-200 dark:hover:bg-slate-600">
+          <span class="flex items-center gap-3">
+            <i class="fa-solid fa-file-import text-xl"></i>
+            <span>
+              <span class="block font-semibold">匯入紀錄</span>
+              <span class="mt-1 block text-xs text-slate-500 dark:text-slate-400">選擇先前匯出的 JSON 備份檔</span>
+            </span>
+          </span>
+        </label>
+        <input id="progressImportFile" type="file" accept=".json,application/json" onchange="importProgressBackup(event)" class="sr-only">
+        <p class="text-xs leading-relaxed text-slate-500 dark:text-slate-400">匯入前會再次確認；匯入後將取代這台裝置目前的學習統計、歷史測驗資料與計時器設定。</p>
+        <p id="backupStatus" class="text-sm text-rose-500" role="status" aria-live="polite"></p>
+      </div>
     </div>
   </div>
 
