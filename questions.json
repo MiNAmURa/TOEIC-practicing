@@ -1326,5 +1326,61 @@
     "meaning": "違規地、違法地、不正當地",
     "sentenceEn": "The documents were ____ stored and could not be located.",
     "sentenceZh": "這些文件存放不當，因此無法找到。"
+  },
+  {
+    "id": 167,
+    "word": "likely",
+    "pos": "(adj.)",
+    "meaning": "可能的",
+    "sentenceEn": "The shipment is ____ to arrive before noon.",
+    "sentenceZh": "這批貨很可能會在中午前送達。"
+  },
+  {
+    "id": 168,
+    "word": "after all",
+    "pos": "(phr.)",
+    "meaning": "畢竟",
+    "sentenceEn": "We should reserve a larger room; ____, more than fifty people have registered.",
+    "sentenceZh": "我們應該預訂較大的房間；畢竟，已有五十多人報名。"
+  },
+  {
+    "id": 169,
+    "word": "can always",
+    "pos": "(phr.)",
+    "meaning": "也許可以…（做另一個選擇）",
+    "sentenceEn": "If the train is full, we ____ take a taxi instead.",
+    "sentenceZh": "如果火車客滿，我們也可以改搭計程車。"
+  },
+  {
+    "id": 170,
+    "word": "looking to",
+    "pos": "(phr.)",
+    "meaning": "想要做…（某事）",
+    "sentenceEn": "The company is ____ expand its operations into Asia next year.",
+    "sentenceZh": "這家公司計劃明年將業務拓展至亞洲。"
+  },
+  {
+    "id": 171,
+    "word": "That leaves",
+    "pos": "(phr.)",
+    "meaning": "那就只剩下…",
+    "sentenceEn": "The other candidates have declined, so ____ us with two finalists.",
+    "sentenceZh": "其他候選人都已婉拒，因此就只剩下兩位入圍者。"
+  },
+  {
+    "id": 172,
+    "word": "current",
+    "pos": "(n.)",
+    "meaning": "水流、氣流、電流、思潮",
+    "sentenceEn": "A strong ocean ____ made it difficult for the boat to reach shore.",
+    "sentenceZh": "強勁的海流讓船隻難以抵達岸邊。"
+  },
+  {
+    "id": 173,
+    "word": "look forward to",
+    "pos": "(phr.)",
+    "meaning": "期待",
+    "sentenceEn": "We ____ welcoming you to our annual conference.",
+    "sentenceZh": "我們期待歡迎您蒞臨年度研討會。"
   }
 ]
