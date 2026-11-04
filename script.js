@@ -24,7 +24,9 @@ import defaultQuizQuestions from './questions.json' with { type: 'json' };
     let statsRecordedForQuiz = false;
     let wordStatsStorageReady = true;
     let quizHistory = [];
+    let quizHistoryStorageReady = true;
     let timerEnabled = false;
+    let timerPreferenceStorageReady = true;
     let quizTimerStartedAt = null;
     let quizTimerInterval = null;
     let completedDurationMs = null;
@@ -33,6 +35,8 @@ import defaultQuizQuestions from './questions.json' with { type: 'json' };
     const WORD_STATS_STORAGE_KEY = 'toeicVocabularyStats';
     const QUIZ_HISTORY_STORAGE_KEY = 'toeicQuizHistory';
     const TIMER_PREFERENCE_STORAGE_KEY = 'toeicQuizTimerEnabled';
+    const PROGRESS_BACKUP_FORMAT = 'toeic-vocabulary-progress';
+    const PROGRESS_BACKUP_VERSION = 1;
     const WRONG_REVIEW_ORDER_LABEL = '錯題複習（隨機）';
     const availableQuestionCounts = [20, 40, 50, 80, 100, 150, 200, 400, 600, 800, 1000];
     const allQuestionsOption = 'all';
@@ -74,9 +78,11 @@ import defaultQuizQuestions from './questions.json' with { type: 'json' };
 
       try {
         localStorage.setItem(WORD_STATS_STORAGE_KEY, JSON.stringify(wordStats));
+        wordStatsStorageReady = true;
         document.getElementById('wordStatsStatus').innerText = '';
         return true;
       } catch (error) {
+        wordStatsStorageReady = false;
         document.getElementById('wordStatsStatus').innerText = '統計儲存失敗，請確認瀏覽器儲存空間設定。';
         console.error('Unable to save word statistics:', error);
         return false;
@@ -132,8 +138,10 @@ import defaultQuizQuestions from './questions.json' with { type: 'json' };
       timerEnabled = enabled;
       try {
         localStorage.setItem(TIMER_PREFERENCE_STORAGE_KEY, String(timerEnabled));
+        timerPreferenceStorageReady = true;
         document.getElementById('wordStatsStatus').innerText = '';
       } catch (error) {
+        timerPreferenceStorageReady = false;
         document.getElementById('wordStatsStatus').innerText = '計時器設定無法儲存，請確認瀏覽器儲存空間設定。';
         console.error('Unable to save quiz timer preference:', error);
       }
@@ -149,6 +157,7 @@ import defaultQuizQuestions from './questions.json' with { type: 'json' };
         timerEnabled = savedPreference === 'true';
         document.getElementById('timerEnabled').checked = timerEnabled;
       } catch (error) {
+        timerPreferenceStorageReady = false;
         document.getElementById('wordStatsStatus').innerText = '無法讀取計時器設定，請確認瀏覽器儲存空間設定。';
         console.error('Unable to load quiz timer preference:', error);
       }
@@ -182,6 +191,7 @@ import defaultQuizQuestions from './questions.json' with { type: 'json' };
           saveQuizHistory();
         }
       } catch (error) {
+        quizHistoryStorageReady = false;
         document.getElementById('wordStatsStatus').innerText = '無法讀取歷史測驗資料，請確認瀏覽器儲存空間設定。';
         console.error('Unable to load quiz history:', error);
       }
@@ -190,10 +200,136 @@ import defaultQuizQuestions from './questions.json' with { type: 'json' };
     function saveQuizHistory() {
       try {
         localStorage.setItem(QUIZ_HISTORY_STORAGE_KEY, JSON.stringify(quizHistory));
+        quizHistoryStorageReady = true;
         document.getElementById('wordStatsStatus').innerText = '';
       } catch (error) {
+        quizHistoryStorageReady = false;
         document.getElementById('wordStatsStatus').innerText = '歷史測驗資料儲存失敗，請確認瀏覽器儲存空間設定。';
         console.error('Unable to save quiz history:', error);
+      }
+    }
+
+    function validateProgressBackup(backup) {
+      if (!backup || Array.isArray(backup) || typeof backup !== 'object' ||
+          backup.format !== PROGRESS_BACKUP_FORMAT ||
+          backup.version !== PROGRESS_BACKUP_VERSION ||
+          !backup.wordStats || Array.isArray(backup.wordStats) || typeof backup.wordStats !== 'object' ||
+          !Array.isArray(backup.quizHistory) ||
+          typeof backup.timerEnabled !== 'boolean') {
+        throw new Error('備份檔格式或版本不支援。');
+      }
+
+      for (const [id, stats] of Object.entries(backup.wordStats)) {
+        if (!/^\d+$/.test(id) || !stats ||
+            !Number.isInteger(stats.correct) || stats.correct < 0 ||
+            !Number.isInteger(stats.wrong) || stats.wrong < 0) {
+          throw new Error(`備份檔的單字統計資料無效（題目 ${id}）。`);
+        }
+      }
+
+      if (!backup.quizHistory.every(isValidQuizHistoryEntry)) {
+        throw new Error('備份檔的歷史測驗資料格式不正確。');
+      }
+
+      return {
+        wordStats: backup.wordStats,
+        quizHistory: backup.quizHistory.filter(entry => entry.order !== WRONG_REVIEW_ORDER_LABEL),
+        timerEnabled: backup.timerEnabled
+      };
+    }
+
+    function replaceProgressStorage(progress) {
+      const entries = [
+        [WORD_STATS_STORAGE_KEY, JSON.stringify(progress.wordStats)],
+        [QUIZ_HISTORY_STORAGE_KEY, JSON.stringify(progress.quizHistory)],
+        [TIMER_PREFERENCE_STORAGE_KEY, String(progress.timerEnabled)]
+      ];
+      const previousValues = entries.map(([key]) => [key, localStorage.getItem(key)]);
+
+      try {
+        entries.forEach(([key, value]) => localStorage.setItem(key, value));
+      } catch (error) {
+        const rollbackErrors = [];
+        previousValues.forEach(([key, value]) => {
+          try {
+            if (value === null) {
+              localStorage.removeItem(key);
+            } else {
+              localStorage.setItem(key, value);
+            }
+          } catch (rollbackError) {
+            rollbackErrors.push({ key, error: rollbackError });
+          }
+        });
+
+        if (rollbackErrors.length) {
+          console.error('Unable to fully roll back imported progress:', rollbackErrors);
+          throw new Error('儲存匯入資料失敗，且本機資料未能完整還原；請檢查瀏覽器儲存空間。', { cause: error });
+        }
+        throw error;
+      }
+    }
+
+    function exportProgressBackup() {
+      if (!wordStatsStorageReady || !quizHistoryStorageReady || !timerPreferenceStorageReady) {
+        document.getElementById('wordStatsStatus').innerText = '目前無法讀取完整統計資料，請先確認瀏覽器儲存空間設定。';
+        return;
+      }
+
+      try {
+        const backup = {
+          format: PROGRESS_BACKUP_FORMAT,
+          version: PROGRESS_BACKUP_VERSION,
+          exportedAt: new Date().toISOString(),
+          wordStats,
+          quizHistory: quizHistory.filter(entry => entry.order !== WRONG_REVIEW_ORDER_LABEL),
+          timerEnabled
+        };
+        const blobUrl = URL.createObjectURL(new Blob([JSON.stringify(backup, null, 2)], {
+          type: 'application/json'
+        }));
+        const downloadLink = document.createElement('a');
+        downloadLink.href = blobUrl;
+        downloadLink.download = `toeic-progress-${new Date().toISOString().slice(0, 10)}.json`;
+        document.body.append(downloadLink);
+        downloadLink.click();
+        downloadLink.remove();
+        setTimeout(() => URL.revokeObjectURL(blobUrl), 1000);
+        document.getElementById('wordStatsStatus').innerText = '紀錄備份檔已匯出。';
+      } catch (error) {
+        document.getElementById('wordStatsStatus').innerText = '匯出失敗，請確認瀏覽器是否允許下載檔案。';
+        console.error('Unable to export progress backup:', error);
+      }
+    }
+
+    async function importProgressBackup(event) {
+      const fileInput = event.currentTarget;
+      const file = fileInput.files?.[0];
+      if (!file) return;
+
+      try {
+        const backup = validateProgressBackup(JSON.parse(await file.text()));
+        if (!confirm('匯入將取代這台裝置目前的單字統計、歷史測驗紀錄與計時器設定，確定繼續嗎？')) {
+          return;
+        }
+
+        replaceProgressStorage(backup);
+        wordStats = backup.wordStats;
+        quizHistory = backup.quizHistory;
+        timerEnabled = backup.timerEnabled;
+        wordStatsStorageReady = true;
+        quizHistoryStorageReady = true;
+        timerPreferenceStorageReady = true;
+        document.getElementById('timerEnabled').checked = timerEnabled;
+        document.getElementById('wordStatsStatus').innerText = '紀錄已成功匯入並取代本機資料。';
+      } catch (error) {
+        document.getElementById('wordStatsStatus').innerText =
+          error instanceof SyntaxError
+            ? '匯入失敗：檔案不是有效的 JSON 備份。'
+            : `匯入失敗：${error.message}`;
+        console.error('Unable to import progress backup:', error);
+      } finally {
+        fileInput.value = '';
       }
     }
 
@@ -811,5 +947,7 @@ import defaultQuizQuestions from './questions.json' with { type: 'json' };
       filterWordStats,
       showQuizHistory,
       hideQuizHistory,
-      setTimerEnabled
+      setTimerEnabled,
+      exportProgressBackup,
+      importProgressBackup
     });

@@ -145,6 +145,16 @@
         <i class="fa-solid fa-clock-rotate-left"></i>
         <span>歷史測驗資料</span>
       </button>
+      <div class="mt-3 grid grid-cols-2 gap-3">
+        <button type="button" onclick="exportProgressBackup()" class="py-3 rounded-xl border border-brand-200 bg-brand-50 text-brand-700 font-semibold transition-colors hover:bg-brand-100 dark:border-brand-800 dark:bg-brand-900/30 dark:text-brand-300 dark:hover:bg-brand-900/50">
+          <i class="fa-solid fa-file-export mr-2"></i>匯出紀錄
+        </button>
+        <label for="progressImportFile" class="cursor-pointer rounded-xl border border-slate-200 bg-slate-50 py-3 text-center font-semibold text-slate-700 transition-colors hover:bg-slate-100 dark:border-slate-600 dark:bg-slate-700 dark:text-slate-200 dark:hover:bg-slate-600">
+          <i class="fa-solid fa-file-import mr-2"></i>匯入紀錄
+        </label>
+        <input id="progressImportFile" type="file" accept=".json,application/json" onchange="importProgressBackup(event)" class="sr-only">
+      </div>
+      <p class="mt-2 text-xs text-slate-500 dark:text-slate-400">匯入紀錄會取代這台裝置目前的學習統計、歷史測驗資料與計時器設定。</p>
       <div class="mt-4">
         <input id="timerEnabled" type="checkbox" onchange="setTimerEnabled(this.checked)" class="timer-toggle-input sr-only">
         <label for="timerEnabled" class="timer-toggle-card flex cursor-pointer items-center justify-between gap-4 rounded-xl border border-slate-200 bg-white px-4 py-3 text-left transition-colors dark:border-slate-600 dark:bg-slate-700">
