@@ -18,7 +18,7 @@ import defaultQuizQuestions from './questions.json' with { type: 'json' };
     let score = 0;
     let answeredState = [];
     let userWrongQuestions = [];
-    let selectedQuestionCount = 40;
+    let selectedQuestionCount = 20;
     let selectedQuestionOrder = 'random';
     let wordStats = {};
     let statsRecordedForQuiz = false;
@@ -33,6 +33,7 @@ import defaultQuizQuestions from './questions.json' with { type: 'json' };
     const WORD_STATS_STORAGE_KEY = 'toeicVocabularyStats';
     const QUIZ_HISTORY_STORAGE_KEY = 'toeicQuizHistory';
     const TIMER_PREFERENCE_STORAGE_KEY = 'toeicQuizTimerEnabled';
+    const WRONG_REVIEW_ORDER_LABEL = '錯題複習（隨機）';
     const availableQuestionCounts = [20, 40, 50, 80, 100, 150, 200, 400, 600, 800, 1000];
     const allQuestionsOption = 'all';
     const questionOrderLabels = {
@@ -153,7 +154,7 @@ import defaultQuizQuestions from './questions.json' with { type: 'json' };
     }
 
     function isValidQuizHistoryEntry(entry) {
-      const validOrders = [...Object.values(questionOrderLabels), '錯題複習（隨機）'];
+      const validOrders = [...Object.values(questionOrderLabels), WRONG_REVIEW_ORDER_LABEL];
       return entry &&
         typeof entry.completedAt === 'string' &&
         !Number.isNaN(Date.parse(entry.completedAt)) &&
@@ -175,7 +176,10 @@ import defaultQuizQuestions from './questions.json' with { type: 'json' };
         if (!Array.isArray(parsedHistory) || !parsedHistory.every(isValidQuizHistoryEntry)) {
           throw new Error('Stored quiz history has an invalid format.');
         }
-        quizHistory = parsedHistory;
+        quizHistory = parsedHistory.filter(entry => entry.order !== WRONG_REVIEW_ORDER_LABEL);
+        if (quizHistory.length !== parsedHistory.length) {
+          saveQuizHistory();
+        }
       } catch (error) {
         document.getElementById('wordStatsStatus').innerText = '無法讀取歷史測驗資料，請確認瀏覽器儲存空間設定。';
         console.error('Unable to load quiz history:', error);
@@ -432,7 +436,7 @@ import defaultQuizQuestions from './questions.json' with { type: 'json' };
         quizQuestions = orderedQuestions.slice(0, questionCount);
       }
       const quizOrder = customQuestions
-        ? '錯題複習（隨機）'
+        ? WRONG_REVIEW_ORDER_LABEL
         : questionOrderLabels[selectedQuestionOrder];
       currentIndex = 0;
       score = 0;
@@ -644,17 +648,19 @@ import defaultQuizQuestions from './questions.json' with { type: 'json' };
       }
       const total = quizQuestions.length;
       const percentage = Math.round((score / total) * 100);
-      quizHistory.push({
-        completedAt: new Date().toISOString(),
-        questionCount: total,
-        order: activeQuizOrder,
-        correct: score,
-        wrong: total - score,
-        accuracy: percentage,
-        durationMs: completedDurationMs
-      });
+      if (activeQuizOrder !== WRONG_REVIEW_ORDER_LABEL) {
+        quizHistory.push({
+          completedAt: new Date().toISOString(),
+          questionCount: total,
+          order: activeQuizOrder,
+          correct: score,
+          wrong: total - score,
+          accuracy: percentage,
+          durationMs: completedDurationMs
+        });
+        saveQuizHistory();
+      }
       quizHistoryRecordedForQuiz = true;
-      saveQuizHistory();
 
       document.getElementById('quizScreen').classList.add('hidden');
       document.getElementById('resultScreen').classList.remove('hidden');
