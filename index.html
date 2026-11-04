@@ -125,10 +125,11 @@
 
       <div class="mb-8 text-left">
         <p class="text-sm font-semibold text-slate-600 dark:text-slate-300 mb-3">排序題庫</p>
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <button id="questionOrderRandomBtn" type="button" onclick="selectQuestionOrder('random')" aria-pressed="true" class="question-order-btn px-3 py-3 rounded-xl border font-semibold transition-all focus:outline-none focus:ring-2 focus:ring-brand-500">隨機</button>
           <button id="questionOrderAccuracyBtn" type="button" onclick="selectQuestionOrder('accuracy')" aria-pressed="false" class="question-order-btn px-3 py-3 rounded-xl border font-semibold transition-all focus:outline-none focus:ring-2 focus:ring-brand-500">按照答題機率升冪</button>
           <button id="questionOrderFixedBtn" type="button" onclick="selectQuestionOrder('fixed')" aria-pressed="false" class="question-order-btn px-3 py-3 rounded-xl border font-semibold transition-all focus:outline-none focus:ring-2 focus:ring-brand-500">固定排序</button>
+          <button id="questionOrderNewestBtn" type="button" onclick="selectQuestionOrder('newest')" aria-pressed="false" class="question-order-btn px-3 py-3 rounded-xl border font-semibold transition-all focus:outline-none focus:ring-2 focus:ring-brand-500">由新到舊</button>
         </div>
       </div>
 

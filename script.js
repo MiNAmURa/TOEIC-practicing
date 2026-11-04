@@ -39,7 +39,8 @@ import defaultQuizQuestions from './questions.json' with { type: 'json' };
     const questionOrderLabels = {
       random: '隨機',
       accuracy: '按照答題機率升冪',
-      fixed: '固定排序'
+      fixed: '固定排序',
+      newest: '由新到舊'
     };
 
     function loadWordStats() {
@@ -346,7 +347,7 @@ import defaultQuizQuestions from './questions.json' with { type: 'json' };
     }
 
     function selectQuestionOrder(order) {
-      if (!['random', 'accuracy', 'fixed'].includes(order)) return;
+      if (!Object.hasOwn(questionOrderLabels, order)) return;
 
       selectedQuestionOrder = order;
       document.querySelectorAll('.question-order-btn').forEach(button => {
@@ -426,6 +427,8 @@ import defaultQuizQuestions from './questions.json' with { type: 'json' };
             })
             .sort((a, b) => a.accuracy - b.accuracy || a.index - b.index)
             .map(({ question }) => question);
+        } else if (selectedQuestionOrder === 'newest') {
+          orderedQuestions = [...defaultQuizQuestions].reverse();
         } else {
           orderedQuestions = [...defaultQuizQuestions];
         }

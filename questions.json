@@ -1382,5 +1382,317 @@
     "meaning": "期待",
     "sentenceEn": "We ____ welcoming you to our annual conference.",
     "sentenceZh": "我們期待歡迎您蒞臨年度研討會。"
+  },
+  {
+    "id": 174,
+    "word": "clockwise",
+    "pos": "(adv./adj.)",
+    "meaning": "順時鐘方向（的）",
+    "sentenceEn": "Turn the handle ____ to unlock the door.",
+    "sentenceZh": "將把手順時鐘方向轉動以解鎖門。"
+  },
+  {
+    "id": 175,
+    "word": "anticlockwise",
+    "pos": "(adv./adj.)",
+    "meaning": "逆時針（的）（英式用法）",
+    "sentenceEn": "Turn the dial ____ to lower the temperature.",
+    "sentenceZh": "將旋鈕逆時針轉動以降低溫度。"
+  },
+  {
+    "id": 176,
+    "word": "counterclockwise",
+    "pos": "(adv./adj.)",
+    "meaning": "逆時針（的）（美式用法）",
+    "sentenceEn": "Rotate the control ____ until it stops.",
+    "sentenceZh": "將控制鈕逆時針旋轉直到轉不動為止。"
+  },
+  {
+    "id": 177,
+    "word": "complimentary",
+    "pos": "(adj.)",
+    "meaning": "免費招待的、公關贈送的；讚美的",
+    "sentenceEn": "The hotel provides ____ breakfast to all guests.",
+    "sentenceZh": "飯店為所有住客提供免費早餐。"
+  },
+  {
+    "id": 178,
+    "word": "luxurious",
+    "pos": "(adj.)",
+    "meaning": "奢華的、舒適的",
+    "sentenceEn": "The company hosted the event in a ____ hotel.",
+    "sentenceZh": "公司在一家奢華舒適的飯店舉辦活動。"
+  },
+  {
+    "id": 179,
+    "word": "week-long",
+    "pos": "(adj.)",
+    "meaning": "一個星期長的、為期一週的",
+    "sentenceEn": "The agency organized a ____ training program for new employees.",
+    "sentenceZh": "該機構為新進員工安排了一週的訓練計畫。"
+  },
+  {
+    "id": 180,
+    "word": "make use of",
+    "pos": "(phr.)",
+    "meaning": "善加利用",
+    "sentenceEn": "Employees should ____ the resources available to them.",
+    "sentenceZh": "員工應該善加利用可取得的資源。"
+  },
+  {
+    "id": 181,
+    "word": "so as to",
+    "pos": "(phr.)",
+    "meaning": "為了、以便（較正式地表達目的）",
+    "sentenceEn": "Please submit your application early ____ avoid delays.",
+    "sentenceZh": "請提早提交申請，以避免延誤。"
+  },
+  {
+    "id": 182,
+    "word": "connecting flight",
+    "pos": "(n.)",
+    "meaning": "（飛機）轉機航班",
+    "sentenceEn": "Passengers should check the departure time of their ____.",
+    "sentenceZh": "旅客應確認轉機航班的起飛時間。"
+  },
+  {
+    "id": 183,
+    "word": "probably",
+    "pos": "(adv.)",
+    "meaning": "可能地、大概",
+    "sentenceEn": "The revised schedule will ____ be announced tomorrow.",
+    "sentenceZh": "修訂後的時程大概會在明天公布。"
+  },
+  {
+    "id": 184,
+    "word": "despite",
+    "pos": "(prep.)",
+    "meaning": "儘管",
+    "sentenceEn": "The outdoor event continued ____ the heavy rain.",
+    "sentenceZh": "儘管下著大雨，戶外活動仍繼續舉行。"
+  },
+  {
+    "id": 185,
+    "word": "regarding",
+    "pos": "(prep.)",
+    "meaning": "關於",
+    "sentenceEn": "Please contact the human resources department ____ your benefits.",
+    "sentenceZh": "如有關於福利的問題，請聯絡人力資源部門。"
+  },
+  {
+    "id": 186,
+    "word": "aboard",
+    "pos": "(adv./prep.)",
+    "meaning": "在（大型載具）上",
+    "sentenceEn": "All passengers must be ____ the ship by 6 p.m.",
+    "sentenceZh": "所有乘客必須在下午六點前登船。"
+  },
+  {
+    "id": 187,
+    "word": "abroad",
+    "pos": "(adv.)",
+    "meaning": "在國外、到國外",
+    "sentenceEn": "The company plans to open a new office ____ next year.",
+    "sentenceZh": "公司計畫明年在國外開設新辦公室。"
+  },
+  {
+    "id": 188,
+    "word": "ride",
+    "pos": "(v. 原形)",
+    "meaning": "騎乘",
+    "sentenceEn": "Staff members can ____ bicycles to the nearby conference center.",
+    "sentenceZh": "員工可以騎自行車前往附近的會議中心。"
+  },
+  {
+    "id": 189,
+    "word": "rode",
+    "pos": "(v. 過去式)",
+    "meaning": "騎乘（過去式）",
+    "sentenceEn": "She ____ the shuttle bus to the airport yesterday.",
+    "sentenceZh": "她昨天搭乘接駁巴士前往機場。"
+  },
+  {
+    "id": 190,
+    "word": "ridden",
+    "pos": "(v. 過去分詞)",
+    "meaning": "騎乘（過去分詞）",
+    "sentenceEn": "He has ____ the commuter train to work for years.",
+    "sentenceZh": "他多年來一直搭乘通勤列車上班。"
+  },
+  {
+    "id": 191,
+    "word": "modify",
+    "pos": "(v. 原形)",
+    "meaning": "修改",
+    "sentenceEn": "The technician can ____ the equipment to meet your needs.",
+    "sentenceZh": "技術人員可以修改設備以符合您的需求。"
+  },
+  {
+    "id": 192,
+    "word": "modified",
+    "pos": "(v. 過去式/過去分詞)",
+    "meaning": "修改（已修改／被修改）",
+    "sentenceEn": "The original schedule was ____ to accommodate the guests.",
+    "sentenceZh": "原訂時程已修改，以配合來賓的安排。"
+  },
+  {
+    "id": 193,
+    "word": "dial",
+    "pos": "(v./n.)",
+    "meaning": "撥打（電話）；（圓型的）錶盤、帶刻度的儀表、旋鈕",
+    "sentenceEn": "Please ____ the number shown on the screen.",
+    "sentenceZh": "請撥打螢幕上顯示的電話號碼。"
+  },
+  {
+    "id": 194,
+    "word": "dialed",
+    "pos": "(v. 過去式/過去分詞，美式拼法)",
+    "meaning": "撥打（電話；已撥打）",
+    "sentenceEn": "The receptionist ____ the number for the caller.",
+    "sentenceZh": "接待人員替來電者撥了電話號碼。"
+  },
+  {
+    "id": 195,
+    "word": "observe",
+    "pos": "(v. 原形)",
+    "meaning": "觀察、監視、察覺",
+    "sentenceEn": "The supervisor will ____ the production process.",
+    "sentenceZh": "主管將觀察生產流程。"
+  },
+  {
+    "id": 196,
+    "word": "observed",
+    "pos": "(v. 過去式/過去分詞)",
+    "meaning": "觀察、監視、察覺（已觀察／被觀察）",
+    "sentenceEn": "The inspectors ____ several safety problems during the review.",
+    "sentenceZh": "檢查人員在審查期間發現了幾項安全問題。"
+  },
+  {
+    "id": 197,
+    "word": "commute",
+    "pos": "(v. 原形)",
+    "meaning": "上班通勤",
+    "sentenceEn": "Many employees ____ by train to avoid traffic.",
+    "sentenceZh": "許多員工搭火車通勤以避開交通壅塞。"
+  },
+  {
+    "id": 198,
+    "word": "commuted",
+    "pos": "(v. 過去式/過去分詞)",
+    "meaning": "上班通勤（已通勤）",
+    "sentenceEn": "She ____ to the downtown office by bus last year.",
+    "sentenceZh": "她去年搭公車通勤到市中心辦公室。"
+  },
+  {
+    "id": 199,
+    "word": "communicate",
+    "pos": "(v. 原形)",
+    "meaning": "溝通、交流",
+    "sentenceEn": "Team members must ____ clearly with their clients.",
+    "sentenceZh": "團隊成員必須與客戶清楚溝通。"
+  },
+  {
+    "id": 200,
+    "word": "communicated",
+    "pos": "(v. 過去式/過去分詞)",
+    "meaning": "溝通、交流（已溝通）",
+    "sentenceEn": "The manager ____ the updated policy to all employees.",
+    "sentenceZh": "經理向所有員工傳達了更新後的政策。"
+  },
+  {
+    "id": 201,
+    "word": "compliment",
+    "pos": "(v./n.)",
+    "meaning": "稱讚；讚美、稱讚",
+    "sentenceEn": "The director took time to ____ the team on its excellent work.",
+    "sentenceZh": "主管特地稱讚團隊出色的工作表現。"
+  },
+  {
+    "id": 202,
+    "word": "complimented",
+    "pos": "(v. 過去式/過去分詞)",
+    "meaning": "稱讚（已稱讚）",
+    "sentenceEn": "The client ____ the staff on their professionalism.",
+    "sentenceZh": "客戶稱讚了員工的專業表現。"
+  },
+  {
+    "id": 203,
+    "word": "resort",
+    "pos": "(v./n.)",
+    "meaning": "訴諸於……、不得已而採取；度假勝地",
+    "sentenceEn": "The coastal ____ offers special rates to conference attendees.",
+    "sentenceZh": "這間海濱度假勝地為研討會與會者提供優惠價格。"
+  },
+  {
+    "id": 204,
+    "word": "resorted",
+    "pos": "(v. 過去式/過去分詞)",
+    "meaning": "訴諸於……、不得已而採取（已採取）",
+    "sentenceEn": "The company ____ to temporary measures during the renovation.",
+    "sentenceZh": "整修期間，公司不得已採取了臨時措施。"
+  },
+  {
+    "id": 205,
+    "word": "remain",
+    "pos": "(v. 原形)",
+    "meaning": "保持、維持、狀態不變；仍然是",
+    "sentenceEn": "Please ____ seated until the aircraft has stopped.",
+    "sentenceZh": "請保持就座，直到飛機完全停下來。"
+  },
+  {
+    "id": 206,
+    "word": "remained",
+    "pos": "(v. 過去式/過去分詞)",
+    "meaning": "保持、維持、仍然是（過去）",
+    "sentenceEn": "The department ____ closed during the holiday.",
+    "sentenceZh": "該部門在假日期間仍然關閉。"
+  },
+  {
+    "id": 207,
+    "word": "listener",
+    "pos": "(n.)",
+    "meaning": "聽眾、視聽者",
+    "sentenceEn": "Each ____ can access the program through the station's website.",
+    "sentenceZh": "每位聽眾都可以透過電台網站收聽節目。"
+  },
+  {
+    "id": 208,
+    "word": "laundry",
+    "pos": "(n.)",
+    "meaning": "洗衣店；待洗衣物、正在洗或洗好的衣物",
+    "sentenceEn": "The hotel offers a same-day ____ service for business travelers.",
+    "sentenceZh": "飯店為商務旅客提供當日洗衣服務。"
+  },
+  {
+    "id": 209,
+    "word": "housekeeping",
+    "pos": "(n.)",
+    "meaning": "家務管理；（飯店的）房務部門",
+    "sentenceEn": "Please contact ____ if you need fresh towels.",
+    "sentenceZh": "如果您需要乾淨的毛巾，請聯絡房務部門。"
+  },
+  {
+    "id": 210,
+    "word": "knob",
+    "pos": "(n.)",
+    "meaning": "實體凸起的旋鈕",
+    "sentenceEn": "Turn the temperature ____ to adjust the air conditioning.",
+    "sentenceZh": "轉動溫度旋鈕以調整空調。"
+  },
+  {
+    "id": 211,
+    "word": "luxury",
+    "pos": "(n.)",
+    "meaning": "奢華、奢侈品、奢望",
+    "sentenceEn": "The brochure features a collection of ____ goods.",
+    "sentenceZh": "這本型錄介紹了一系列奢侈品。"
+  },
+  {
+    "id": 212,
+    "word": "airline",
+    "pos": "(n.)",
+    "meaning": "航空公司",
+    "sentenceEn": "The ____ added more flights to the popular destination.",
+    "sentenceZh": "這家航空公司增加了飛往熱門目的地的航班。"
   }
 ]
