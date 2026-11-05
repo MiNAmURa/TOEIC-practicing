@@ -21,6 +21,7 @@ import defaultQuizQuestions from './questions.json' with { type: 'json' };
     let selectedQuestionCount = 20;
     let selectedQuestionOrder = 'random';
     let wordStats = {};
+    let wordStatsSort = { field: null, direction: null };
     let statsRecordedForQuiz = false;
     let wordStatsStorageReady = true;
     let quizHistory = [];
@@ -409,6 +410,7 @@ import defaultQuizQuestions from './questions.json' with { type: 'json' };
       document.getElementById('wordStatsSummary').innerText =
         `題庫共 ${defaultQuizQuestions.length} 題｜累計答對 ${totalCorrect} 題、答錯 ${totalWrong} 題，整體正確率 ${totalAccuracy}`;
       document.getElementById('wordStatsSearch').value = '';
+      wordStatsSort = { field: null, direction: null };
       renderWordStatsTable();
       document.getElementById('wordStatsModal').classList.remove('hidden');
     }
@@ -417,12 +419,52 @@ import defaultQuizQuestions from './questions.json' with { type: 'json' };
       renderWordStatsTable(searchTerm);
     }
 
+    function sortWordStats(field) {
+      if (wordStatsSort.field !== field) {
+        wordStatsSort = { field, direction: 'desc' };
+      } else if (wordStatsSort.direction === 'desc') {
+        wordStatsSort = { field, direction: 'asc' };
+      } else {
+        wordStatsSort = { field: null, direction: null };
+      }
+
+      renderWordStatsTable(document.getElementById('wordStatsSearch').value);
+    }
+
+    function renderWordStatsSortButton(field, label) {
+      const direction = wordStatsSort.field === field ? wordStatsSort.direction : null;
+      const icon = direction === 'desc' ? '↓' : direction === 'asc' ? '↑' : '↕';
+      const state = direction === 'desc' ? '降冪' : direction === 'asc' ? '升冪' : '原排序';
+
+      return `<button type="button" onclick="sortWordStats('${field}')" aria-label="${label}排序，目前${state}" aria-pressed="${Boolean(direction)}" class="inline-flex items-center gap-1 rounded px-1 py-0.5 hover:bg-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-500 dark:hover:bg-slate-600">${label}<span aria-hidden="true" class="text-xs">${icon}</span></button>`;
+    }
+
     function renderWordStatsTable(searchTerm = '') {
       const normalizedSearch = searchTerm.trim().toLocaleLowerCase();
       const filteredQuestions = defaultQuizQuestions.filter(question =>
         [question.word, question.pos, question.meaning]
           .some(value => value.toLocaleLowerCase().includes(normalizedSearch))
       );
+      const sortedQuestions = !wordStatsSort.field
+        ? filteredQuestions
+        : filteredQuestions
+          .map((question, index) => ({ question, index }))
+          .sort((a, b) => {
+            const aStats = wordStats[String(a.question.id)] || { correct: 0, wrong: 0 };
+            const bStats = wordStats[String(b.question.id)] || { correct: 0, wrong: 0 };
+            const aAttempts = aStats.correct + aStats.wrong;
+            const bAttempts = bStats.correct + bStats.wrong;
+            const aValue = wordStatsSort.field === 'accuracy'
+              ? (aAttempts ? aStats.correct / aAttempts : 0)
+              : aStats[wordStatsSort.field];
+            const bValue = wordStatsSort.field === 'accuracy'
+              ? (bAttempts ? bStats.correct / bAttempts : 0)
+              : bStats[wordStatsSort.field];
+            const sortMultiplier = wordStatsSort.direction === 'desc' ? -1 : 1;
+
+            return (aValue - bValue) * sortMultiplier || a.index - b.index;
+          })
+          .map(({ question }) => question);
 
       document.getElementById('wordStatsTable').innerHTML = `
         <table class="w-full text-sm text-left border-separate border-spacing-0">
@@ -430,13 +472,13 @@ import defaultQuizQuestions from './questions.json' with { type: 'json' };
             <tr>
               <th class="sticky top-0 z-10 bg-slate-100 p-3 text-left shadow-[0_1px_0_0_rgba(148,163,184,0.3)] dark:bg-slate-700 dark:shadow-[0_1px_0_0_rgba(71,85,105,0.7)]">單字</th>
               <th class="sticky top-0 z-10 bg-slate-100 p-3 text-left shadow-[0_1px_0_0_rgba(148,163,184,0.3)] dark:bg-slate-700 dark:shadow-[0_1px_0_0_rgba(71,85,105,0.7)]">詞性／意思</th>
-              <th class="sticky top-0 z-10 whitespace-nowrap bg-slate-100 p-3 text-right shadow-[0_1px_0_0_rgba(148,163,184,0.3)] dark:bg-slate-700 dark:shadow-[0_1px_0_0_rgba(71,85,105,0.7)]">答對</th>
-              <th class="sticky top-0 z-10 whitespace-nowrap bg-slate-100 p-3 text-right shadow-[0_1px_0_0_rgba(148,163,184,0.3)] dark:bg-slate-700 dark:shadow-[0_1px_0_0_rgba(71,85,105,0.7)]">答錯</th>
-              <th class="sticky top-0 z-10 whitespace-nowrap bg-slate-100 p-3 text-right shadow-[0_1px_0_0_rgba(148,163,184,0.3)] dark:bg-slate-700 dark:shadow-[0_1px_0_0_rgba(71,85,105,0.7)]">正確率</th>
+              <th class="sticky top-0 z-10 whitespace-nowrap bg-slate-100 p-3 text-right shadow-[0_1px_0_0_rgba(148,163,184,0.3)] dark:bg-slate-700 dark:shadow-[0_1px_0_0_rgba(71,85,105,0.7)]">${renderWordStatsSortButton('correct', '答對')}</th>
+              <th class="sticky top-0 z-10 whitespace-nowrap bg-slate-100 p-3 text-right shadow-[0_1px_0_0_rgba(148,163,184,0.3)] dark:bg-slate-700 dark:shadow-[0_1px_0_0_rgba(71,85,105,0.7)]">${renderWordStatsSortButton('wrong', '答錯')}</th>
+              <th class="sticky top-0 z-10 whitespace-nowrap bg-slate-100 p-3 text-right shadow-[0_1px_0_0_rgba(148,163,184,0.3)] dark:bg-slate-700 dark:shadow-[0_1px_0_0_rgba(71,85,105,0.7)]">${renderWordStatsSortButton('accuracy', '正確率')}</th>
             </tr>
           </thead>
           <tbody>
-            ${filteredQuestions.length ? filteredQuestions.map(question => {
+            ${sortedQuestions.length ? sortedQuestions.map(question => {
               const stats = wordStats[String(question.id)] || { correct: 0, wrong: 0 };
               return `
                 <tr class="border-b border-slate-100 dark:border-slate-700">
@@ -967,6 +1009,7 @@ import defaultQuizQuestions from './questions.json' with { type: 'json' };
       showWordStats,
       hideWordStats,
       filterWordStats,
+      sortWordStats,
       showQuizHistory,
       hideQuizHistory,
       showBackupModal,
