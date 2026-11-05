@@ -962,10 +962,10 @@
   {
     "id": 121,
     "word": "offer",
-    "pos": "(v. 原形)",
-    "meaning": "提議",
-    "sentenceEn": "The company plans to ____ free training to all staff.",
-    "sentenceZh": "公司計畫為所有員工提供免費培訓。"
+    "pos": "(n. / v.)",
+    "meaning": "提供、提議；工作錄取通知；出價",
+    "sentenceEn": "The candidate accepted a job ____ from the company.",
+    "sentenceZh": "這位求職者接受了公司的工作錄取通知。"
   },
   {
     "id": 122,
@@ -1694,5 +1694,365 @@
     "meaning": "航空公司",
     "sentenceEn": "The ____ added more flights to the popular destination.",
     "sentenceZh": "這家航空公司增加了飛往熱門目的地的航班。"
+  },
+  {
+    "id": 213,
+    "word": "conference",
+    "pos": "(n.)",
+    "meaning": "會議",
+    "sentenceEn": "The annual ____ will bring together industry leaders from around the world.",
+    "sentenceZh": "年度會議將邀集來自世界各地的產業領袖。"
+  },
+  {
+    "id": 214,
+    "word": "reference",
+    "pos": "(n. / v.)",
+    "meaning": "推薦信；參考資料、引文出處；談及、提到",
+    "sentenceEn": "Please include a professional ____ with your job application.",
+    "sentenceZh": "請在求職申請中附上一封推薦信。"
+  },
+  {
+    "id": 215,
+    "word": "referral",
+    "pos": "(n.)",
+    "meaning": "轉介、介紹；（病患）轉診",
+    "sentenceEn": "The specialist requires a ____ from your family doctor.",
+    "sentenceZh": "這位專科醫師需要您的家庭醫師開立轉診單。"
+  },
+  {
+    "id": 216,
+    "word": "attendant",
+    "pos": "(n.)",
+    "meaning": "服務員；（飛機、停車場或加油站等的）服務人員",
+    "sentenceEn": "A parking ____ will help visitors find an available space.",
+    "sentenceZh": "停車場服務員會協助訪客尋找空位。"
+  },
+  {
+    "id": 217,
+    "word": "receptionist",
+    "pos": "(n.)",
+    "meaning": "接待員",
+    "sentenceEn": "The ____ will direct you to the conference room.",
+    "sentenceZh": "接待員會帶您前往會議室。"
+  },
+  {
+    "id": 218,
+    "word": "special",
+    "pos": "(adj. / n.)",
+    "meaning": "特別的；（促銷）特價商品、特別節目",
+    "sentenceEn": "Today's ____ includes a discount on office supplies.",
+    "sentenceZh": "今日特價商品包含折扣文具用品。"
+  },
+  {
+    "id": 219,
+    "word": "leading provider",
+    "pos": "(n. phr.)",
+    "meaning": "領先的供應商；產業龍頭",
+    "sentenceEn": "The company is a ____ of cloud-based accounting software.",
+    "sentenceZh": "這家公司是雲端會計軟體的領先供應商。"
+  },
+  {
+    "id": 220,
+    "word": "mud",
+    "pos": "(n.)",
+    "meaning": "泥巴",
+    "sentenceEn": "Workers removed the ____ from the entrance after the storm.",
+    "sentenceZh": "暴風雨過後，工人清除了入口處的泥巴。"
+  },
+  {
+    "id": 221,
+    "word": "operation",
+    "pos": "(n.)",
+    "meaning": "營運、運作；行動計畫；手術",
+    "sentenceEn": "The factory resumed ____ after the power outage was resolved.",
+    "sentenceZh": "停電問題解決後，工廠恢復營運。"
+  },
+  {
+    "id": 222,
+    "word": "removal",
+    "pos": "(n.)",
+    "meaning": "去除、移除；搬走",
+    "sentenceEn": "The ____ of outdated equipment will begin next week.",
+    "sentenceZh": "老舊設備的移除作業將於下週開始。"
+  },
+  {
+    "id": 223,
+    "word": "service",
+    "pos": "(v. 原形)",
+    "meaning": "提供服務；維修、保養",
+    "sentenceEn": "The company will ____ all office printers before Monday.",
+    "sentenceZh": "公司會在星期一前維修所有辦公室印表機。"
+  },
+  {
+    "id": 224,
+    "word": "serviced",
+    "pos": "(v. 過去式)",
+    "meaning": "提供服務；維修、保養（過去式）",
+    "sentenceEn": "A technician ____ the office printers yesterday.",
+    "sentenceZh": "技術人員昨天維修了辦公室印表機。"
+  },
+  {
+    "id": 225,
+    "word": "serviced",
+    "pos": "(v. 過去分詞)",
+    "meaning": "提供服務；維修、保養（過去分詞）",
+    "sentenceEn": "The office printers have been ____ recently.",
+    "sentenceZh": "辦公室印表機最近已完成保養。"
+  },
+  {
+    "id": 226,
+    "word": "re-energize",
+    "pos": "(v. 原形)",
+    "meaning": "重新補充精力；注入新的動力",
+    "sentenceEn": "A short break can ____ the team before the afternoon session.",
+    "sentenceZh": "短暫休息能讓團隊在下午的會議前重新補充精力。"
+  },
+  {
+    "id": 227,
+    "word": "energize",
+    "pos": "(v. 原形)",
+    "meaning": "給予活力、激勵；（硬體）通電、供給能量",
+    "sentenceEn": "The motivational speech helped ____ the entire sales team.",
+    "sentenceZh": "這場激勵演講讓整個銷售團隊充滿活力。"
+  },
+  {
+    "id": 228,
+    "word": "energised",
+    "pos": "(v. 過去式)",
+    "meaning": "給予活力、激勵；通電（過去式，英式拼法）",
+    "sentenceEn": "The new campaign ____ employees across the company.",
+    "sentenceZh": "這場新活動激勵了全公司的員工。"
+  },
+  {
+    "id": 229,
+    "word": "energised",
+    "pos": "(v. 過去分詞)",
+    "meaning": "給予活力、激勵；通電（過去分詞，英式拼法）",
+    "sentenceEn": "The backup system has been ____ for the safety test.",
+    "sentenceZh": "備援系統已通電以進行安全測試。"
+  },
+  {
+    "id": 230,
+    "word": "wrap",
+    "pos": "(v. 原形)",
+    "meaning": "（用紙或布）包、裹起來",
+    "sentenceEn": "Please ____ the fragile equipment before shipping it.",
+    "sentenceZh": "寄送易碎設備前，請先將它包好。"
+  },
+  {
+    "id": 231,
+    "word": "wrapped",
+    "pos": "(v. 過去式)",
+    "meaning": "（用紙或布）包、裹起來（過去式）",
+    "sentenceEn": "The assistant ____ each item carefully.",
+    "sentenceZh": "助理仔細地包好了每一件物品。"
+  },
+  {
+    "id": 232,
+    "word": "wrapped",
+    "pos": "(v. 過去分詞)",
+    "meaning": "（用紙或布）包、裹起來（過去分詞）",
+    "sentenceEn": "All of the gifts have been ____ in recyclable paper.",
+    "sentenceZh": "所有禮物都已用可回收紙張包裝好。"
+  },
+  {
+    "id": 233,
+    "word": "recharge",
+    "pos": "(v. 原形)",
+    "meaning": "休息以恢復精力；重新充電",
+    "sentenceEn": "Employees can use the lounge to ____ during their break.",
+    "sentenceZh": "員工可以在休息時間使用休息室恢復精力。"
+  },
+  {
+    "id": 234,
+    "word": "recharged",
+    "pos": "(v. 過去式)",
+    "meaning": "休息以恢復精力；重新充電（過去式）",
+    "sentenceEn": "After a quiet weekend, she ____ and returned to work refreshed.",
+    "sentenceZh": "度過安靜的週末後，她恢復了精力並精神飽滿地回到工作崗位。"
+  },
+  {
+    "id": 235,
+    "word": "recharged",
+    "pos": "(v. 過去分詞)",
+    "meaning": "休息以恢復精力；重新充電（過去分詞）",
+    "sentenceEn": "The batteries have been ____ overnight.",
+    "sentenceZh": "電池已經充了一整晚的電。"
+  },
+  {
+    "id": 236,
+    "word": "operate",
+    "pos": "(v. 原形)",
+    "meaning": "操作；施行（手術）",
+    "sentenceEn": "Only trained staff are allowed to ____ the equipment.",
+    "sentenceZh": "只有受過訓練的員工可以操作這項設備。"
+  },
+  {
+    "id": 237,
+    "word": "operated",
+    "pos": "(v. 過去式)",
+    "meaning": "操作；施行（手術）（過去式）",
+    "sentenceEn": "The technician ____ the machine according to the instructions.",
+    "sentenceZh": "技術人員依照說明操作了機器。"
+  },
+  {
+    "id": 238,
+    "word": "operated",
+    "pos": "(v. 過去分詞)",
+    "meaning": "操作；施行（手術）（過去分詞）",
+    "sentenceEn": "The equipment is ____ by certified technicians.",
+    "sentenceZh": "這項設備由合格技術人員操作。"
+  },
+  {
+    "id": 239,
+    "word": "be pleased to",
+    "pos": "(phr.)",
+    "meaning": "很樂意（做某事）",
+    "sentenceEn": "We would ____ assist you with your reservation.",
+    "sentenceZh": "我們很樂意協助您處理預約。"
+  },
+  {
+    "id": 240,
+    "word": "refer A to B",
+    "pos": "(phr.)",
+    "meaning": "將 A 轉介給 B；將 A 介紹給 B",
+    "sentenceEn": "To direct someone to another person or department, you can say, “Please ____.”",
+    "sentenceZh": "若要將某人轉介給另一位人士或部門，可以說：「請將 A 轉介給 B。」"
+  },
+  {
+    "id": 241,
+    "word": "refer to",
+    "pos": "(phr. v.)",
+    "meaning": "參考；提到",
+    "sentenceEn": "Please ____ the attached schedule before the meeting.",
+    "sentenceZh": "請在會議前參考隨附的行程表。"
+  },
+  {
+    "id": 242,
+    "word": "calm",
+    "pos": "(adj.)",
+    "meaning": "冷靜的；平靜的",
+    "sentenceEn": "The receptionist remained ____ while assisting the frustrated customer.",
+    "sentenceZh": "接待員協助那位不滿的顧客時仍保持冷靜。"
+  },
+  {
+    "id": 243,
+    "word": "courteous",
+    "pos": "(adj.)",
+    "meaning": "謙恭有禮的；非常有禮貌的",
+    "sentenceEn": "All staff members are expected to be ____ to visitors.",
+    "sentenceZh": "所有員工都應該有禮貌地對待訪客。"
+  },
+  {
+    "id": 244,
+    "word": "professional",
+    "pos": "(adj.)",
+    "meaning": "專業的",
+    "sentenceEn": "Please maintain a ____ appearance during the interview.",
+    "sentenceZh": "面試期間請保持專業的儀容。"
+  },
+  {
+    "id": 245,
+    "word": "facial",
+    "pos": "(adj.)",
+    "meaning": "臉部的",
+    "sentenceEn": "The clinic offers several ____ treatments.",
+    "sentenceZh": "這間診所提供多種臉部療程。"
+  },
+  {
+    "id": 246,
+    "word": "available",
+    "pos": "(adj.)",
+    "meaning": "可用的；可取得聯繫的；有空的；可獲得的",
+    "sentenceEn": "A customer service representative is ____ to answer your questions.",
+    "sentenceZh": "有客服人員可以為您解答問題。"
+  },
+  {
+    "id": 247,
+    "word": "bouquet",
+    "pos": "(n.)",
+    "meaning": "花束；（酒等的）香氣",
+    "sentenceEn": "She sent a colorful ____ to the hotel's front desk.",
+    "sentenceZh": "她送了一束色彩繽紛的花到飯店櫃檯。"
+  },
+  {
+    "id": 248,
+    "word": "establish",
+    "pos": "(v. 原形)",
+    "meaning": "創立；與……建立關係",
+    "sentenceEn": "The two companies hope to ____ a long-term business relationship.",
+    "sentenceZh": "兩家公司希望建立長期的商業關係。"
+  },
+  {
+    "id": 249,
+    "word": "established",
+    "pos": "(v. 過去式)",
+    "meaning": "創立；與……建立關係（過去式）",
+    "sentenceEn": "The organization ____ a new branch in Singapore last year.",
+    "sentenceZh": "該組織去年在新加坡成立了一間新分部。"
+  },
+  {
+    "id": 250,
+    "word": "established",
+    "pos": "(v. 過去分詞)",
+    "meaning": "創立；與……建立關係（過去分詞）",
+    "sentenceEn": "The firm has ____ strong ties with local suppliers.",
+    "sentenceZh": "這家公司已與當地供應商建立了穩固的合作關係。"
+  },
+  {
+    "id": 251,
+    "word": "suspect",
+    "pos": "(v. 原形)",
+    "meaning": "懷疑；猜疑",
+    "sentenceEn": "Auditors ____ that several expense reports contain errors.",
+    "sentenceZh": "稽核人員懷疑有幾份費用報告含有錯誤。"
+  },
+  {
+    "id": 252,
+    "word": "suspected",
+    "pos": "(v. 過去式)",
+    "meaning": "懷疑；猜疑（過去式）",
+    "sentenceEn": "The manager ____ that the delivery had been sent to the wrong address.",
+    "sentenceZh": "經理懷疑貨物被寄到了錯誤的地址。"
+  },
+  {
+    "id": 253,
+    "word": "suspected",
+    "pos": "(v. 過去分詞)",
+    "meaning": "懷疑；猜疑（過去分詞）",
+    "sentenceEn": "The company is ____ of violating the safety regulations.",
+    "sentenceZh": "該公司被懷疑違反安全規定。"
+  },
+  {
+    "id": 254,
+    "word": "established",
+    "pos": "(adj.)",
+    "meaning": "（因發展已久而）公認的、已確立的；著名的",
+    "sentenceEn": "She joined an ____ firm with a strong reputation in the industry.",
+    "sentenceZh": "她加入了一家在業界享有盛譽的知名公司。"
+  },
+  {
+    "id": 255,
+    "word": "countless",
+    "pos": "(adj.)",
+    "meaning": "數不清的；無數的",
+    "sentenceEn": "The annual report lists ____ achievements from the past year.",
+    "sentenceZh": "年度報告列出了過去一年中數不清的成果。"
+  },
+  {
+    "id": 256,
+    "word": "suspicious",
+    "pos": "(adj.)",
+    "meaning": "可疑的；令人起疑的",
+    "sentenceEn": "Staff reported a ____ package left near the entrance.",
+    "sentenceZh": "員工通報了放在入口附近的一個可疑包裹。"
+  },
+  {
+    "id": 257,
+    "word": "suspiciously",
+    "pos": "(adv.)",
+    "meaning": "起疑地；可疑地",
+    "sentenceEn": "The customer looked ____ at the unexpected charge on the invoice.",
+    "sentenceZh": "顧客看著帳單上意料之外的費用，神情起疑。"
   }
 ]
