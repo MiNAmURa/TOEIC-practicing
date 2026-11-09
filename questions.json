@@ -2563,7 +2563,7 @@
     "id": 321,
     "word": "statement",
     "pos": "(n.)",
-    "meaning": "聲明；表態；報表",
+    "meaning": "聲明；表態；對帳單",
     "sentenceEn": "The spokesperson issued a ____ regarding the recent changes to the service.",
     "sentenceZh": "發言人針對近期服務變動發布了一份聲明。"
   },
@@ -2590,5 +2590,13 @@
     "meaning": "費用；專業服務費；註冊費；入場費；學費；服務費",
     "sentenceEn": "Applicants must pay a registration ____ before submitting their forms.",
     "sentenceZh": "申請者必須先繳交註冊費，才能提交表格。"
+  },
+  {
+    "id": 325,
+    "word": "frequent",
+    "pos": "(adj.)",
+    "meaning": "頻繁發生的；經常的",
+    "sentenceEn": "The company has experienced ____ delays in deliveries.",
+    "sentenceZh": "公司經常遇到交貨延誤。"
   }
 ]
