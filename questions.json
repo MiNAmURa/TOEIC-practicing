@@ -2054,5 +2054,541 @@
     "meaning": "起疑地；可疑地",
     "sentenceEn": "The customer looked ____ at the unexpected charge on the invoice.",
     "sentenceZh": "顧客看著帳單上意料之外的費用，神情起疑。"
+  },
+  {
+    "id": 258,
+    "word": "reimbursement",
+    "pos": "(n.)",
+    "meaning": "報銷；償還",
+    "sentenceEn": "Employees must submit receipts to receive ____ for business travel expenses.",
+    "sentenceZh": "員工必須提交收據，才能報銷商務旅行費用。"
+  },
+  {
+    "id": 259,
+    "word": "ensure",
+    "pos": "(v.)",
+    "meaning": "確保；保證",
+    "sentenceEn": "Please review the contract carefully to ____ that all details are accurate.",
+    "sentenceZh": "請仔細檢查合約，以確保所有細節正確無誤。"
+  },
+  {
+    "id": 260,
+    "word": "by the end of",
+    "pos": "(片語)",
+    "meaning": "到……結束時；在……期限前",
+    "sentenceEn": "All expense reports must be submitted ____ the month.",
+    "sentenceZh": "所有費用報告都必須在月底前提交。"
+  },
+  {
+    "id": 261,
+    "word": "remarkable",
+    "pos": "(adj.)",
+    "meaning": "非凡的；顯著的",
+    "sentenceEn": "The new sales strategy produced a ____ increase in quarterly revenue.",
+    "sentenceZh": "新的銷售策略使季度營收顯著增加。"
+  },
+  {
+    "id": 262,
+    "word": "adverse",
+    "pos": "(adj.)",
+    "meaning": "不利的；有害的",
+    "sentenceEn": "The shipment was delayed because of ____ weather conditions.",
+    "sentenceZh": "貨運因不利的天候條件而延誤。"
+  },
+  {
+    "id": 263,
+    "word": "adversely",
+    "pos": "(adv.)",
+    "meaning": "不利地；有害地",
+    "sentenceEn": "The unexpected regulation could ____ affect small businesses.",
+    "sentenceZh": "這項意外的規定可能會對小型企業造成不利影響。"
+  },
+  {
+    "id": 264,
+    "word": "adversity",
+    "pos": "(n.)",
+    "meaning": "逆境；困境",
+    "sentenceEn": "The company continued to serve its customers despite significant financial ____.",
+    "sentenceZh": "儘管面臨嚴重的財務困境，該公司仍持續為客戶提供服務。"
+  },
+  {
+    "id": 265,
+    "word": "adversary",
+    "pos": "(n.)",
+    "meaning": "對手；敵手",
+    "sentenceEn": "The two firms became formidable ____ in the regional market.",
+    "sentenceZh": "這兩家公司成為區域市場中強勁的競爭對手。"
+  },
+  {
+    "id": 266,
+    "word": "centralized",
+    "pos": "(adj.)",
+    "meaning": "集中的；中央集權的",
+    "sentenceEn": "The company adopted a ____ system for managing employee records.",
+    "sentenceZh": "公司採用集中式系統來管理員工資料。"
+  },
+  {
+    "id": 267,
+    "word": "capital",
+    "pos": "(n.)",
+    "meaning": "資本；首都；大寫字母",
+    "sentenceEn": "The startup is seeking additional ____ to expand its operations.",
+    "sentenceZh": "這家新創公司正在尋求額外資本以擴大營運。"
+  },
+  {
+    "id": 268,
+    "word": "administration",
+    "pos": "(n.)",
+    "meaning": "行政；管理；政府",
+    "sentenceEn": "The ____ announced new guidelines for public transportation.",
+    "sentenceZh": "政府公布了公共交通的新指引。"
+  },
+  {
+    "id": 269,
+    "word": "dictates",
+    "pos": "(n. pl.)",
+    "meaning": "命令；規定",
+    "sentenceEn": "The new safety policy ____ that all visitors wear protective equipment.",
+    "sentenceZh": "新的安全政策規定所有訪客都必須穿戴防護裝備。"
+  },
+  {
+    "id": 270,
+    "word": "unequivocally",
+    "pos": "(adv.)",
+    "meaning": "明確無疑地；毫不含糊地",
+    "sentenceEn": "The director ____ approved the revised budget.",
+    "sentenceZh": "主管明確無疑地批准了修訂後的預算。"
+  },
+  {
+    "id": 271,
+    "word": "fundamentally",
+    "pos": "(adv.)",
+    "meaning": "根本上；基本上",
+    "sentenceEn": "The two proposals are ____ different in their approach to customer service.",
+    "sentenceZh": "這兩項提案在客戶服務方式上有根本的不同。"
+  },
+  {
+    "id": 272,
+    "word": "localized",
+    "pos": "(adj.)",
+    "meaning": "局部的；地方化的",
+    "sentenceEn": "The software includes ____ content for each regional market.",
+    "sentenceZh": "這套軟體為各地區市場提供了在地化內容。"
+  },
+  {
+    "id": 273,
+    "word": "demographic",
+    "pos": "(adj.)",
+    "meaning": "人口統計的；人口群體",
+    "sentenceEn": "The survey helps the marketing team understand each customer ____.",
+    "sentenceZh": "這項調查有助於行銷團隊了解每個客戶人口群體。"
+  },
+  {
+    "id": 274,
+    "word": "amend",
+    "pos": "(v.)",
+    "meaning": "修訂；修改",
+    "sentenceEn": "The committee voted to ____ the proposal before submitting it to the board.",
+    "sentenceZh": "委員會表決在將提案提交董事會前先予以修訂。"
+  },
+  {
+    "id": 275,
+    "word": "fabricate",
+    "pos": "(v.)",
+    "meaning": "捏造；製造",
+    "sentenceEn": "The factory can ____ custom parts for industrial equipment.",
+    "sentenceZh": "這家工廠可以為工業設備製造客製零件。"
+  },
+  {
+    "id": 276,
+    "word": "disregard",
+    "pos": "(v.)",
+    "meaning": "忽視；不理會",
+    "sentenceEn": "Staff should not ____ the warning signs posted near the machinery.",
+    "sentenceZh": "員工不應忽視張貼在機器附近的警告標誌。"
+  },
+  {
+    "id": 277,
+    "word": "obfuscate",
+    "pos": "(v.)",
+    "meaning": "混淆；使難以理解",
+    "sentenceEn": "The report uses plain language rather than technical terms that might ____ its findings.",
+    "sentenceZh": "這份報告使用淺白的語言，而非可能使研究結果難以理解的專業術語。"
+  },
+  {
+    "id": 278,
+    "word": "formidable",
+    "pos": "(adj.)",
+    "meaning": "強大的；令人敬畏的；難以應付的",
+    "sentenceEn": "The firm faces a ____ challenge as it enters a highly competitive market.",
+    "sentenceZh": "該公司進入競爭激烈的市場，面臨一項難以應付的挑戰。"
+  },
+  {
+    "id": 279,
+    "word": "territorial",
+    "pos": "(adj.)",
+    "meaning": "領土的；地域的",
+    "sentenceEn": "The agreement clarified the ____ boundaries between the two regions.",
+    "sentenceZh": "這項協議釐清了兩個地區之間的領土界線。"
+  },
+  {
+    "id": 280,
+    "word": "director",
+    "pos": "(n.)",
+    "meaning": "董事；主管；導演",
+    "sentenceEn": "The marketing ____ will present the campaign results at Monday's meeting.",
+    "sentenceZh": "行銷主管將在星期一的會議上報告宣傳活動成果。"
+  },
+  {
+    "id": 281,
+    "word": "spearheaded",
+    "pos": "(v. 過去式)",
+    "meaning": "帶頭推動；領導",
+    "sentenceEn": "The operations manager ____ the effort to reduce delivery times.",
+    "sentenceZh": "營運經理帶頭推動縮短交貨時間的工作。"
+  },
+  {
+    "id": 282,
+    "word": "inspection",
+    "pos": "(n.)",
+    "meaning": "檢查；視察",
+    "sentenceEn": "The warehouse passed its annual safety ____ without any major issues.",
+    "sentenceZh": "倉庫順利通過年度安全檢查，沒有重大問題。"
+  },
+  {
+    "id": 283,
+    "word": "distinguished",
+    "pos": "(adj.)",
+    "meaning": "傑出的；著名的；卓越的",
+    "sentenceEn": "A ____ panel of experts will evaluate the award nominees.",
+    "sentenceZh": "一個由傑出專家組成的評審團將評選獎項入圍者。"
+  },
+  {
+    "id": 284,
+    "word": "aristocratic",
+    "pos": "(adj.)",
+    "meaning": "貴族的；貴族式的",
+    "sentenceEn": "The historic hotel is known for its ____ architecture and formal service.",
+    "sentenceZh": "這家歷史悠久的飯店以其貴族式建築與正式服務聞名。"
+  },
+  {
+    "id": 285,
+    "word": "captivated",
+    "pos": "(adj.)",
+    "meaning": "被迷住的；著迷的",
+    "sentenceEn": "The visitors were ____ by the designer's innovative exhibition.",
+    "sentenceZh": "訪客被設計師創新的展覽深深吸引。"
+  },
+  {
+    "id": 286,
+    "word": "avant-garde",
+    "pos": "(adj.)",
+    "meaning": "前衛的；先鋒派的",
+    "sentenceEn": "The gallery is featuring ____ works by emerging artists.",
+    "sentenceZh": "這間藝廊正在展出新銳藝術家的前衛作品。"
+  },
+  {
+    "id": 287,
+    "word": "conceptual",
+    "pos": "(adj.)",
+    "meaning": "概念的；觀念性的",
+    "sentenceEn": "The architect presented a ____ design for the proposed office complex.",
+    "sentenceZh": "建築師為規劃中的辦公大樓提出了一份概念設計。"
+  },
+  {
+    "id": 288,
+    "word": "blueprint",
+    "pos": "(n.)",
+    "meaning": "藍圖；計畫",
+    "sentenceEn": "The project team created a detailed ____ for the office renovation.",
+    "sentenceZh": "專案團隊為辦公室整修制定了詳細計畫。"
+  },
+  {
+    "id": 289,
+    "word": "pioneered",
+    "pos": "(v. 過去式)",
+    "meaning": "開創；率先採用",
+    "sentenceEn": "The company ____ a new approach to online customer support.",
+    "sentenceZh": "該公司率先採用新的線上客戶支援方式。"
+  },
+  {
+    "id": 290,
+    "word": "guild",
+    "pos": "(n.)",
+    "meaning": "行會；公會；同業公會",
+    "sentenceEn": "Local craftspeople formed a ____ to promote traditional techniques.",
+    "sentenceZh": "當地工匠組成了一個公會，以推廣傳統技術。"
+  },
+  {
+    "id": 291,
+    "word": "think",
+    "pos": "(v. 原形)",
+    "meaning": "想；思考",
+    "sentenceEn": "Please ____ carefully before making a decision about the proposal.",
+    "sentenceZh": "在決定是否採納這項提案前，請仔細思考。"
+  },
+  {
+    "id": 292,
+    "word": "thought",
+    "pos": "(v. 過去式)",
+    "meaning": "想；思考（過去式）",
+    "sentenceEn": "The manager ____ the new schedule would improve productivity.",
+    "sentenceZh": "經理認為新的時程安排會提升工作效率。"
+  },
+  {
+    "id": 293,
+    "word": "thought",
+    "pos": "(v. 過去分詞)",
+    "meaning": "想；思考（過去分詞）",
+    "sentenceEn": "The issue was ____ to have been resolved last month.",
+    "sentenceZh": "大家原以為這個問題上個月就已經解決了。"
+  },
+  {
+    "id": 294,
+    "word": "pioneer",
+    "pos": "(n. / v.)",
+    "meaning": "先驅；開拓者；倡導；開創",
+    "sentenceEn": "The firm hopes to ____ a more sustainable approach to packaging.",
+    "sentenceZh": "這家公司希望開創更永續的包裝方式。"
+  },
+  {
+    "id": 295,
+    "word": "pioneered",
+    "pos": "(v. 過去分詞)",
+    "meaning": "開創；率先採用（過去分詞）",
+    "sentenceEn": "The company has ____ several innovative services for small businesses.",
+    "sentenceZh": "該公司已為小型企業開創了多項創新服務。"
+  },
+  {
+    "id": 296,
+    "word": "accord",
+    "pos": "(v. 原形)",
+    "meaning": "（帶有尊敬的）給予；授予",
+    "sentenceEn": "The committee may ____ special recognition to outstanding employees.",
+    "sentenceZh": "委員會可能會向表現傑出的員工授予特別表揚。"
+  },
+  {
+    "id": 297,
+    "word": "accorded",
+    "pos": "(v. 過去式)",
+    "meaning": "（帶有尊敬的）給予；授予（過去式）",
+    "sentenceEn": "The visiting delegation was ____ a formal welcome by the mayor.",
+    "sentenceZh": "市長向來訪代表團致以正式歡迎。"
+  },
+  {
+    "id": 298,
+    "word": "accorded",
+    "pos": "(v. 過去分詞)",
+    "meaning": "（帶有尊敬的）給予；授予（過去分詞）",
+    "sentenceEn": "The proposal has been ____ priority because of its potential benefits.",
+    "sentenceZh": "這項提案因具有潛在效益而獲得優先處理。"
+  },
+  {
+    "id": 299,
+    "word": "encounter",
+    "pos": "(v. 原形)",
+    "meaning": "遭遇；偶遇；邂逅",
+    "sentenceEn": "New employees may ____ unfamiliar procedures during their first week.",
+    "sentenceZh": "新進員工在第一週可能會遇到不熟悉的流程。"
+  },
+  {
+    "id": 300,
+    "word": "encountered",
+    "pos": "(v. 過去式)",
+    "meaning": "遭遇；偶遇；邂逅（過去式）",
+    "sentenceEn": "The technicians ____ a minor problem while installing the equipment.",
+    "sentenceZh": "技術人員在安裝設備時遇到了一個小問題。"
+  },
+  {
+    "id": 301,
+    "word": "encountered",
+    "pos": "(v. 過去分詞)",
+    "meaning": "遭遇；偶遇；邂逅（過去分詞）",
+    "sentenceEn": "Several delays have been ____ during the construction project.",
+    "sentenceZh": "這項建築工程已遭遇數次延誤。"
+  },
+  {
+    "id": 302,
+    "word": "infer",
+    "pos": "(v. 原形)",
+    "meaning": "推理；推斷",
+    "sentenceEn": "Readers can ____ the author's intention from the report's conclusion.",
+    "sentenceZh": "讀者可以從報告的結論推斷作者的意圖。"
+  },
+  {
+    "id": 303,
+    "word": "inferred",
+    "pos": "(v. 過去式)",
+    "meaning": "推理；推斷（過去式）",
+    "sentenceEn": "The analyst ____ that demand would rise based on recent sales figures.",
+    "sentenceZh": "分析師根據近期銷售數據推斷需求將會上升。"
+  },
+  {
+    "id": 304,
+    "word": "inferred",
+    "pos": "(v. 過去分詞)",
+    "meaning": "推理；推斷（過去分詞）",
+    "sentenceEn": "A customer's preferences can be ____ from their previous purchases.",
+    "sentenceZh": "顧客的偏好可以從其過往購買紀錄推斷出來。"
+  },
+  {
+    "id": 305,
+    "word": "profound",
+    "pos": "(adj.)",
+    "meaning": "深刻的；深遠的",
+    "sentenceEn": "The new policy had a ____ effect on employee morale.",
+    "sentenceZh": "新政策對員工士氣造成了深遠的影響。"
+  },
+  {
+    "id": 306,
+    "word": "environmental",
+    "pos": "(adj.)",
+    "meaning": "環境的；自然環境的",
+    "sentenceEn": "The company is reviewing the ____ impact of its manufacturing process.",
+    "sentenceZh": "公司正在檢視其製造流程對環境的影響。"
+  },
+  {
+    "id": 307,
+    "word": "responsible",
+    "pos": "(adj.)",
+    "meaning": "負責任的；負責的",
+    "sentenceEn": "Each department head is ____ for submitting a monthly report.",
+    "sentenceZh": "各部門主管都負責提交每月報告。"
+  },
+  {
+    "id": 308,
+    "word": "architectural",
+    "pos": "(adj.)",
+    "meaning": "建築學的；建築的",
+    "sentenceEn": "The renovation will preserve the building's original ____ features.",
+    "sentenceZh": "整修工程將保留這棟建築原有的建築特色。"
+  },
+  {
+    "id": 309,
+    "word": "thorough",
+    "pos": "(adj.)",
+    "meaning": "徹底的；詳盡的",
+    "sentenceEn": "A ____ review of the contract revealed several errors.",
+    "sentenceZh": "對合約進行詳盡審查後，發現了幾處錯誤。"
+  },
+  {
+    "id": 310,
+    "word": "convenience",
+    "pos": "(n.)",
+    "meaning": "方便；便利",
+    "sentenceEn": "For your ____, the forms can be submitted online.",
+    "sentenceZh": "為了方便您，這些表格可以在線上提交。"
+  },
+  {
+    "id": 311,
+    "word": "inconvenience",
+    "pos": "(n.)",
+    "meaning": "不方便；不便",
+    "sentenceEn": "We apologize for any ____ caused by the temporary service interruption.",
+    "sentenceZh": "對於服務暫停所造成的不便，我們深表歉意。"
+  },
+  {
+    "id": 312,
+    "word": "inferred",
+    "pos": "(adj.)",
+    "meaning": "推斷的；推論出的",
+    "sentenceEn": "The report distinguishes observed facts from ____ conclusions.",
+    "sentenceZh": "這份報告區分了觀察到的事實與推論出的結論。"
+  },
+  {
+    "id": 313,
+    "word": "according to",
+    "pos": "(片語)",
+    "meaning": "根據；按照",
+    "sentenceEn": "____ the latest forecast, demand is expected to increase next quarter.",
+    "sentenceZh": "根據最新預測，下季需求預計將會增加。"
+  },
+  {
+    "id": 314,
+    "word": "in accord with",
+    "pos": "(片語)",
+    "meaning": "符合；與……一致",
+    "sentenceEn": "All procedures must be carried out ____ company policy.",
+    "sentenceZh": "所有程序都必須按照公司政策執行。"
+  },
+  {
+    "id": 315,
+    "word": "booking fee",
+    "pos": "(n. phr.)",
+    "meaning": "訂位費；預訂手續費",
+    "sentenceEn": "A small ____ will be added to each online reservation.",
+    "sentenceZh": "每筆線上預訂都會加收一小筆預訂手續費。"
+  },
+  {
+    "id": 316,
+    "word": "blender",
+    "pos": "(n.)",
+    "meaning": "攪拌機；果汁機",
+    "sentenceEn": "The kitchen staff used a ____ to prepare fresh fruit smoothies.",
+    "sentenceZh": "廚房工作人員使用果汁機製作新鮮水果冰沙。"
+  },
+  {
+    "id": 317,
+    "word": "threat",
+    "pos": "(n.)",
+    "meaning": "威脅；恐嚇",
+    "sentenceEn": "The company upgraded its security system to address the risk of a cyber ____.",
+    "sentenceZh": "公司升級了安全系統，以應對網路威脅的風險。"
+  },
+  {
+    "id": 318,
+    "word": "thigh",
+    "pos": "(n.)",
+    "meaning": "大腿；（禽肉的）腿肉",
+    "sentenceEn": "The restaurant serves grilled chicken ____ with seasonal vegetables.",
+    "sentenceZh": "這家餐廳供應搭配時令蔬菜的烤雞腿肉。"
+  },
+  {
+    "id": 319,
+    "word": "economy",
+    "pos": "(n.)",
+    "meaning": "經濟；節省；經濟艙（常見於 economy class）",
+    "sentenceEn": "The airline offers ____ class tickets at several price levels.",
+    "sentenceZh": "這家航空公司提供多種價位的經濟艙機票。"
+  },
+  {
+    "id": 320,
+    "word": "refund",
+    "pos": "(n. / v.)",
+    "meaning": "退款；退還款項",
+    "sentenceEn": "Customers may request a ____ within 30 days of purchase.",
+    "sentenceZh": "顧客可以在購買後 30 天內申請退款。"
+  },
+  {
+    "id": 321,
+    "word": "statement",
+    "pos": "(n.)",
+    "meaning": "聲明；表態；報表",
+    "sentenceEn": "The spokesperson issued a ____ regarding the recent changes to the service.",
+    "sentenceZh": "發言人針對近期服務變動發布了一份聲明。"
+  },
+  {
+    "id": 322,
+    "word": "profoundness",
+    "pos": "(n.)",
+    "meaning": "深刻性；深度",
+    "sentenceEn": "The reviewer praised the ____ of the author's analysis.",
+    "sentenceZh": "評論者稱讚作者分析的深刻性。"
+  },
+  {
+    "id": 323,
+    "word": "accord",
+    "pos": "(n.)",
+    "meaning": "協議；條約",
+    "sentenceEn": "The two organizations reached an ____ on sharing research data.",
+    "sentenceZh": "這兩個組織就共享研究資料達成協議。"
+  },
+  {
+    "id": 324,
+    "word": "fee",
+    "pos": "(n.)",
+    "meaning": "費用；專業服務費；註冊費；入場費；學費；服務費",
+    "sentenceEn": "Applicants must pay a registration ____ before submitting their forms.",
+    "sentenceZh": "申請者必須先繳交註冊費，才能提交表格。"
   }
 ]
