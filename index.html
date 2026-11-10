@@ -126,7 +126,7 @@
         <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
           <button id="questionOrderRandomBtn" type="button" onclick="selectQuestionOrder('random')" aria-pressed="true" class="question-order-btn px-3 py-3 rounded-xl border font-semibold transition-all focus:outline-none focus:ring-2 focus:ring-brand-500">隨機抽題</button>
           <button id="questionOrderAccuracyBtn" type="button" onclick="selectQuestionOrder('accuracy')" aria-pressed="false" class="question-order-btn px-3 py-3 rounded-xl border font-semibold transition-all focus:outline-none focus:ring-2 focus:ring-brand-500">錯題優先</button>
-          <button id="questionOrderFixedBtn" type="button" onclick="selectQuestionOrder('fixed')" aria-pressed="false" class="question-order-btn px-3 py-3 rounded-xl border font-semibold transition-all focus:outline-none focus:ring-2 focus:ring-brand-500">固定排序</button>
+          <button id="questionOrderStarredBtn" type="button" onclick="selectQuestionOrder('starred')" aria-pressed="false" class="question-order-btn px-3 py-3 rounded-xl border font-semibold transition-all focus:outline-none focus:ring-2 focus:ring-brand-500">星號優先</button>
           <button id="questionOrderNewestBtn" type="button" onclick="selectQuestionOrder('newest')" aria-pressed="false" class="question-order-btn px-3 py-3 rounded-xl border font-semibold transition-all focus:outline-none focus:ring-2 focus:ring-brand-500">由新到舊</button>
         </div>
       </div>
@@ -203,14 +203,18 @@
       </div>
 
       <!-- Question Card -->
-      <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 sm:p-8 shadow-xl border border-slate-100 dark:border-slate-700/60 transition-all">
+      <div class="relative bg-white dark:bg-slate-800 rounded-2xl p-6 sm:p-8 shadow-xl border border-slate-100 dark:border-slate-700/60 transition-all">
+        <button id="questionStarBtn" type="button" onclick="toggleQuestionStar()" aria-label="加入星號" aria-pressed="false" title="加入星號" class="absolute right-5 top-5 inline-flex h-10 w-10 items-center justify-center rounded-xl text-slate-400 transition-colors hover:bg-amber-50 hover:text-amber-500 focus:outline-none focus:ring-2 focus:ring-amber-400 dark:hover:bg-slate-700">
+          <i id="questionStarIcon" class="fa-regular fa-star text-lg" aria-hidden="true"></i>
+        </button>
         <!-- Question Meta -->
-        <div class="flex items-center gap-2 mb-4">
+        <div class="flex items-center gap-2 mb-4 pr-12">
           <span id="posBadge" class="text-xs font-bold px-2.5 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-md">
             (v.)
           </span>
           <span class="text-xs font-medium text-slate-400">手動輸入拼音題</span>
         </div>
+        <p id="starStatus" class="text-xs text-rose-500 mb-2" role="status" aria-live="polite"></p>
 
         <!-- Target Word Chinese Meaning -->
         <h2 id="targetChinese" class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mb-6">
@@ -329,6 +333,9 @@
           <p id="wordStatsSummary" class="text-sm text-slate-500 dark:text-slate-400 mt-1"></p>
         </div>
         <div class="flex items-center gap-2">
+          <button id="wordStatsStarFilterBtn" type="button" onclick="toggleWordStatsStarFilter()" aria-label="只顯示星號單字" aria-pressed="false" title="只顯示星號單字" class="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg text-slate-400 transition-colors hover:bg-amber-50 hover:text-amber-500 focus:outline-none focus:ring-2 focus:ring-amber-400 dark:hover:bg-slate-700">
+            <i id="wordStatsStarFilterIcon" class="fa-regular fa-star" aria-hidden="true"></i>
+          </button>
           <label class="relative flex-1 sm:w-64 sm:flex-none">
             <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-slate-400"></i>
             <input id="wordStatsSearch" type="search" oninput="filterWordStats(this.value)" aria-label="搜尋單字、詞性或中文意思" placeholder="搜尋單字或中文意思" class="w-full pl-9 pr-3 py-2 rounded-lg border border-slate-200 dark:border-slate-600 bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-100 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-500">
@@ -339,6 +346,8 @@
         </div>
       </div>
       <div id="wordStatsTable" class="overflow-auto"></div>
+      <p id="wordStatsStarStatus" class="px-5 text-xs text-rose-500" role="status" aria-live="polite"></p>
+      <p id="wordStatsPronunciationStatus" class="px-5 py-2 text-xs text-slate-500 dark:text-slate-400" role="status" aria-live="polite"></p>
     </div>
   </div>
 
@@ -362,7 +371,7 @@
       <div class="flex items-center justify-between gap-4 p-5 border-b border-slate-200 dark:border-slate-700">
         <div>
           <h2 id="backupModalTitle" class="text-xl font-bold text-slate-900 dark:text-white">備份管理</h2>
-          <p class="mt-1 text-sm text-slate-500 dark:text-slate-400">在不同裝置間轉移學習統計與測驗紀錄。</p>
+          <p class="mt-1 text-sm text-slate-500 dark:text-slate-400">在不同裝置間轉移學習統計、星號單字與測驗紀錄。</p>
         </div>
         <button type="button" onclick="hideBackupModal()" aria-label="關閉備份管理" class="p-2 rounded-lg text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-700">
           <i class="fa-solid fa-xmark text-lg"></i>
@@ -374,7 +383,7 @@
             <i class="fa-solid fa-file-export text-xl"></i>
             <span>
               <span class="block font-semibold">匯出紀錄</span>
-              <span class="mt-1 block text-xs opacity-80">下載包含單字統計、歷史測驗與計時器設定的備份檔</span>
+              <span class="mt-1 block text-xs opacity-80">下載包含單字統計、星號單字、歷史測驗與計時器設定的備份檔</span>
             </span>
           </span>
         </button>
@@ -388,7 +397,7 @@
           </span>
         </label>
         <input id="progressImportFile" type="file" accept=".json,application/json" onchange="importProgressBackup(event)" class="sr-only">
-        <p class="text-xs leading-relaxed text-slate-500 dark:text-slate-400">匯入前會再次確認；匯入後將取代這台裝置目前的學習統計、歷史測驗資料與計時器設定。</p>
+        <p class="text-xs leading-relaxed text-slate-500 dark:text-slate-400">匯入前會再次確認；匯入後將取代這台裝置目前的學習統計、星號單字、歷史測驗資料與計時器設定。</p>
         <p id="backupStatus" class="text-sm text-rose-500" role="status" aria-live="polite"></p>
       </div>
     </div>

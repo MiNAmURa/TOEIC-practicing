@@ -12,6 +12,76 @@ import defaultQuizQuestions from './questions.json' with { type: 'json' };
       return shuffled;
     }
 
+    function loadStarredQuestions() {
+      try {
+        const savedIds = localStorage.getItem(STARRED_QUESTIONS_STORAGE_KEY);
+        if (savedIds === null) return;
+
+        const parsedIds = JSON.parse(savedIds);
+        const questionIds = new Set(defaultQuizQuestions.map(question => question.id));
+        if (!Array.isArray(parsedIds) ||
+            !parsedIds.every(id => Number.isInteger(id) && questionIds.has(id))) {
+          throw new Error('Stored starred questions have an invalid format.');
+        }
+
+        starredQuestionIds = new Set(parsedIds);
+      } catch (error) {
+        starredQuestionsStorageReady = false;
+        document.getElementById('wordStatsStatus').innerText = '無法讀取星號單字，請確認瀏覽器儲存空間設定。';
+        console.error('Unable to load starred questions:', error);
+      }
+    }
+
+    function saveStarredQuestions() {
+      if (!starredQuestionsStorageReady) {
+        setStarredQuestionsStatus('星號設定無法讀取，請確認瀏覽器儲存空間設定。');
+        return false;
+      }
+
+      try {
+        localStorage.setItem(STARRED_QUESTIONS_STORAGE_KEY, JSON.stringify([...starredQuestionIds]));
+        setStarredQuestionsStatus('');
+        return true;
+      } catch (error) {
+        starredQuestionsStorageReady = false;
+        setStarredQuestionsStatus('星號設定儲存失敗，請確認瀏覽器儲存空間設定。');
+        console.error('Unable to save starred questions:', error);
+        return false;
+      }
+    }
+
+    function setStarredQuestionsStatus(message) {
+      document.getElementById('starStatus').innerText = message;
+      document.getElementById('wordStatsStarStatus').innerText = message;
+    }
+
+    function updateQuestionStarButton() {
+      const question = quizQuestions[currentIndex];
+      const isStarred = starredQuestionIds.has(question.id);
+      const button = document.getElementById('questionStarBtn');
+      button.setAttribute('aria-pressed', String(isStarred));
+      button.setAttribute('aria-label', isStarred ? '移除星號' : '加入星號');
+      button.title = isStarred ? '移除星號' : '加入星號';
+      button.className = `absolute right-5 top-5 inline-flex h-10 w-10 items-center justify-center rounded-xl transition-colors focus:outline-none focus:ring-2 focus:ring-amber-400 ${
+        isStarred
+          ? 'bg-amber-50 text-amber-500 hover:bg-amber-100 dark:bg-amber-900/30 dark:text-amber-300 dark:hover:bg-amber-900/50'
+          : 'text-slate-400 hover:bg-amber-50 hover:text-amber-500 dark:hover:bg-slate-700'
+      }`;
+      document.getElementById('questionStarIcon').className =
+        `${isStarred ? 'fa-solid' : 'fa-regular'} fa-star text-lg`;
+    }
+
+    function toggleQuestionStar() {
+      const question = quizQuestions[currentIndex];
+      if (starredQuestionIds.has(question.id)) {
+        starredQuestionIds.delete(question.id);
+      } else {
+        starredQuestionIds.add(question.id);
+      }
+      updateQuestionStarButton();
+      saveStarredQuestions();
+    }
+
     // Quiz State Variables
     let quizQuestions = [];
     let currentIndex = 0;
@@ -21,13 +91,16 @@ import defaultQuizQuestions from './questions.json' with { type: 'json' };
     let selectedQuestionCount = 20;
     let selectedQuestionOrder = 'random';
     let wordStats = {};
-    let wordStatsSort = { field: null, direction: null };
+    let wordStatsSort = { field: 'id', direction: 'desc' };
+    let wordStatsStarFilterEnabled = false;
+    let starredQuestionIds = new Set();
     let statsRecordedForQuiz = false;
     let wordStatsStorageReady = true;
     let quizHistory = [];
     let quizHistoryStorageReady = true;
     let timerEnabled = false;
     let timerPreferenceStorageReady = true;
+    let starredQuestionsStorageReady = true;
     let quizTimerStartedAt = null;
     let quizTimerInterval = null;
     let completedDurationMs = null;
@@ -36,6 +109,7 @@ import defaultQuizQuestions from './questions.json' with { type: 'json' };
     const WORD_STATS_STORAGE_KEY = 'toeicVocabularyStats';
     const QUIZ_HISTORY_STORAGE_KEY = 'toeicQuizHistory';
     const TIMER_PREFERENCE_STORAGE_KEY = 'toeicQuizTimerEnabled';
+    const STARRED_QUESTIONS_STORAGE_KEY = 'toeicStarredQuestions';
     const PROGRESS_BACKUP_FORMAT = 'toeic-vocabulary-progress';
     const PROGRESS_BACKUP_VERSION = 1;
     const WRONG_REVIEW_ORDER_LABEL = '錯題複習（隨機）';
@@ -45,6 +119,7 @@ import defaultQuizQuestions from './questions.json' with { type: 'json' };
       random: '隨機抽題',
       accuracy: '錯題優先',
       fixed: '固定排序',
+      starred: '星號優先',
       newest: '由新到舊'
     };
     const legacyQuestionOrderLabels = {
@@ -233,6 +308,13 @@ import defaultQuizQuestions from './questions.json' with { type: 'json' };
         throw new Error('備份檔格式或版本不支援。');
       }
 
+      const questionIds = new Set(defaultQuizQuestions.map(question => question.id));
+      const starredIds = backup.starredQuestionIds === undefined ? [] : backup.starredQuestionIds;
+      if (!Array.isArray(starredIds) ||
+          !starredIds.every(id => Number.isInteger(id) && questionIds.has(id))) {
+        throw new Error('備份檔的星號單字資料格式不正確。');
+      }
+
       for (const [id, stats] of Object.entries(backup.wordStats)) {
         if (!/^\d+$/.test(id) || !stats ||
             !Number.isInteger(stats.correct) || stats.correct < 0 ||
@@ -253,7 +335,8 @@ import defaultQuizQuestions from './questions.json' with { type: 'json' };
             ...entry,
             order: legacyQuestionOrderLabels[entry.order] || entry.order
           })),
-        timerEnabled: backup.timerEnabled
+        timerEnabled: backup.timerEnabled,
+        starredQuestionIds: starredIds
       };
     }
 
@@ -261,7 +344,8 @@ import defaultQuizQuestions from './questions.json' with { type: 'json' };
       const entries = [
         [WORD_STATS_STORAGE_KEY, JSON.stringify(progress.wordStats)],
         [QUIZ_HISTORY_STORAGE_KEY, JSON.stringify(progress.quizHistory)],
-        [TIMER_PREFERENCE_STORAGE_KEY, String(progress.timerEnabled)]
+        [TIMER_PREFERENCE_STORAGE_KEY, String(progress.timerEnabled)],
+        [STARRED_QUESTIONS_STORAGE_KEY, JSON.stringify(progress.starredQuestionIds)]
       ];
       const previousValues = entries.map(([key]) => [key, localStorage.getItem(key)]);
 
@@ -290,7 +374,7 @@ import defaultQuizQuestions from './questions.json' with { type: 'json' };
     }
 
     function exportProgressBackup() {
-      if (!wordStatsStorageReady || !quizHistoryStorageReady || !timerPreferenceStorageReady) {
+      if (!wordStatsStorageReady || !quizHistoryStorageReady || !timerPreferenceStorageReady || !starredQuestionsStorageReady) {
         document.getElementById('backupStatus').innerText = '目前無法讀取完整統計資料，請先確認瀏覽器儲存空間設定。';
         return;
       }
@@ -302,7 +386,8 @@ import defaultQuizQuestions from './questions.json' with { type: 'json' };
           exportedAt: new Date().toISOString(),
           wordStats,
           quizHistory: quizHistory.filter(entry => entry.order !== WRONG_REVIEW_ORDER_LABEL),
-          timerEnabled
+          timerEnabled,
+          starredQuestionIds: [...starredQuestionIds]
         };
         const blobUrl = URL.createObjectURL(new Blob([JSON.stringify(backup, null, 2)], {
           type: 'application/json'
@@ -329,7 +414,7 @@ import defaultQuizQuestions from './questions.json' with { type: 'json' };
 
       try {
         const backup = validateProgressBackup(JSON.parse(await file.text()));
-        if (!confirm('匯入將取代這台裝置目前的單字統計、歷史測驗紀錄與計時器設定，確定繼續嗎？')) {
+        if (!confirm('匯入將取代這台裝置目前的單字統計、星號單字、歷史測驗紀錄與計時器設定，確定繼續嗎？')) {
           return;
         }
 
@@ -337,9 +422,11 @@ import defaultQuizQuestions from './questions.json' with { type: 'json' };
         wordStats = backup.wordStats;
         quizHistory = backup.quizHistory;
         timerEnabled = backup.timerEnabled;
+        starredQuestionIds = new Set(backup.starredQuestionIds);
         wordStatsStorageReady = true;
         quizHistoryStorageReady = true;
         timerPreferenceStorageReady = true;
+        starredQuestionsStorageReady = true;
         document.getElementById('timerEnabled').checked = timerEnabled;
         document.getElementById('backupStatus').className = 'text-sm text-emerald-600 dark:text-emerald-400';
         document.getElementById('backupStatus').innerText = '紀錄已成功匯入並取代本機資料。';
@@ -410,7 +497,11 @@ import defaultQuizQuestions from './questions.json' with { type: 'json' };
       document.getElementById('wordStatsSummary').innerText =
         `題庫共 ${defaultQuizQuestions.length} 題｜累計答對 ${totalCorrect} 題、答錯 ${totalWrong} 題，整體正確率 ${totalAccuracy}`;
       document.getElementById('wordStatsSearch').value = '';
-      wordStatsSort = { field: null, direction: null };
+      document.getElementById('wordStatsPronunciationStatus').innerText = '';
+      document.getElementById('wordStatsStarStatus').innerText = '';
+      wordStatsStarFilterEnabled = false;
+      updateWordStatsStarFilterButton();
+      wordStatsSort = { field: 'id', direction: 'desc' };
       renderWordStatsTable();
       document.getElementById('wordStatsModal').classList.remove('hidden');
     }
@@ -419,11 +510,43 @@ import defaultQuizQuestions from './questions.json' with { type: 'json' };
       renderWordStatsTable(searchTerm);
     }
 
+    function toggleWordStatsStarFilter() {
+      wordStatsStarFilterEnabled = !wordStatsStarFilterEnabled;
+      updateWordStatsStarFilterButton();
+      renderWordStatsTable(document.getElementById('wordStatsSearch').value);
+    }
+
+    function updateWordStatsStarFilterButton() {
+      const button = document.getElementById('wordStatsStarFilterBtn');
+      button.setAttribute('aria-pressed', String(wordStatsStarFilterEnabled));
+      button.setAttribute('aria-label', wordStatsStarFilterEnabled ? '顯示全部單字' : '只顯示星號單字');
+      button.title = wordStatsStarFilterEnabled ? '顯示全部單字' : '只顯示星號單字';
+      button.className = `inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-amber-400 ${
+        wordStatsStarFilterEnabled
+          ? 'bg-amber-50 text-amber-500 dark:bg-amber-900/30 dark:text-amber-300'
+          : 'text-slate-400 hover:bg-amber-50 hover:text-amber-500 dark:hover:bg-slate-700'
+      }`;
+      document.getElementById('wordStatsStarFilterIcon').className =
+        `${wordStatsStarFilterEnabled ? 'fa-solid' : 'fa-regular'} fa-star`;
+    }
+
+    function toggleWordStatsStar(questionId) {
+      if (starredQuestionIds.has(questionId)) {
+        starredQuestionIds.delete(questionId);
+      } else {
+        starredQuestionIds.add(questionId);
+      }
+      saveStarredQuestions();
+      renderWordStatsTable(document.getElementById('wordStatsSearch').value);
+    }
+
     function sortWordStats(field) {
       if (wordStatsSort.field !== field) {
         wordStatsSort = { field, direction: 'desc' };
       } else if (wordStatsSort.direction === 'desc') {
         wordStatsSort = { field, direction: 'asc' };
+      } else if (field === 'id') {
+        wordStatsSort = { field, direction: 'desc' };
       } else {
         wordStatsSort = { field: null, direction: null };
       }
@@ -442,6 +565,7 @@ import defaultQuizQuestions from './questions.json' with { type: 'json' };
     function renderWordStatsTable(searchTerm = '') {
       const normalizedSearch = searchTerm.trim().toLocaleLowerCase();
       const filteredQuestions = defaultQuizQuestions.filter(question =>
+        (!wordStatsStarFilterEnabled || starredQuestionIds.has(question.id)) &&
         [question.word, question.pos, question.meaning]
           .some(value => value.toLocaleLowerCase().includes(normalizedSearch))
       );
@@ -455,13 +579,16 @@ import defaultQuizQuestions from './questions.json' with { type: 'json' };
             const aAttempts = aStats.correct + aStats.wrong;
             const bAttempts = bStats.correct + bStats.wrong;
             const aValue = wordStatsSort.field === 'accuracy'
-              ? (aAttempts ? aStats.correct / aAttempts : 0)
-              : aStats[wordStatsSort.field];
+                ? (aAttempts ? aStats.correct / aAttempts : 0)
+                : wordStatsSort.field === 'id'
+                  ? a.question.id
+                  : aStats[wordStatsSort.field];
             const bValue = wordStatsSort.field === 'accuracy'
-              ? (bAttempts ? bStats.correct / bAttempts : 0)
-              : bStats[wordStatsSort.field];
+                ? (bAttempts ? bStats.correct / bAttempts : 0)
+                : wordStatsSort.field === 'id'
+                  ? b.question.id
+                  : bStats[wordStatsSort.field];
             const sortMultiplier = wordStatsSort.direction === 'desc' ? -1 : 1;
-
             return (aValue - bValue) * sortMultiplier || a.index - b.index;
           })
           .map(({ question }) => question);
@@ -470,19 +597,26 @@ import defaultQuizQuestions from './questions.json' with { type: 'json' };
         <table class="w-full text-sm text-left border-separate border-spacing-0">
           <thead class="text-slate-600 dark:text-slate-200">
             <tr>
-              <th class="sticky top-0 z-10 bg-slate-100 p-3 text-left shadow-[0_1px_0_0_rgba(148,163,184,0.3)] dark:bg-slate-700 dark:shadow-[0_1px_0_0_rgba(71,85,105,0.7)]">單字</th>
+              <th class="sticky top-0 z-10 whitespace-nowrap bg-slate-100 p-3 text-left shadow-[0_1px_0_0_rgba(148,163,184,0.3)] dark:bg-slate-700 dark:shadow-[0_1px_0_0_rgba(71,85,105,0.7)]">${renderWordStatsSortButton('id', '單字 ID')}</th>
+              <th class="sticky top-0 z-10 whitespace-nowrap bg-slate-100 p-3 text-center shadow-[0_1px_0_0_rgba(148,163,184,0.3)] dark:bg-slate-700 dark:shadow-[0_1px_0_0_rgba(71,85,105,0.7)]">星號</th>
               <th class="sticky top-0 z-10 bg-slate-100 p-3 text-left shadow-[0_1px_0_0_rgba(148,163,184,0.3)] dark:bg-slate-700 dark:shadow-[0_1px_0_0_rgba(71,85,105,0.7)]">詞性／意思</th>
               <th class="sticky top-0 z-10 whitespace-nowrap bg-slate-100 p-3 text-right shadow-[0_1px_0_0_rgba(148,163,184,0.3)] dark:bg-slate-700 dark:shadow-[0_1px_0_0_rgba(71,85,105,0.7)]">${renderWordStatsSortButton('correct', '答對')}</th>
               <th class="sticky top-0 z-10 whitespace-nowrap bg-slate-100 p-3 text-right shadow-[0_1px_0_0_rgba(148,163,184,0.3)] dark:bg-slate-700 dark:shadow-[0_1px_0_0_rgba(71,85,105,0.7)]">${renderWordStatsSortButton('wrong', '答錯')}</th>
               <th class="sticky top-0 z-10 whitespace-nowrap bg-slate-100 p-3 text-right shadow-[0_1px_0_0_rgba(148,163,184,0.3)] dark:bg-slate-700 dark:shadow-[0_1px_0_0_rgba(71,85,105,0.7)]">${renderWordStatsSortButton('accuracy', '正確率')}</th>
+              <th class="sticky top-0 z-10 whitespace-nowrap bg-slate-100 p-3 text-center shadow-[0_1px_0_0_rgba(148,163,184,0.3)] dark:bg-slate-700 dark:shadow-[0_1px_0_0_rgba(71,85,105,0.7)]">發音</th>
             </tr>
           </thead>
           <tbody>
-            ${sortedQuestions.length ? sortedQuestions.map(question => {
+            ${sortedQuestions.length ? sortedQuestions.map((question, index) => {
               const stats = wordStats[String(question.id)] || { correct: 0, wrong: 0 };
               return `
                 <tr class="border-b border-slate-100 dark:border-slate-700">
                   <td class="p-3 font-semibold text-brand-600 dark:text-brand-400 whitespace-nowrap">${question.word}</td>
+                  <td class="p-3 text-center">
+                    <button type="button" data-star-question-id="${question.id}" aria-label="${starredQuestionIds.has(question.id) ? '移除星號' : '加入星號'}" aria-pressed="${starredQuestionIds.has(question.id)}" title="${starredQuestionIds.has(question.id) ? '移除星號' : '加入星號'}" class="inline-flex h-9 w-9 items-center justify-center rounded-lg ${starredQuestionIds.has(question.id) ? 'text-amber-500 dark:text-amber-300' : 'text-slate-300 hover:text-amber-500 dark:text-slate-500 dark:hover:text-amber-300'}">
+                      <i class="${starredQuestionIds.has(question.id) ? 'fa-solid' : 'fa-regular'} fa-star" aria-hidden="true"></i>
+                    </button>
+                  </td>
                   <td class="p-3 min-w-48">
                     <span class="text-xs text-slate-500 dark:text-slate-400">${question.pos}</span>
                     <span class="block text-slate-700 dark:text-slate-200">${question.meaning}</span>
@@ -490,16 +624,32 @@ import defaultQuizQuestions from './questions.json' with { type: 'json' };
                   <td class="p-3 text-right text-emerald-600 dark:text-emerald-400">${stats.correct}</td>
                   <td class="p-3 text-right text-rose-600 dark:text-rose-400">${stats.wrong}</td>
                   <td class="p-3 text-right font-semibold text-slate-700 dark:text-slate-200">${getWordAccuracy(stats)}</td>
+                  <td class="p-3 text-center">
+                    <button type="button" data-pronunciation-index="${index}" aria-label="播放單字發音" title="播放單字發音" class="inline-flex h-9 w-9 items-center justify-center rounded-lg text-brand-600 hover:bg-brand-50 focus:outline-none focus:ring-2 focus:ring-brand-500 dark:text-brand-300 dark:hover:bg-slate-700">
+                      <i class="fa-solid fa-volume-high" aria-hidden="true"></i>
+                    </button>
+                  </td>
                 </tr>
               `;
             }).join('') : `
               <tr>
-                <td colspan="5" class="p-8 text-center text-slate-500 dark:text-slate-400">找不到符合的單字</td>
+                <td colspan="7" class="p-8 text-center text-slate-500 dark:text-slate-400">${wordStatsStarFilterEnabled ? '找不到星號單字' : '找不到符合的單字'}</td>
               </tr>
             `}
           </tbody>
         </table>
       `;
+      document.querySelectorAll('#wordStatsTable [data-star-question-id]').forEach(button => {
+        button.addEventListener('click', () => {
+          toggleWordStatsStar(Number(button.dataset.starQuestionId));
+        });
+      });
+      document.querySelectorAll('#wordStatsTable [data-pronunciation-index]').forEach(button => {
+        button.addEventListener('click', () => {
+          const question = sortedQuestions[Number(button.dataset.pronunciationIndex)];
+          playWordPronunciation(question.word, document.getElementById('wordStatsPronunciationStatus'));
+        });
+      });
     }
 
     function hideWordStats() {
@@ -570,7 +720,10 @@ import defaultQuizQuestions from './questions.json' with { type: 'json' };
     }
 
     function playAnswerPronunciation() {
-      const status = document.getElementById('pronunciationStatus');
+      playWordPronunciation(quizQuestions[currentIndex].word, document.getElementById('pronunciationStatus'));
+    }
+
+    function playWordPronunciation(word, status) {
       if (!('speechSynthesis' in window) || !('SpeechSynthesisUtterance' in window)) {
         status.innerText = '此瀏覽器不支援語音播放，請改用其他瀏覽器。';
         return;
@@ -580,7 +733,7 @@ import defaultQuizQuestions from './questions.json' with { type: 'json' };
         const speech = window.speechSynthesis;
         speech.cancel();
 
-        const utterance = new SpeechSynthesisUtterance(quizQuestions[currentIndex].word);
+        const utterance = new SpeechSynthesisUtterance(word);
         utterance.lang = 'en-US';
         utterance.rate = 0.85;
         utterance.volume = 1;
@@ -624,6 +777,11 @@ import defaultQuizQuestions from './questions.json' with { type: 'json' };
             })
             .sort((a, b) => a.accuracy - b.accuracy || a.index - b.index)
             .map(({ question }) => question);
+        } else if (selectedQuestionOrder === 'starred') {
+          orderedQuestions = [
+            ...defaultQuizQuestions.filter(question => starredQuestionIds.has(question.id)),
+            ...defaultQuizQuestions.filter(question => !starredQuestionIds.has(question.id))
+          ];
         } else if (selectedQuestionOrder === 'newest') {
           orderedQuestions = [...defaultQuizQuestions].reverse();
         } else {
@@ -711,6 +869,7 @@ import defaultQuizQuestions from './questions.json' with { type: 'json' };
     // Render Current Question
     function renderQuestion() {
       const q = quizQuestions[currentIndex];
+      updateQuestionStarButton();
 
       // Update counters
       document.getElementById('questionCounter').innerText = `${currentIndex + 1} / ${quizQuestions.length}`;
@@ -992,6 +1151,7 @@ import defaultQuizQuestions from './questions.json' with { type: 'json' };
     updateQuestionCountButtons();
     selectQuestionOrder(selectedQuestionOrder);
     loadWordStats();
+    loadStarredQuestions();
     loadTimerPreference();
     loadQuizHistory();
 
@@ -1005,6 +1165,8 @@ import defaultQuizQuestions from './questions.json' with { type: 'json' };
       reviewWrongQuestions,
       handleFormSubmit,
       playAnswerPronunciation,
+      toggleQuestionStar,
+      toggleWordStatsStarFilter,
       selectQuestionOrder,
       showWordStats,
       hideWordStats,
