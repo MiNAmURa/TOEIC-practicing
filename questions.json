@@ -2598,5 +2598,173 @@
     "meaning": "頻繁發生的；經常的",
     "sentenceEn": "The company has experienced ____ delays in deliveries.",
     "sentenceZh": "公司經常遇到交貨延誤。"
+  },
+  {
+    "id": 326,
+    "word": "unfortunately",
+    "pos": "(adv.)",
+    "meaning": "不幸地",
+    "sentenceEn": "____, the outdoor event was canceled because of the storm.",
+    "sentenceZh": "不幸地，戶外活動因暴風雨而取消了。"
+  },
+  {
+    "id": 327,
+    "word": "additionally",
+    "pos": "(adv.)",
+    "meaning": "此外；額外地",
+    "sentenceEn": "____, applicants must provide two professional references.",
+    "sentenceZh": "此外，申請者必須提供兩位職場推薦人。"
+  },
+  {
+    "id": 328,
+    "word": "certainly",
+    "pos": "(adv.)",
+    "meaning": "毫無疑問地；當然",
+    "sentenceEn": "The new software will ____ improve the team's productivity.",
+    "sentenceZh": "新軟體毫無疑問地會提升團隊的工作效率。"
+  },
+  {
+    "id": 329,
+    "word": "free of charge",
+    "pos": "(adv. phr.)",
+    "meaning": "免費地",
+    "sentenceEn": "The hotel provides airport shuttle service ____ for its guests.",
+    "sentenceZh": "這家飯店為住客免費提供機場接駁服務。"
+  },
+  {
+    "id": 330,
+    "word": "sincerely",
+    "pos": "(adv.)",
+    "meaning": "真誠地；誠摯地",
+    "sentenceEn": "The director ____ thanked the staff for their hard work.",
+    "sentenceZh": "主管真誠地感謝員工的辛勤付出。"
+  },
+  {
+    "id": 331,
+    "word": "immediately",
+    "pos": "(adv.)",
+    "meaning": "立即地",
+    "sentenceEn": "Please report any safety concerns to your supervisor ____.",
+    "sentenceZh": "如有任何安全疑慮，請立即向主管通報。"
+  },
+  {
+    "id": 332,
+    "word": "refundable",
+    "pos": "(adj.)",
+    "meaning": "可退款的",
+    "sentenceEn": "The deposit is fully ____ if the reservation is canceled in advance.",
+    "sentenceZh": "如果提前取消預訂，押金可以全額退還。"
+  },
+  {
+    "id": 333,
+    "word": "furnished",
+    "pos": "(adj.)",
+    "meaning": "配備家具的",
+    "sentenceEn": "The company is looking for a fully ____ apartment for its visiting executives.",
+    "sentenceZh": "公司正在為來訪主管尋找一間配備完整家具的公寓。"
+  },
+  {
+    "id": 334,
+    "word": "isolated",
+    "pos": "(adj. / v. 過去式/過分)",
+    "meaning": "隔離的、孤立的、偏遠的；分離（已分離）",
+    "sentenceEn": "The research station is ____ from the nearest town.",
+    "sentenceZh": "這座研究站與最近的城鎮隔絕，位置偏遠。"
+  },
+  {
+    "id": 335,
+    "word": "violate",
+    "pos": "(v.)",
+    "meaning": "違反（法律、規則）；侵犯",
+    "sentenceEn": "Companies must not ____ the terms of their contracts.",
+    "sentenceZh": "公司不得違反合約條款。"
+  },
+  {
+    "id": 336,
+    "word": "violated",
+    "pos": "(v. 過去式/過分)",
+    "meaning": "違反（已違反）；侵犯（已侵犯）",
+    "sentenceEn": "The investigation found that the supplier ____ several safety regulations.",
+    "sentenceZh": "調查發現供應商違反了數項安全規定。"
+  },
+  {
+    "id": 337,
+    "word": "isolate",
+    "pos": "(v.)",
+    "meaning": "分離；隔離",
+    "sentenceEn": "Technicians must ____ the damaged equipment before repairing it.",
+    "sentenceZh": "技術人員在維修前必須先隔離受損設備。"
+  },
+  {
+    "id": 338,
+    "word": "tenant",
+    "pos": "(n.)",
+    "meaning": "租客；房客",
+    "sentenceEn": "Each ____ must submit a maintenance request to the building office.",
+    "sentenceZh": "每位租客都必須向大樓辦公室提交維修申請。"
+  },
+  {
+    "id": 339,
+    "word": "landlord",
+    "pos": "(n.)",
+    "meaning": "房東",
+    "sentenceEn": "The ____ agreed to repair the heating system before winter.",
+    "sentenceZh": "房東同意在冬天來臨前修理暖氣系統。"
+  },
+  {
+    "id": 340,
+    "word": "house owner",
+    "pos": "(n. phr.)",
+    "meaning": "房屋所有人；房東",
+    "sentenceEn": "The ____ is responsible for maintaining the property's exterior.",
+    "sentenceZh": "房屋所有人負責維護房屋的外部。"
+  },
+  {
+    "id": 341,
+    "word": "property manager",
+    "pos": "(n. phr.)",
+    "meaning": "房屋代管；物業管理人",
+    "sentenceEn": "Contact the ____ if you have questions about your lease.",
+    "sentenceZh": "如果對租約有疑問，請聯絡房屋代管人。"
+  },
+  {
+    "id": 342,
+    "word": "property",
+    "pos": "(n.)",
+    "meaning": "房產（不動產物件）；財產；所有物",
+    "sentenceEn": "The agency manages several commercial ____ in the downtown area.",
+    "sentenceZh": "這家仲介公司管理市中心的數處商業不動產。"
+  },
+  {
+    "id": 343,
+    "word": "electricity",
+    "pos": "(n.)",
+    "meaning": "電力；電",
+    "sentenceEn": "Tenants are responsible for paying their own ____ bills.",
+    "sentenceZh": "租客須自行支付電費。"
+  },
+  {
+    "id": 344,
+    "word": "wardrobe",
+    "pos": "(n.)",
+    "meaning": "衣櫃；衣物收納櫥櫃",
+    "sentenceEn": "The furnished apartment includes a large ____ in the main bedroom.",
+    "sentenceZh": "這間附家具的公寓在主臥室內設有一個大型衣櫃。"
+  },
+  {
+    "id": 345,
+    "word": "bank transfer",
+    "pos": "(n. phr.)",
+    "meaning": "銀行轉帳",
+    "sentenceEn": "Rent must be paid by ____ before the fifth of each month.",
+    "sentenceZh": "租金必須在每月五日之前以銀行轉帳支付。"
+  },
+  {
+    "id": 346,
+    "word": "affair",
+    "pos": "(n.)",
+    "meaning": "事務；外遇",
+    "sentenceEn": "The regional manager handles the company's financial ____.",
+    "sentenceZh": "區域經理負責處理公司的財務事務。"
   }
 ]

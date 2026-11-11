@@ -95,6 +95,7 @@ import defaultQuizQuestions from './questions.json' with { type: 'json' };
     let wordStatsStarFilterEnabled = false;
     let starredQuestionIds = new Set();
     let statsRecordedForQuiz = false;
+    let currentQuizRecordsStats = true;
     let wordStatsStorageReady = true;
     let quizHistory = [];
     let quizHistoryStorageReady = true;
@@ -518,6 +519,8 @@ import defaultQuizQuestions from './questions.json' with { type: 'json' };
 
     function updateWordStatsStarFilterButton() {
       const button = document.getElementById('wordStatsStarFilterBtn');
+      const starredQuizButton = document.getElementById('starredQuizBtn');
+      const starredQuestionCount = starredQuestionIds.size;
       button.setAttribute('aria-pressed', String(wordStatsStarFilterEnabled));
       button.setAttribute('aria-label', wordStatsStarFilterEnabled ? '顯示全部單字' : '只顯示星號單字');
       button.title = wordStatsStarFilterEnabled ? '顯示全部單字' : '只顯示星號單字';
@@ -528,6 +531,15 @@ import defaultQuizQuestions from './questions.json' with { type: 'json' };
       }`;
       document.getElementById('wordStatsStarFilterIcon').className =
         `${wordStatsStarFilterEnabled ? 'fa-solid' : 'fa-regular'} fa-star`;
+      starredQuizButton.classList.toggle('hidden', !wordStatsStarFilterEnabled);
+      starredQuizButton.disabled = starredQuestionCount === 0;
+      starredQuizButton.setAttribute(
+        'aria-label',
+        starredQuestionCount ? `測驗 ${starredQuestionCount} 個星號單字` : '沒有星號單字可測驗'
+      );
+      starredQuizButton.querySelector('span').innerText = `測驗星號單字 (${starredQuestionCount})`;
+      starredQuizButton.classList.toggle('cursor-not-allowed', starredQuestionCount === 0);
+      starredQuizButton.classList.toggle('opacity-50', starredQuestionCount === 0);
     }
 
     function toggleWordStatsStar(questionId) {
@@ -537,7 +549,19 @@ import defaultQuizQuestions from './questions.json' with { type: 'json' };
         starredQuestionIds.add(questionId);
       }
       saveStarredQuestions();
+      updateWordStatsStarFilterButton();
       renderWordStatsTable(document.getElementById('wordStatsSearch').value);
+    }
+
+    function startStarredQuiz() {
+      const starredQuestions = defaultQuizQuestions.filter(question => starredQuestionIds.has(question.id));
+      if (!starredQuestions.length) return;
+
+      hideWordStats();
+      startQuiz(starredQuestions, {
+        recordStats: false,
+        orderLabel: '星號單字測驗'
+      });
     }
 
     function sortWordStats(field) {
@@ -759,7 +783,7 @@ import defaultQuizQuestions from './questions.json' with { type: 'json' };
     }
 
     // Start Quiz Function
-    function startQuiz(customQuestions = null) {
+    function startQuiz(customQuestions = null, { recordStats = true, orderLabel = WRONG_REVIEW_ORDER_LABEL } = {}) {
       stopQuizTimer();
       if (customQuestions) {
         quizQuestions = shuffleArray(customQuestions);
@@ -794,13 +818,14 @@ import defaultQuizQuestions from './questions.json' with { type: 'json' };
         quizQuestions = orderedQuestions.slice(0, questionCount);
       }
       const quizOrder = customQuestions
-        ? WRONG_REVIEW_ORDER_LABEL
+        ? orderLabel
         : questionOrderLabels[selectedQuestionOrder];
       currentIndex = 0;
       score = 0;
       answeredState = new Array(quizQuestions.length).fill(null);
       userWrongQuestions = [];
       statsRecordedForQuiz = false;
+      currentQuizRecordsStats = recordStats;
       quizHistoryRecordedForQuiz = false;
       completedDurationMs = null;
       quizTimerStartedAt = timerEnabled ? Date.now() : null;
@@ -1003,7 +1028,7 @@ import defaultQuizQuestions from './questions.json' with { type: 'json' };
     // Show Results
     function showResults() {
       if (quizHistoryRecordedForQuiz) return;
-      recordQuizStats();
+      if (currentQuizRecordsStats) recordQuizStats();
       stopQuizTimer();
       if (quizTimerStartedAt !== null) {
         completedDurationMs = Date.now() - quizTimerStartedAt;
@@ -1167,6 +1192,7 @@ import defaultQuizQuestions from './questions.json' with { type: 'json' };
       playAnswerPronunciation,
       toggleQuestionStar,
       toggleWordStatsStarFilter,
+      startStarredQuiz,
       selectQuestionOrder,
       showWordStats,
       hideWordStats,

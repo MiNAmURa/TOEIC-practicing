@@ -336,6 +336,10 @@
           <button id="wordStatsStarFilterBtn" type="button" onclick="toggleWordStatsStarFilter()" aria-label="只顯示星號單字" aria-pressed="false" title="只顯示星號單字" class="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg text-slate-400 transition-colors hover:bg-amber-50 hover:text-amber-500 focus:outline-none focus:ring-2 focus:ring-amber-400 dark:hover:bg-slate-700">
             <i id="wordStatsStarFilterIcon" class="fa-regular fa-star" aria-hidden="true"></i>
           </button>
+          <button id="starredQuizBtn" type="button" onclick="startStarredQuiz()" class="hidden shrink-0 rounded-lg bg-amber-500 px-3 py-2 text-sm font-semibold text-white transition-colors hover:bg-amber-600 focus:outline-none focus:ring-2 focus:ring-amber-400 focus:ring-offset-2 dark:focus:ring-offset-slate-800">
+            <i class="fa-solid fa-play mr-1" aria-hidden="true"></i>
+            <span>測驗星號單字</span>
+          </button>
           <label class="relative flex-1 sm:w-64 sm:flex-none">
             <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-slate-400"></i>
             <input id="wordStatsSearch" type="search" oninput="filterWordStats(this.value)" aria-label="搜尋單字、詞性或中文意思" placeholder="搜尋單字或中文意思" class="w-full pl-9 pr-3 py-2 rounded-lg border border-slate-200 dark:border-slate-600 bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-100 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-500">
