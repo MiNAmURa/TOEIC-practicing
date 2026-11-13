@@ -2766,5 +2766,445 @@
     "meaning": "事務；外遇",
     "sentenceEn": "The regional manager handles the company's financial ____.",
     "sentenceZh": "區域經理負責處理公司的財務事務。"
+  },
+  {
+    "id": 347,
+    "word": "allure",
+    "pos": "(n.)",
+    "meaning": "吸引力；誘惑",
+    "sentenceEn": "The island's natural ____ attracts visitors from around the world.",
+    "sentenceZh": "這座島嶼的自然魅力吸引世界各地的遊客。"
+  },
+  {
+    "id": 348,
+    "word": "feint",
+    "pos": "(n.)",
+    "meaning": "假動作（運動用語）",
+    "sentenceEn": "The player used a clever ____ to get past the defender.",
+    "sentenceZh": "這名選手用巧妙的假動作突破防守球員。"
+  },
+  {
+    "id": 349,
+    "word": "affection",
+    "pos": "(n.)",
+    "meaning": "喜愛；摯愛；愛戴",
+    "sentenceEn": "The retiring teacher received a great deal of ____ from former students.",
+    "sentenceZh": "這位即將退休的老師深受昔日學生愛戴。"
+  },
+  {
+    "id": 350,
+    "word": "extraction",
+    "pos": "(n.)",
+    "meaning": "提取；拔出；拔牙",
+    "sentenceEn": "The dentist recommended the ____ of the damaged tooth.",
+    "sentenceZh": "牙醫建議拔除受損的牙齒。"
+  },
+  {
+    "id": 351,
+    "word": "ploy",
+    "pos": "(n.)",
+    "meaning": "計謀；花招",
+    "sentenceEn": "The salesperson's limited-time offer was a ____ to encourage quick purchases.",
+    "sentenceZh": "業務員的限時優惠是一種促使顧客儘快購買的花招。"
+  },
+  {
+    "id": 352,
+    "word": "thriller",
+    "pos": "(n.)",
+    "meaning": "驚悚片；懸疑作品",
+    "sentenceEn": "The author is best known for writing a popular ____.",
+    "sentenceZh": "這位作家最為人熟知的是創作了一部受歡迎的驚悚小說。"
+  },
+  {
+    "id": 353,
+    "word": "trope",
+    "pos": "(n.)",
+    "meaning": "老套路；典型老梗；常見橋段",
+    "sentenceEn": "The film relies on a familiar romantic-comedy ____.",
+    "sentenceZh": "這部電影採用了浪漫喜劇中常見的橋段。"
+  },
+  {
+    "id": 354,
+    "word": "fallout",
+    "pos": "(n.)",
+    "meaning": "負面影響；不良後果",
+    "sentenceEn": "The company is still dealing with the ____ from the data breach.",
+    "sentenceZh": "公司仍在處理資料外洩事件造成的負面影響。"
+  },
+  {
+    "id": 355,
+    "word": "individual",
+    "pos": "(n.)",
+    "meaning": "個人；個體",
+    "sentenceEn": "Each ____ is responsible for submitting a separate application.",
+    "sentenceZh": "每個人都必須各自提交一份申請。"
+  },
+  {
+    "id": 356,
+    "word": "spark",
+    "pos": "(n.)",
+    "meaning": "火花；導火線；誘因",
+    "sentenceEn": "The new policy could be the ____ that starts a wider debate.",
+    "sentenceZh": "這項新政策可能成為引發更廣泛討論的導火線。"
+  },
+  {
+    "id": 357,
+    "word": "allegation",
+    "pos": "(n.)",
+    "meaning": "（未經證實的）指控；指責",
+    "sentenceEn": "The organization denied the ____ of financial misconduct.",
+    "sentenceZh": "該組織否認有財務不當行為的指控。"
+  },
+  {
+    "id": 358,
+    "word": "speculation",
+    "pos": "(n.)",
+    "meaning": "猜測；推斷",
+    "sentenceEn": "The company issued a statement to address ____ about its merger.",
+    "sentenceZh": "公司發布聲明，回應外界對合併案的猜測。"
+  },
+  {
+    "id": 359,
+    "word": "implication",
+    "pos": "(n.)",
+    "meaning": "暗示；牽連；可能的後果",
+    "sentenceEn": "The report discusses the financial ____ of the proposed changes.",
+    "sentenceZh": "報告探討了這些變更可能造成的財務影響。"
+  },
+  {
+    "id": 360,
+    "word": "smuggle",
+    "pos": "(v.)",
+    "meaning": "走私；偷運",
+    "sentenceEn": "Authorities are investigating whether the company will ____ goods across the border.",
+    "sentenceZh": "當局正在調查這家公司是否會將貨物偷運過境。"
+  },
+  {
+    "id": 361,
+    "word": "smuggled",
+    "pos": "(v. 過去式)",
+    "meaning": "走私；偷運（過去式）",
+    "sentenceEn": "Investigators discovered that the traders ____ restricted goods last year.",
+    "sentenceZh": "調查人員發現這些商人去年曾偷運違禁品。"
+  },
+  {
+    "id": 362,
+    "word": "smuggled",
+    "pos": "(v. 過去分詞)",
+    "meaning": "走私；偷運（過去分詞）",
+    "sentenceEn": "The restricted goods had been ____ across the border.",
+    "sentenceZh": "這些違禁品已被偷運過境。"
+  },
+  {
+    "id": 363,
+    "word": "feign",
+    "pos": "(v.)",
+    "meaning": "假裝（某種情感）；裝作",
+    "sentenceEn": "The interviewee tried to ____ confidence during the presentation.",
+    "sentenceZh": "這名受訪者在簡報時試著裝出自信的樣子。"
+  },
+  {
+    "id": 364,
+    "word": "feigned",
+    "pos": "(v. 過去式)",
+    "meaning": "假裝；裝作（過去式）",
+    "sentenceEn": "He ____ surprise when he saw the welcome banner.",
+    "sentenceZh": "他看到歡迎布條時，假裝很驚訝。"
+  },
+  {
+    "id": 365,
+    "word": "feigned",
+    "pos": "(v. 過去分詞)",
+    "meaning": "假裝；裝作（過去分詞）",
+    "sentenceEn": "Her concern seemed ____ rather than genuine.",
+    "sentenceZh": "她的關心似乎是裝出來的，而非真心的。"
+  },
+  {
+    "id": 366,
+    "word": "extract",
+    "pos": "(v.)",
+    "meaning": "取出；提取；設法獲取",
+    "sentenceEn": "The analyst will ____ key information from the report.",
+    "sentenceZh": "分析師將從報告中提取重要資訊。"
+  },
+  {
+    "id": 367,
+    "word": "extracted",
+    "pos": "(v. 過去式)",
+    "meaning": "取出；提取；設法獲取（過去式）",
+    "sentenceEn": "The technician ____ the damaged component from the device.",
+    "sentenceZh": "技術人員從裝置中取出了受損的零件。"
+  },
+  {
+    "id": 368,
+    "word": "extracted",
+    "pos": "(v. 過去分詞)",
+    "meaning": "取出；提取；設法獲取（過去分詞）",
+    "sentenceEn": "The data has been ____ from several archived files.",
+    "sentenceZh": "資料已從數個封存檔案中提取出來。"
+  },
+  {
+    "id": 369,
+    "word": "resign",
+    "pos": "(v.)",
+    "meaning": "辭職",
+    "sentenceEn": "The director decided to ____ after accepting a position overseas.",
+    "sentenceZh": "主管接受海外職位後，決定辭職。"
+  },
+  {
+    "id": 370,
+    "word": "resigned",
+    "pos": "(v. 過去式)",
+    "meaning": "辭職（過去式）",
+    "sentenceEn": "The treasurer ____ from the committee last month.",
+    "sentenceZh": "財務主管上個月辭去了委員會職務。"
+  },
+  {
+    "id": 371,
+    "word": "resigned",
+    "pos": "(v. 過去分詞)",
+    "meaning": "辭職（過去分詞）",
+    "sentenceEn": "Several board members have ____ since the reorganization.",
+    "sentenceZh": "重組以來，已有數位董事會成員辭職。"
+  },
+  {
+    "id": 372,
+    "word": "desire",
+    "pos": "(v.)",
+    "meaning": "想要；渴望",
+    "sentenceEn": "Many employees ____ opportunities for professional development.",
+    "sentenceZh": "許多員工渴望獲得專業發展的機會。"
+  },
+  {
+    "id": 373,
+    "word": "desired",
+    "pos": "(v. 過去式)",
+    "meaning": "想要；渴望（過去式）",
+    "sentenceEn": "The client ____ a more detailed estimate before approving the project.",
+    "sentenceZh": "客戶希望在核准專案前取得更詳細的估價。"
+  },
+  {
+    "id": 374,
+    "word": "desired",
+    "pos": "(v. 過去分詞)",
+    "meaning": "想要；渴望（過去分詞）",
+    "sentenceEn": "The renovation has produced the ____ results.",
+    "sentenceZh": "整修已達到預期的成果。"
+  },
+  {
+    "id": 375,
+    "word": "inspire",
+    "pos": "(v.)",
+    "meaning": "啟發；激起",
+    "sentenceEn": "The guest speaker hopes to ____ young entrepreneurs.",
+    "sentenceZh": "這位客座講者希望能啟發年輕的企業家。"
+  },
+  {
+    "id": 376,
+    "word": "inspired",
+    "pos": "(v. 過去式)",
+    "meaning": "啟發；激起（過去式）",
+    "sentenceEn": "The manager's presentation ____ the team to improve its service.",
+    "sentenceZh": "經理的簡報激勵團隊改善服務。"
+  },
+  {
+    "id": 377,
+    "word": "inspired",
+    "pos": "(v. 過去分詞)",
+    "meaning": "啟發；激起（過去分詞）",
+    "sentenceEn": "The campaign was ____ by feedback from local residents.",
+    "sentenceZh": "這項宣傳活動的構想來自當地居民的回饋。"
+  },
+  {
+    "id": 378,
+    "word": "accelerate",
+    "pos": "(v.)",
+    "meaning": "加速",
+    "sentenceEn": "The company plans to ____ development of its new product.",
+    "sentenceZh": "公司計劃加快新產品的開發。"
+  },
+  {
+    "id": 379,
+    "word": "accelerated",
+    "pos": "(v. 過去式)",
+    "meaning": "加速（過去式）",
+    "sentenceEn": "The team ____ the project after receiving additional funding.",
+    "sentenceZh": "團隊在獲得額外資金後加快了專案進度。"
+  },
+  {
+    "id": 380,
+    "word": "accelerated",
+    "pos": "(v. 過去分詞)",
+    "meaning": "加速（過去分詞）",
+    "sentenceEn": "Production has been ____ to meet rising demand.",
+    "sentenceZh": "為了滿足日益增加的需求，生產已加速進行。"
+  },
+  {
+    "id": 381,
+    "word": "ensnare",
+    "pos": "(v.)",
+    "meaning": "使……入圈套",
+    "sentenceEn": "The fake investment offer was designed to ____ inexperienced buyers.",
+    "sentenceZh": "這項虛假的投資邀約是為了誘使缺乏經驗的買家上當。"
+  },
+  {
+    "id": 382,
+    "word": "ensnared",
+    "pos": "(v. 過去式)",
+    "meaning": "使……入圈套（過去式）",
+    "sentenceEn": "The scam ____ several customers before it was reported.",
+    "sentenceZh": "這場詐騙在被通報前誘使數名顧客上當。"
+  },
+  {
+    "id": 383,
+    "word": "ensnared",
+    "pos": "(v. 過去分詞)",
+    "meaning": "使……入圈套（過去分詞）",
+    "sentenceEn": "Several investors were ____ by the fraudulent offer.",
+    "sentenceZh": "數名投資人被這項詐騙邀約誘騙。"
+  },
+  {
+    "id": 384,
+    "word": "surround",
+    "pos": "(v.)",
+    "meaning": "包圍",
+    "sentenceEn": "Tall trees ____ the conference center.",
+    "sentenceZh": "高大的樹木環繞著會議中心。"
+  },
+  {
+    "id": 385,
+    "word": "surrounded",
+    "pos": "(v. 過去式)",
+    "meaning": "包圍（過去式）",
+    "sentenceEn": "Security staff ____ the building during the event.",
+    "sentenceZh": "活動期間，保全人員包圍了這棟大樓。"
+  },
+  {
+    "id": 386,
+    "word": "surrounded",
+    "pos": "(v. 過去分詞)",
+    "meaning": "包圍（過去分詞）",
+    "sentenceEn": "The hotel is ____ by gardens and walking paths.",
+    "sentenceZh": "這家飯店被花園和步道環繞。"
+  },
+  {
+    "id": 387,
+    "word": "recruit",
+    "pos": "(v.)",
+    "meaning": "招募；吸收（尤指軍隊）",
+    "sentenceEn": "The firm plans to ____ additional engineers this year.",
+    "sentenceZh": "這家公司計劃今年再招募幾位工程師。"
+  },
+  {
+    "id": 388,
+    "word": "recruited",
+    "pos": "(v. 過去式)",
+    "meaning": "招募；吸收（過去式）",
+    "sentenceEn": "The department ____ two new assistants in September.",
+    "sentenceZh": "該部門九月招募了兩名新助理。"
+  },
+  {
+    "id": 389,
+    "word": "recruited",
+    "pos": "(v. 過去分詞)",
+    "meaning": "招募；吸收（過去分詞）",
+    "sentenceEn": "More than fifty volunteers have been ____ for the event.",
+    "sentenceZh": "已有五十多名志工受邀參加這場活動。"
+  },
+  {
+    "id": 390,
+    "word": "foreign",
+    "pos": "(adj.)",
+    "meaning": "外國的",
+    "sentenceEn": "The company recently opened an office in a ____ market.",
+    "sentenceZh": "這家公司最近在海外市場開設了一間辦事處。"
+  },
+  {
+    "id": 391,
+    "word": "obsessed",
+    "pos": "(adj.)",
+    "meaning": "迷戀的；困擾的",
+    "sentenceEn": "The designer is ____ with finding sustainable materials.",
+    "sentenceZh": "這位設計師一心想找到永續材料。"
+  },
+  {
+    "id": 392,
+    "word": "flabbergasted",
+    "pos": "(adj.)",
+    "meaning": "目瞪口呆的；大吃一驚的",
+    "sentenceEn": "Employees were ____ when the company announced an unexpected bonus.",
+    "sentenceZh": "公司宣布發放意外獎金時，員工們都目瞪口呆。"
+  },
+  {
+    "id": 393,
+    "word": "exclusive",
+    "pos": "(adj.)",
+    "meaning": "專有的；獨佔的",
+    "sentenceEn": "Members receive ____ access to the research database.",
+    "sentenceZh": "會員可獨家使用這個研究資料庫。"
+  },
+  {
+    "id": 394,
+    "word": "unsuspecting",
+    "pos": "(adj.)",
+    "meaning": "毫無戒心的",
+    "sentenceEn": "The misleading email targeted ____ customers.",
+    "sentenceZh": "這封誤導性的電子郵件以毫無戒心的顧客為目標。"
+  },
+  {
+    "id": 395,
+    "word": "valuable",
+    "pos": "(adj.)",
+    "meaning": "有價值的；寶貴的",
+    "sentenceEn": "The survey provided ____ feedback for improving the service.",
+    "sentenceZh": "這份問卷為改善服務提供了寶貴的回饋。"
+  },
+  {
+    "id": 396,
+    "word": "spectacular",
+    "pos": "(adj.)",
+    "meaning": "壯觀的；令人驚嘆的",
+    "sentenceEn": "The new convention center offers a ____ view of the harbor.",
+    "sentenceZh": "這座新的會議中心可以欣賞到令人驚嘆的港灣景色。"
+  },
+  {
+    "id": 397,
+    "word": "surrounding",
+    "pos": "(adj.)",
+    "meaning": "周圍的；環繞四周的",
+    "sentenceEn": "The hotel offers free shuttle service to the ____ neighborhoods.",
+    "sentenceZh": "這家飯店提供前往周邊地區的免費接駁服務。"
+  },
+  {
+    "id": 398,
+    "word": "groundless",
+    "pos": "(adj.)",
+    "meaning": "毫無理由的；無根據的",
+    "sentenceEn": "The company described the rumors as ____ and inaccurate.",
+    "sentenceZh": "公司表示這些謠言毫無根據且不正確。"
+  },
+  {
+    "id": 399,
+    "word": "properly",
+    "pos": "(adv.)",
+    "meaning": "適當地；正確地",
+    "sentenceEn": "Please make sure all forms are completed ____.",
+    "sentenceZh": "請確認所有表格都已正確填寫。"
+  },
+  {
+    "id": 400,
+    "word": "beyond",
+    "pos": "(prep. / adv.)",
+    "meaning": "在更遠處；超出",
+    "sentenceEn": "The hiking trail continues ____ the old bridge.",
+    "sentenceZh": "這條健行步道延伸至舊橋更遠處。"
+  },
+  {
+    "id": 401,
+    "word": "the other way around",
+    "pos": "(phr.)",
+    "meaning": "正好相反；顛倒",
+    "sentenceEn": "The assistant reports to the director, not ____.",
+    "sentenceZh": "助理向主管報告，而不是相反。"
   }
 ]
