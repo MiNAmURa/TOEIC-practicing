@@ -2882,18 +2882,10 @@
   {
     "id": 361,
     "word": "smuggled",
-    "pos": "(v. 過去式)",
-    "meaning": "走私；偷運（過去式）",
+    "pos": "(v. 過去式/過去分詞)",
+    "meaning": "走私；偷運",
     "sentenceEn": "Investigators discovered that the traders ____ restricted goods last year.",
     "sentenceZh": "調查人員發現這些商人去年曾偷運違禁品。"
-  },
-  {
-    "id": 362,
-    "word": "smuggled",
-    "pos": "(v. 過去分詞)",
-    "meaning": "走私；偷運（過去分詞）",
-    "sentenceEn": "The restricted goods had been ____ across the border.",
-    "sentenceZh": "這些違禁品已被偷運過境。"
   },
   {
     "id": 363,
@@ -2906,18 +2898,10 @@
   {
     "id": 364,
     "word": "feigned",
-    "pos": "(v. 過去式)",
-    "meaning": "假裝；裝作（過去式）",
+    "pos": "(v. 過去式/過去分詞)",
+    "meaning": "假裝；裝作",
     "sentenceEn": "He ____ surprise when he saw the welcome banner.",
     "sentenceZh": "他看到歡迎布條時，假裝很驚訝。"
-  },
-  {
-    "id": 365,
-    "word": "feigned",
-    "pos": "(v. 過去分詞)",
-    "meaning": "假裝；裝作（過去分詞）",
-    "sentenceEn": "Her concern seemed ____ rather than genuine.",
-    "sentenceZh": "她的關心似乎是裝出來的，而非真心的。"
   },
   {
     "id": 366,
@@ -2930,18 +2914,10 @@
   {
     "id": 367,
     "word": "extracted",
-    "pos": "(v. 過去式)",
-    "meaning": "取出；提取；設法獲取（過去式）",
+    "pos": "(v. 過去式/過去分詞)",
+    "meaning": "取出；提取；設法獲取",
     "sentenceEn": "The technician ____ the damaged component from the device.",
     "sentenceZh": "技術人員從裝置中取出了受損的零件。"
-  },
-  {
-    "id": 368,
-    "word": "extracted",
-    "pos": "(v. 過去分詞)",
-    "meaning": "取出；提取；設法獲取（過去分詞）",
-    "sentenceEn": "The data has been ____ from several archived files.",
-    "sentenceZh": "資料已從數個封存檔案中提取出來。"
   },
   {
     "id": 369,
@@ -2954,18 +2930,10 @@
   {
     "id": 370,
     "word": "resigned",
-    "pos": "(v. 過去式)",
-    "meaning": "辭職（過去式）",
+    "pos": "(v. 過去式/過去分詞)",
+    "meaning": "辭職",
     "sentenceEn": "The treasurer ____ from the committee last month.",
     "sentenceZh": "財務主管上個月辭去了委員會職務。"
-  },
-  {
-    "id": 371,
-    "word": "resigned",
-    "pos": "(v. 過去分詞)",
-    "meaning": "辭職（過去分詞）",
-    "sentenceEn": "Several board members have ____ since the reorganization.",
-    "sentenceZh": "重組以來，已有數位董事會成員辭職。"
   },
   {
     "id": 372,
@@ -2978,18 +2946,10 @@
   {
     "id": 373,
     "word": "desired",
-    "pos": "(v. 過去式)",
-    "meaning": "想要；渴望（過去式）",
+    "pos": "(v. 過去式/過去分詞)",
+    "meaning": "想要；渴望",
     "sentenceEn": "The client ____ a more detailed estimate before approving the project.",
     "sentenceZh": "客戶希望在核准專案前取得更詳細的估價。"
-  },
-  {
-    "id": 374,
-    "word": "desired",
-    "pos": "(v. 過去分詞)",
-    "meaning": "想要；渴望（過去分詞）",
-    "sentenceEn": "The renovation has produced the ____ results.",
-    "sentenceZh": "整修已達到預期的成果。"
   },
   {
     "id": 375,
@@ -3002,18 +2962,10 @@
   {
     "id": 376,
     "word": "inspired",
-    "pos": "(v. 過去式)",
-    "meaning": "啟發；激起（過去式）",
+    "pos": "(v. 過去式/過去分詞)",
+    "meaning": "啟發；激起",
     "sentenceEn": "The manager's presentation ____ the team to improve its service.",
     "sentenceZh": "經理的簡報激勵團隊改善服務。"
-  },
-  {
-    "id": 377,
-    "word": "inspired",
-    "pos": "(v. 過去分詞)",
-    "meaning": "啟發；激起（過去分詞）",
-    "sentenceEn": "The campaign was ____ by feedback from local residents.",
-    "sentenceZh": "這項宣傳活動的構想來自當地居民的回饋。"
   },
   {
     "id": 378,
@@ -3026,18 +2978,10 @@
   {
     "id": 379,
     "word": "accelerated",
-    "pos": "(v. 過去式)",
-    "meaning": "加速（過去式）",
+    "pos": "(v. 過去式/過去分詞)",
+    "meaning": "加速",
     "sentenceEn": "The team ____ the project after receiving additional funding.",
     "sentenceZh": "團隊在獲得額外資金後加快了專案進度。"
-  },
-  {
-    "id": 380,
-    "word": "accelerated",
-    "pos": "(v. 過去分詞)",
-    "meaning": "加速（過去分詞）",
-    "sentenceEn": "Production has been ____ to meet rising demand.",
-    "sentenceZh": "為了滿足日益增加的需求，生產已加速進行。"
   },
   {
     "id": 381,
@@ -3050,18 +2994,10 @@
   {
     "id": 382,
     "word": "ensnared",
-    "pos": "(v. 過去式)",
-    "meaning": "使……入圈套（過去式）",
+    "pos": "(v. 過去式/過去分詞)",
+    "meaning": "使……入圈套",
     "sentenceEn": "The scam ____ several customers before it was reported.",
     "sentenceZh": "這場詐騙在被通報前誘使數名顧客上當。"
-  },
-  {
-    "id": 383,
-    "word": "ensnared",
-    "pos": "(v. 過去分詞)",
-    "meaning": "使……入圈套（過去分詞）",
-    "sentenceEn": "Several investors were ____ by the fraudulent offer.",
-    "sentenceZh": "數名投資人被這項詐騙邀約誘騙。"
   },
   {
     "id": 384,
@@ -3074,18 +3010,10 @@
   {
     "id": 385,
     "word": "surrounded",
-    "pos": "(v. 過去式)",
-    "meaning": "包圍（過去式）",
+    "pos": "(v. 過去式/過去分詞)",
+    "meaning": "包圍",
     "sentenceEn": "Security staff ____ the building during the event.",
     "sentenceZh": "活動期間，保全人員包圍了這棟大樓。"
-  },
-  {
-    "id": 386,
-    "word": "surrounded",
-    "pos": "(v. 過去分詞)",
-    "meaning": "包圍（過去分詞）",
-    "sentenceEn": "The hotel is ____ by gardens and walking paths.",
-    "sentenceZh": "這家飯店被花園和步道環繞。"
   },
   {
     "id": 387,
@@ -3098,18 +3026,10 @@
   {
     "id": 388,
     "word": "recruited",
-    "pos": "(v. 過去式)",
-    "meaning": "招募；吸收（過去式）",
+    "pos": "(v. 過去式/過去分詞)",
+    "meaning": "招募；吸收",
     "sentenceEn": "The department ____ two new assistants in September.",
     "sentenceZh": "該部門九月招募了兩名新助理。"
-  },
-  {
-    "id": 389,
-    "word": "recruited",
-    "pos": "(v. 過去分詞)",
-    "meaning": "招募；吸收（過去分詞）",
-    "sentenceEn": "More than fifty volunteers have been ____ for the event.",
-    "sentenceZh": "已有五十多名志工受邀參加這場活動。"
   },
   {
     "id": 390,
