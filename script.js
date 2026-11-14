@@ -259,7 +259,16 @@ import defaultQuizQuestions from './questions.json' with { type: 'json' };
         entry.correct + entry.wrong === entry.questionCount &&
         Number.isInteger(entry.accuracy) && entry.accuracy >= 0 && entry.accuracy <= 100 &&
         validOrders.includes(entry.order) &&
-        (entry.durationMs === null || (Number.isInteger(entry.durationMs) && entry.durationMs >= 0));
+        (entry.durationMs === undefined || entry.durationMs === null ||
+          (Number.isInteger(entry.durationMs) && entry.durationMs >= 0));
+    }
+
+    function normalizeQuizHistoryEntry(entry) {
+      return {
+        ...entry,
+        order: legacyQuestionOrderLabels[entry.order] || entry.order,
+        durationMs: entry.durationMs ?? null
+      };
     }
 
     function loadQuizHistory() {
@@ -273,10 +282,7 @@ import defaultQuizQuestions from './questions.json' with { type: 'json' };
         }
         quizHistory = parsedHistory
           .filter(entry => entry.order !== WRONG_REVIEW_ORDER_LABEL)
-          .map(entry => ({
-            ...entry,
-            order: legacyQuestionOrderLabels[entry.order] || entry.order
-          }));
+          .map(normalizeQuizHistoryEntry);
         if (JSON.stringify(quizHistory) !== JSON.stringify(parsedHistory)) {
           saveQuizHistory();
         }
@@ -332,10 +338,7 @@ import defaultQuizQuestions from './questions.json' with { type: 'json' };
         wordStats: backup.wordStats,
         quizHistory: backup.quizHistory
           .filter(entry => entry.order !== WRONG_REVIEW_ORDER_LABEL)
-          .map(entry => ({
-            ...entry,
-            order: legacyQuestionOrderLabels[entry.order] || entry.order
-          })),
+          .map(normalizeQuizHistoryEntry),
         timerEnabled: backup.timerEnabled,
         starredQuestionIds: starredIds
       };
