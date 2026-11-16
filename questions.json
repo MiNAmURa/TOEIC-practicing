@@ -946,18 +946,10 @@
   {
     "id": 119,
     "word": "settled",
-    "pos": "(v. 過去式)",
-    "meaning": "安頓下來、安排（過去式）",
-    "sentenceEn": "The company ____ in its new office earlier this year.",
-    "sentenceZh": "公司今年稍早搬進新辦公室並安頓下來。"
-  },
-  {
-    "id": 120,
-    "word": "settled",
-    "pos": "(v. 過去分詞)",
-    "meaning": "安頓下來、安排（過去分詞）",
-    "sentenceEn": "The payment has been ____ in full.",
-    "sentenceZh": "款項已經全額結清。"
+    "pos": "(v. 過去式/過去分詞)",
+    "meaning": "安頓下來、安排",
+    "sentenceEn": "The company ____ in its new office earlier this year. / The payment has been ____ in full.",
+    "sentenceZh": "公司今年稍早搬進新辦公室並安頓下來；款項已經全額結清。"
   },
   {
     "id": 121,
@@ -970,18 +962,10 @@
   {
     "id": 122,
     "word": "offered",
-    "pos": "(v. 過去式)",
-    "meaning": "提議（過去式）",
-    "sentenceEn": "The supplier ____ us a lower price for the bulk order.",
-    "sentenceZh": "供應商曾為這筆大量訂單提供較低的價格。"
-  },
-  {
-    "id": 123,
-    "word": "offered",
-    "pos": "(v. 過去分詞)",
-    "meaning": "提議（過去分詞）",
-    "sentenceEn": "A full refund has been ____ to every affected customer.",
-    "sentenceZh": "已向每位受影響的顧客提供全額退款。"
+    "pos": "(v. 過去式/過去分詞)",
+    "meaning": "提供、提議",
+    "sentenceEn": "The supplier ____ us a lower price for the bulk order. / A full refund has been ____ to every affected customer.",
+    "sentenceZh": "供應商曾為這筆大量訂單提供較低的價格；已向每位受影響的顧客提供全額退款。"
   },
   {
     "id": 124,
@@ -994,18 +978,10 @@
   {
     "id": 125,
     "word": "exhibited",
-    "pos": "(v. 過去式)",
-    "meaning": "展出、展示（過去式）",
-    "sentenceEn": "The local artist ____ her paintings at the gallery last month.",
-    "sentenceZh": "這位當地藝術家上個月在畫廊展出了她的畫作。"
-  },
-  {
-    "id": 126,
-    "word": "exhibited",
-    "pos": "(v. 過去分詞)",
-    "meaning": "展出、展示（過去分詞）",
-    "sentenceEn": "The photographs have been ____ at the city museum.",
-    "sentenceZh": "這些照片曾在市立博物館展出。"
+    "pos": "(v. 過去式/過去分詞)",
+    "meaning": "展出、展示",
+    "sentenceEn": "The local artist ____ her paintings at the gallery last month. / The photographs have been ____ at the city museum.",
+    "sentenceZh": "這位當地藝術家上個月在畫廊展出了她的畫作；這些照片曾在市立博物館展出。"
   },
   {
     "id": 127,
@@ -1018,18 +994,10 @@
   {
     "id": 128,
     "word": "reserved",
-    "pos": "(v. 過去式)",
-    "meaning": "保留（過去式）",
-    "sentenceEn": "The assistant ____ a conference room for the afternoon meeting.",
-    "sentenceZh": "助理為下午的會議預訂了一間會議室。"
-  },
-  {
-    "id": 129,
-    "word": "reserved",
-    "pos": "(v. 過去分詞)",
-    "meaning": "保留（過去分詞）",
-    "sentenceEn": "Two seats have been ____ for the visiting executives.",
-    "sentenceZh": "已為來訪主管保留兩個座位。"
+    "pos": "(v. 過去式/過去分詞)",
+    "meaning": "保留；預訂",
+    "sentenceEn": "The assistant ____ a conference room for the afternoon meeting. / Two seats have been ____ for the visiting executives.",
+    "sentenceZh": "助理為下午的會議預訂了一間會議室；已為來訪主管保留兩個座位。"
   },
   {
     "id": 130,
@@ -1066,18 +1034,10 @@
   {
     "id": 134,
     "word": "deposited",
-    "pos": "(v. 過去式)",
-    "meaning": "留下、存放、存（錢）、預繳費用（過去式）；定金",
-    "sentenceEn": "The customer ____ the payment at the bank yesterday.",
-    "sentenceZh": "這位顧客昨天在銀行存入了款項。"
-  },
-  {
-    "id": 135,
-    "word": "deposited",
-    "pos": "(v. 過去分詞)",
-    "meaning": "留下、存放、存（錢）、預繳費用（過去分詞）；定金",
-    "sentenceEn": "The funds have been ____ into the company's account.",
-    "sentenceZh": "款項已存入公司的帳戶。"
+    "pos": "(v. 過去式/過去分詞)",
+    "meaning": "留下、存放、存（錢）、預繳費用",
+    "sentenceEn": "The customer ____ the payment at the bank yesterday. / The funds have been ____ into the company's account.",
+    "sentenceZh": "這位顧客昨天在銀行存入了款項；款項已存入公司的帳戶。"
   },
   {
     "id": 136,
@@ -1786,18 +1746,10 @@
   {
     "id": 224,
     "word": "serviced",
-    "pos": "(v. 過去式)",
-    "meaning": "提供服務；維修、保養（過去式）",
-    "sentenceEn": "A technician ____ the office printers yesterday.",
-    "sentenceZh": "技術人員昨天維修了辦公室印表機。"
-  },
-  {
-    "id": 225,
-    "word": "serviced",
-    "pos": "(v. 過去分詞)",
-    "meaning": "提供服務；維修、保養（過去分詞）",
-    "sentenceEn": "The office printers have been ____ recently.",
-    "sentenceZh": "辦公室印表機最近已完成保養。"
+    "pos": "(v. 過去式/過去分詞)",
+    "meaning": "提供服務；維修、保養",
+    "sentenceEn": "A technician ____ the office printers yesterday. / The office printers have been ____ recently.",
+    "sentenceZh": "技術人員昨天維修了辦公室印表機；辦公室印表機最近已完成保養。"
   },
   {
     "id": 226,
@@ -1818,18 +1770,10 @@
   {
     "id": 228,
     "word": "energised",
-    "pos": "(v. 過去式)",
-    "meaning": "給予活力、激勵；通電（過去式，英式拼法）",
-    "sentenceEn": "The new campaign ____ employees across the company.",
-    "sentenceZh": "這場新活動激勵了全公司的員工。"
-  },
-  {
-    "id": 229,
-    "word": "energised",
-    "pos": "(v. 過去分詞)",
-    "meaning": "給予活力、激勵；通電（過去分詞，英式拼法）",
-    "sentenceEn": "The backup system has been ____ for the safety test.",
-    "sentenceZh": "備援系統已通電以進行安全測試。"
+    "pos": "(v. 過去式/過去分詞)",
+    "meaning": "給予活力、激勵；通電（英式拼法）",
+    "sentenceEn": "The new campaign ____ employees across the company. / The backup system has been ____ for the safety test.",
+    "sentenceZh": "這場新活動激勵了全公司的員工；備援系統已通電以進行安全測試。"
   },
   {
     "id": 230,
@@ -1842,18 +1786,10 @@
   {
     "id": 231,
     "word": "wrapped",
-    "pos": "(v. 過去式)",
-    "meaning": "（用紙或布）包、裹起來（過去式）",
-    "sentenceEn": "The assistant ____ each item carefully.",
-    "sentenceZh": "助理仔細地包好了每一件物品。"
-  },
-  {
-    "id": 232,
-    "word": "wrapped",
-    "pos": "(v. 過去分詞)",
-    "meaning": "（用紙或布）包、裹起來（過去分詞）",
-    "sentenceEn": "All of the gifts have been ____ in recyclable paper.",
-    "sentenceZh": "所有禮物都已用可回收紙張包裝好。"
+    "pos": "(v. 過去式/過去分詞)",
+    "meaning": "（用紙或布）包、裹起來",
+    "sentenceEn": "The assistant ____ each item carefully. / All of the gifts have been ____ in recyclable paper.",
+    "sentenceZh": "助理仔細地包好了每一件物品；所有禮物都已用可回收紙張包裝好。"
   },
   {
     "id": 233,
@@ -1866,18 +1802,10 @@
   {
     "id": 234,
     "word": "recharged",
-    "pos": "(v. 過去式)",
-    "meaning": "休息以恢復精力；重新充電（過去式）",
-    "sentenceEn": "After a quiet weekend, she ____ and returned to work refreshed.",
-    "sentenceZh": "度過安靜的週末後，她恢復了精力並精神飽滿地回到工作崗位。"
-  },
-  {
-    "id": 235,
-    "word": "recharged",
-    "pos": "(v. 過去分詞)",
-    "meaning": "休息以恢復精力；重新充電（過去分詞）",
-    "sentenceEn": "The batteries have been ____ overnight.",
-    "sentenceZh": "電池已經充了一整晚的電。"
+    "pos": "(v. 過去式/過去分詞)",
+    "meaning": "休息以恢復精力；重新充電",
+    "sentenceEn": "After a quiet weekend, she ____ and returned to work refreshed. / The batteries have been ____ overnight.",
+    "sentenceZh": "度過安靜的週末後，她恢復了精力並精神飽滿地回到工作崗位；電池已經充了一整晚的電。"
   },
   {
     "id": 236,
@@ -1890,18 +1818,10 @@
   {
     "id": 237,
     "word": "operated",
-    "pos": "(v. 過去式)",
-    "meaning": "操作；施行（手術）（過去式）",
-    "sentenceEn": "The technician ____ the machine according to the instructions.",
-    "sentenceZh": "技術人員依照說明操作了機器。"
-  },
-  {
-    "id": 238,
-    "word": "operated",
-    "pos": "(v. 過去分詞)",
-    "meaning": "操作；施行（手術）（過去分詞）",
-    "sentenceEn": "The equipment is ____ by certified technicians.",
-    "sentenceZh": "這項設備由合格技術人員操作。"
+    "pos": "(v. 過去式/過去分詞)",
+    "meaning": "操作；施行（手術）",
+    "sentenceEn": "The technician ____ the machine according to the instructions. / The equipment is ____ by certified technicians.",
+    "sentenceZh": "技術人員依照說明操作了機器；這項設備由合格技術人員操作。"
   },
   {
     "id": 239,
@@ -1986,18 +1906,10 @@
   {
     "id": 249,
     "word": "established",
-    "pos": "(v. 過去式)",
-    "meaning": "創立；與……建立關係（過去式）",
-    "sentenceEn": "The organization ____ a new branch in Singapore last year.",
-    "sentenceZh": "該組織去年在新加坡成立了一間新分部。"
-  },
-  {
-    "id": 250,
-    "word": "established",
-    "pos": "(v. 過去分詞)",
-    "meaning": "創立；與……建立關係（過去分詞）",
-    "sentenceEn": "The firm has ____ strong ties with local suppliers.",
-    "sentenceZh": "這家公司已與當地供應商建立了穩固的合作關係。"
+    "pos": "(v. 過去式/過去分詞)",
+    "meaning": "創立；與……建立關係",
+    "sentenceEn": "The organization ____ a new branch in Singapore last year. / The firm has ____ strong ties with local suppliers.",
+    "sentenceZh": "該組織去年在新加坡成立了一間新分部；這家公司已與當地供應商建立了穩固的合作關係。"
   },
   {
     "id": 251,
@@ -2010,18 +1922,10 @@
   {
     "id": 252,
     "word": "suspected",
-    "pos": "(v. 過去式)",
-    "meaning": "懷疑；猜疑（過去式）",
-    "sentenceEn": "The manager ____ that the delivery had been sent to the wrong address.",
-    "sentenceZh": "經理懷疑貨物被寄到了錯誤的地址。"
-  },
-  {
-    "id": 253,
-    "word": "suspected",
-    "pos": "(v. 過去分詞)",
-    "meaning": "懷疑；猜疑（過去分詞）",
-    "sentenceEn": "The company is ____ of violating the safety regulations.",
-    "sentenceZh": "該公司被懷疑違反安全規定。"
+    "pos": "(v. 過去式/過去分詞)",
+    "meaning": "懷疑；猜疑",
+    "sentenceEn": "The manager ____ that the delivery had been sent to the wrong address. / The company is ____ of violating the safety regulations.",
+    "sentenceZh": "經理懷疑貨物被寄到了錯誤的地址；該公司被懷疑違反安全規定。"
   },
   {
     "id": 254,
@@ -2306,10 +2210,10 @@
   {
     "id": 289,
     "word": "pioneered",
-    "pos": "(v. 過去式)",
+    "pos": "(v. 過去式/過去分詞)",
     "meaning": "開創；率先採用",
-    "sentenceEn": "The company ____ a new approach to online customer support.",
-    "sentenceZh": "該公司率先採用新的線上客戶支援方式。"
+    "sentenceEn": "The company ____ a new approach to online customer support. / The company has ____ several innovative services for small businesses.",
+    "sentenceZh": "該公司率先採用新的線上客戶支援方式；該公司已為小型企業開創了多項創新服務。"
   },
   {
     "id": 290,
@@ -2330,18 +2234,10 @@
   {
     "id": 292,
     "word": "thought",
-    "pos": "(v. 過去式)",
-    "meaning": "想；思考（過去式）",
-    "sentenceEn": "The manager ____ the new schedule would improve productivity.",
-    "sentenceZh": "經理認為新的時程安排會提升工作效率。"
-  },
-  {
-    "id": 293,
-    "word": "thought",
-    "pos": "(v. 過去分詞)",
-    "meaning": "想；思考（過去分詞）",
-    "sentenceEn": "The issue was ____ to have been resolved last month.",
-    "sentenceZh": "大家原以為這個問題上個月就已經解決了。"
+    "pos": "(v. 過去式/過去分詞)",
+    "meaning": "想；思考；認為",
+    "sentenceEn": "The manager ____ the new schedule would improve productivity. / The issue was ____ to have been resolved last month.",
+    "sentenceZh": "經理認為新的時程安排會提升工作效率；大家原以為這個問題上個月就已經解決了。"
   },
   {
     "id": 294,
@@ -2350,14 +2246,6 @@
     "meaning": "先驅；開拓者；倡導；開創",
     "sentenceEn": "The firm hopes to ____ a more sustainable approach to packaging.",
     "sentenceZh": "這家公司希望開創更永續的包裝方式。"
-  },
-  {
-    "id": 295,
-    "word": "pioneered",
-    "pos": "(v. 過去分詞)",
-    "meaning": "開創；率先採用（過去分詞）",
-    "sentenceEn": "The company has ____ several innovative services for small businesses.",
-    "sentenceZh": "該公司已為小型企業開創了多項創新服務。"
   },
   {
     "id": 296,
@@ -2370,18 +2258,10 @@
   {
     "id": 297,
     "word": "accorded",
-    "pos": "(v. 過去式)",
-    "meaning": "（帶有尊敬的）給予；授予（過去式）",
-    "sentenceEn": "The visiting delegation was ____ a formal welcome by the mayor.",
-    "sentenceZh": "市長向來訪代表團致以正式歡迎。"
-  },
-  {
-    "id": 298,
-    "word": "accorded",
-    "pos": "(v. 過去分詞)",
-    "meaning": "（帶有尊敬的）給予；授予（過去分詞）",
-    "sentenceEn": "The proposal has been ____ priority because of its potential benefits.",
-    "sentenceZh": "這項提案因具有潛在效益而獲得優先處理。"
+    "pos": "(v. 過去式/過去分詞)",
+    "meaning": "（帶有尊敬的）給予；授予",
+    "sentenceEn": "The visiting delegation was ____ a formal welcome by the mayor. / The proposal has been ____ priority because of its potential benefits.",
+    "sentenceZh": "市長向來訪代表團致以正式歡迎；這項提案因具有潛在效益而獲得優先處理。"
   },
   {
     "id": 299,
@@ -2394,18 +2274,10 @@
   {
     "id": 300,
     "word": "encountered",
-    "pos": "(v. 過去式)",
-    "meaning": "遭遇；偶遇；邂逅（過去式）",
-    "sentenceEn": "The technicians ____ a minor problem while installing the equipment.",
-    "sentenceZh": "技術人員在安裝設備時遇到了一個小問題。"
-  },
-  {
-    "id": 301,
-    "word": "encountered",
-    "pos": "(v. 過去分詞)",
-    "meaning": "遭遇；偶遇；邂逅（過去分詞）",
-    "sentenceEn": "Several delays have been ____ during the construction project.",
-    "sentenceZh": "這項建築工程已遭遇數次延誤。"
+    "pos": "(v. 過去式/過去分詞)",
+    "meaning": "遭遇；偶遇；邂逅",
+    "sentenceEn": "The technicians ____ a minor problem while installing the equipment. / Several delays have been ____ during the construction project.",
+    "sentenceZh": "技術人員在安裝設備時遇到了一個小問題；這項建築工程已遭遇數次延誤。"
   },
   {
     "id": 302,
@@ -2418,18 +2290,10 @@
   {
     "id": 303,
     "word": "inferred",
-    "pos": "(v. 過去式)",
-    "meaning": "推理；推斷（過去式）",
-    "sentenceEn": "The analyst ____ that demand would rise based on recent sales figures.",
-    "sentenceZh": "分析師根據近期銷售數據推斷需求將會上升。"
-  },
-  {
-    "id": 304,
-    "word": "inferred",
-    "pos": "(v. 過去分詞)",
-    "meaning": "推理；推斷（過去分詞）",
-    "sentenceEn": "A customer's preferences can be ____ from their previous purchases.",
-    "sentenceZh": "顧客的偏好可以從其過往購買紀錄推斷出來。"
+    "pos": "(v. 過去式/過去分詞)",
+    "meaning": "推理；推斷",
+    "sentenceEn": "The analyst ____ that demand would rise based on recent sales figures. / A customer's preferences can be ____ from their previous purchases.",
+    "sentenceZh": "分析師根據近期銷售數據推斷需求將會上升；顧客的偏好可以從其過往購買紀錄推斷出來。"
   },
   {
     "id": 305,
@@ -3126,5 +2990,237 @@
     "meaning": "正好相反；顛倒",
     "sentenceEn": "The assistant reports to the director, not ____.",
     "sentenceZh": "助理向主管報告，而不是相反。"
+  },
+  {
+    "id": 402,
+    "word": "comply",
+    "pos": "(v.)",
+    "meaning": "服從；遵守",
+    "sentenceEn": "All vendors must ____ with the company's safety standards.",
+    "sentenceZh": "所有供應商都必須遵守公司的安全標準。"
+  },
+  {
+    "id": 403,
+    "word": "complied",
+    "pos": "(v. 過去式/過去分詞)",
+    "meaning": "服從；遵守",
+    "sentenceEn": "The contractor ____ with the revised regulations last year. / The new requirements have been fully ____ with.",
+    "sentenceZh": "承包商去年遵守了修訂後的規定；新的要求已獲得全面遵守。"
+  },
+  {
+    "id": 404,
+    "word": "utilize",
+    "pos": "(v.)",
+    "meaning": "使用；利用",
+    "sentenceEn": "The team will ____ customer feedback to improve the service.",
+    "sentenceZh": "團隊將利用顧客回饋改善服務。"
+  },
+  {
+    "id": 405,
+    "word": "utilized",
+    "pos": "(v. 過去式/過去分詞)",
+    "meaning": "使用；利用",
+    "sentenceEn": "The firm ____ its existing network to reach new clients. / Unused office space has been ____ as a training center.",
+    "sentenceZh": "公司利用既有的網絡接觸新客戶；未使用的辦公空間已改作訓練中心。"
+  },
+  {
+    "id": 406,
+    "word": "refrain",
+    "pos": "(v.)",
+    "meaning": "避免；克制",
+    "sentenceEn": "Please ____ from using mobile phones during the presentation.",
+    "sentenceZh": "簡報期間請避免使用手機。"
+  },
+  {
+    "id": 407,
+    "word": "refrained",
+    "pos": "(v. 過去式/過去分詞)",
+    "meaning": "避免；克制",
+    "sentenceEn": "The spokesperson ____ from commenting on the investigation. / The staff have ____ from sharing confidential information.",
+    "sentenceZh": "發言人避免對調查發表評論；員工一直克制自己不透露機密資訊。"
+  },
+  {
+    "id": 408,
+    "word": "desist",
+    "pos": "(v.)",
+    "meaning": "中止；停止（他人不希望發生的事）",
+    "sentenceEn": "The company was ordered to ____ from sending unsolicited advertisements.",
+    "sentenceZh": "該公司被命令停止寄送未經請求的廣告。"
+  },
+  {
+    "id": 409,
+    "word": "desisted",
+    "pos": "(v. 過去式/過去分詞)",
+    "meaning": "中止；停止（他人不希望發生的事）",
+    "sentenceEn": "The manufacturer ____ from making unsupported claims after receiving the notice. / The firm has ____ from contacting former customers.",
+    "sentenceZh": "製造商收到通知後停止提出未經證實的聲稱；該公司已停止聯絡前客戶。"
+  },
+  {
+    "id": 410,
+    "word": "prevent",
+    "pos": "(v.)",
+    "meaning": "預防；阻擋；阻礙；防止",
+    "sentenceEn": "Regular maintenance can ____ costly equipment failures.",
+    "sentenceZh": "定期維護可以預防代價高昂的設備故障。"
+  },
+  {
+    "id": 411,
+    "word": "prevented",
+    "pos": "(v. 過去式/過去分詞)",
+    "meaning": "預防；阻擋；阻礙；防止",
+    "sentenceEn": "A software update ____ unauthorized access to the database. / The shipment was ____ from leaving the warehouse because of a labeling error.",
+    "sentenceZh": "軟體更新阻止了未經授權者存取資料庫；貨物因標籤錯誤而無法離開倉庫。"
+  },
+  {
+    "id": 412,
+    "word": "write",
+    "pos": "(v.)",
+    "meaning": "書寫；撰寫",
+    "sentenceEn": "Please ____ your employee number on the application form.",
+    "sentenceZh": "請在申請表上寫下您的員工編號。"
+  },
+  {
+    "id": 413,
+    "word": "wrote",
+    "pos": "(v. 過去式)",
+    "meaning": "書寫；撰寫",
+    "sentenceEn": "The director ____ a letter of appreciation to the project team.",
+    "sentenceZh": "主管寫了一封感謝信給專案團隊。"
+  },
+  {
+    "id": 414,
+    "word": "written",
+    "pos": "(v. 過去分詞 / adj.)",
+    "meaning": "書寫（過去分詞）；書面的",
+    "sentenceEn": "The editor has ____ a summary of the report. / Please submit your request in ____ form.",
+    "sentenceZh": "編輯已撰寫報告摘要；請以書面形式提交您的請求。"
+  },
+  {
+    "id": 415,
+    "word": "budget",
+    "pos": "(n. / v.)",
+    "meaning": "預算；編列預算",
+    "sentenceEn": "The department must ____ carefully to stay within its annual ____.",
+    "sentenceZh": "部門必須謹慎編列預算，以免超出年度預算。"
+  },
+  {
+    "id": 416,
+    "word": "budgeted",
+    "pos": "(v. 過去式/過去分詞)",
+    "meaning": "編列預算",
+    "sentenceEn": "The committee ____ for additional staff last quarter. / The renovation has been ____ at $80,000.",
+    "sentenceZh": "委員會上季為增聘員工編列了預算；整修工程的預算已訂為八萬美元。"
+  },
+  {
+    "id": 417,
+    "word": "dedicate",
+    "pos": "(v.)",
+    "meaning": "投入；奉獻",
+    "sentenceEn": "The organization will ____ more resources to employee training.",
+    "sentenceZh": "這個組織將投入更多資源於員工訓練。"
+  },
+  {
+    "id": 418,
+    "word": "dedicated",
+    "pos": "(v. 過去式/過去分詞 / adj.)",
+    "meaning": "投入；奉獻；投入的；奉獻的",
+    "sentenceEn": "The founder ____ her career to improving public education. / A ____ team handles customer inquiries around the clock.",
+    "sentenceZh": "創辦人將她的職涯奉獻於改善公共教育；一支專責團隊全天候處理顧客詢問。"
+  },
+  {
+    "id": 419,
+    "word": "redundant",
+    "pos": "(adj.)",
+    "meaning": "重複的；多餘的",
+    "sentenceEn": "The editor removed several ____ sections from the report.",
+    "sentenceZh": "編輯從報告中刪除了幾個重複的部分。"
+  },
+  {
+    "id": 420,
+    "word": "compliant",
+    "pos": "(adj.)",
+    "meaning": "順從的；遵守規定的",
+    "sentenceEn": "The new equipment is fully ____ with industry standards.",
+    "sentenceZh": "這套新設備完全符合業界標準。"
+  },
+  {
+    "id": 421,
+    "word": "period",
+    "pos": "(n. / adj.)",
+    "meaning": "時期；句號；月經；古代的；古裝的",
+    "sentenceEn": "The museum displayed ____ costumes from the Victorian era. / Please place a ____ at the end of the sentence. / The employee requested leave during her menstrual ____.",
+    "sentenceZh": "博物館展出了維多利亞時期的古裝；請在句子末尾加上句號；這名員工因生理期請假。"
+  },
+  {
+    "id": 422,
+    "word": "semiannual",
+    "pos": "(adj.)",
+    "meaning": "每半年一次的",
+    "sentenceEn": "The board holds a ____ meeting every June and December.",
+    "sentenceZh": "董事會每年六月和十二月各召開一次會議。"
+  },
+  {
+    "id": 423,
+    "word": "biannual",
+    "pos": "(adj.)",
+    "meaning": "每半年一次的",
+    "sentenceEn": "Employees receive ____ performance reviews in spring and fall.",
+    "sentenceZh": "員工每年春季和秋季各接受一次績效考核。"
+  },
+  {
+    "id": 424,
+    "word": "biennial",
+    "pos": "(adj.)",
+    "meaning": "每兩年一次的",
+    "sentenceEn": "The association organizes a ____ conference every other year.",
+    "sentenceZh": "協會每兩年舉辦一次會議。"
+  },
+  {
+    "id": 425,
+    "word": "triennial",
+    "pos": "(adj.)",
+    "meaning": "每三年一次的",
+    "sentenceEn": "The ____ survey measures long-term changes in customer satisfaction.",
+    "sentenceZh": "這項每三年一次的調查用來衡量顧客滿意度的長期變化。"
+  },
+  {
+    "id": 426,
+    "word": "quadrennial",
+    "pos": "(adj.)",
+    "meaning": "每四年一次的",
+    "sentenceEn": "The committee publishes a ____ review of its strategic plan.",
+    "sentenceZh": "委員會每四年發布一次策略計畫檢討報告。"
+  },
+  {
+    "id": 427,
+    "word": "compliance",
+    "pos": "(n.)",
+    "meaning": "順從；遵守",
+    "sentenceEn": "The audit confirmed the company's ____ with environmental regulations.",
+    "sentenceZh": "稽核確認公司遵守了環境法規。"
+  },
+  {
+    "id": 428,
+    "word": "triennium",
+    "pos": "(n.)",
+    "meaning": "三年期",
+    "sentenceEn": "The research grant covers a ____ beginning in January.",
+    "sentenceZh": "這筆研究補助涵蓋從一月開始的三年期。"
+  },
+  {
+    "id": 429,
+    "word": "accordance",
+    "pos": "(n.)",
+    "meaning": "符合；一致",
+    "sentenceEn": "All refunds are processed in ____ with the company's policy.",
+    "sentenceZh": "所有退款均依照公司的政策辦理。"
+  },
+  {
+    "id": 430,
+    "word": "constraints",
+    "pos": "(n. 複數)",
+    "meaning": "限制條件",
+    "sentenceEn": "The design team completed the project despite tight budget ____.",
+    "sentenceZh": "儘管預算限制嚴格，設計團隊仍完成了專案。"
   }
 ]

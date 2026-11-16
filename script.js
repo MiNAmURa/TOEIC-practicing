@@ -20,11 +20,19 @@ import defaultQuizQuestions from './questions.json' with { type: 'json' };
         const parsedIds = JSON.parse(savedIds);
         const questionIds = new Set(defaultQuizQuestions.map(question => question.id));
         if (!Array.isArray(parsedIds) ||
-            !parsedIds.every(id => Number.isInteger(id) && questionIds.has(id))) {
+            !parsedIds.every(Number.isInteger)) {
           throw new Error('Stored starred questions have an invalid format.');
         }
 
-        starredQuestionIds = new Set(parsedIds);
+        const migratedIds = migrateQuestionIds(parsedIds);
+        if (!migratedIds.every(id => questionIds.has(id))) {
+          throw new Error('Stored starred questions have an invalid format.');
+        }
+
+        starredQuestionIds = new Set(migratedIds);
+        if (migratedIds.some((id, index) => id !== parsedIds[index])) {
+          saveStarredQuestions();
+        }
       } catch (error) {
         starredQuestionsStorageReady = false;
         document.getElementById('wordStatsStatus').innerText = '無法讀取星號單字，請確認瀏覽器儲存空間設定。';
@@ -111,6 +119,25 @@ import defaultQuizQuestions from './questions.json' with { type: 'json' };
     const QUIZ_HISTORY_STORAGE_KEY = 'toeicQuizHistory';
     const TIMER_PREFERENCE_STORAGE_KEY = 'toeicQuizTimerEnabled';
     const STARRED_QUESTIONS_STORAGE_KEY = 'toeicStarredQuestions';
+    const mergedQuestionIds = {
+      120: 119,
+      123: 122,
+      126: 125,
+      129: 128,
+      135: 134,
+      225: 224,
+      229: 228,
+      232: 231,
+      235: 234,
+      238: 237,
+      250: 249,
+      253: 252,
+      295: 289,
+      293: 292,
+      298: 297,
+      301: 300,
+      304: 303
+    };
     const PROGRESS_BACKUP_FORMAT = 'toeic-vocabulary-progress';
     const PROGRESS_BACKUP_VERSION = 1;
     const WRONG_REVIEW_ORDER_LABEL = '錯題複習（隨機）';
@@ -127,6 +154,30 @@ import defaultQuizQuestions from './questions.json' with { type: 'json' };
       隨機: questionOrderLabels.random,
       按照答題機率升冪: questionOrderLabels.accuracy
     };
+
+    function migrateQuestionIds(ids) {
+      return ids.map(id => mergedQuestionIds[id] ?? id);
+    }
+
+    function migrateQuestionStats(stats) {
+      const migratedStats = { ...stats };
+      let changed = false;
+
+      for (const [removedId, retainedId] of Object.entries(mergedQuestionIds)) {
+        const removedStats = migratedStats[removedId];
+        if (!removedStats) continue;
+
+        const retainedStats = migratedStats[String(retainedId)] || { correct: 0, wrong: 0 };
+        migratedStats[String(retainedId)] = {
+          correct: retainedStats.correct + removedStats.correct,
+          wrong: retainedStats.wrong + removedStats.wrong
+        };
+        delete migratedStats[removedId];
+        changed = true;
+      }
+
+      return { stats: migratedStats, changed };
+    }
 
     function loadWordStats() {
       try {
@@ -146,7 +197,9 @@ import defaultQuizQuestions from './questions.json' with { type: 'json' };
           }
         }
 
-        wordStats = parsedStats;
+        const migratedStats = migrateQuestionStats(parsedStats);
+        wordStats = migratedStats.stats;
+        if (migratedStats.changed) saveWordStats();
       } catch (error) {
         wordStatsStorageReady = false;
         document.getElementById('wordStatsStatus').innerText = '無法讀取學習統計，請確認瀏覽器儲存空間設定。';
@@ -318,7 +371,11 @@ import defaultQuizQuestions from './questions.json' with { type: 'json' };
       const questionIds = new Set(defaultQuizQuestions.map(question => question.id));
       const starredIds = backup.starredQuestionIds === undefined ? [] : backup.starredQuestionIds;
       if (!Array.isArray(starredIds) ||
-          !starredIds.every(id => Number.isInteger(id) && questionIds.has(id))) {
+          !starredIds.every(Number.isInteger)) {
+        throw new Error('備份檔的星號單字資料格式不正確。');
+      }
+      const migratedStarredIds = migrateQuestionIds(starredIds);
+      if (!migratedStarredIds.every(id => questionIds.has(id))) {
         throw new Error('備份檔的星號單字資料格式不正確。');
       }
 
@@ -335,12 +392,12 @@ import defaultQuizQuestions from './questions.json' with { type: 'json' };
       }
 
       return {
-        wordStats: backup.wordStats,
+        wordStats: migrateQuestionStats(backup.wordStats).stats,
         quizHistory: backup.quizHistory
           .filter(entry => entry.order !== WRONG_REVIEW_ORDER_LABEL)
           .map(normalizeQuizHistoryEntry),
         timerEnabled: backup.timerEnabled,
-        starredQuestionIds: starredIds
+        starredQuestionIds: [...new Set(migratedStarredIds)]
       };
     }
 
@@ -909,7 +966,7 @@ import defaultQuizQuestions from './questions.json' with { type: 'json' };
       document.getElementById('targetChinese').innerText = q.meaning;
 
       // Sentence with blank placeholder
-      document.getElementById('sentenceEn').innerHTML = q.sentenceEn.replace(
+      document.getElementById('sentenceEn').innerHTML = q.sentenceEn.replaceAll(
         '____',
         `<span class="underline underline-offset-4 decoration-brand-500 font-bold text-brand-600 dark:text-brand-400">____</span>`
       );
@@ -976,7 +1033,7 @@ import defaultQuizQuestions from './questions.json' with { type: 'json' };
           feedbackTitle.innerHTML = `<i class="fa-solid fa-circle-xmark text-rose-500"></i> <span>拼寫錯誤！正確答案是：<strong class="underline font-black">${q.word}</strong></span>`;
         }
 
-        const filledSentence = q.sentenceEn.replace('____', `<strong class="text-brand-600 dark:text-brand-400 font-bold">${q.word}</strong>`);
+        const filledSentence = q.sentenceEn.replaceAll('____', `<strong class="text-brand-600 dark:text-brand-400 font-bold">${q.word}</strong>`);
         feedbackText.innerHTML = `
           <p class="font-medium mb-1">【完整例句】${filledSentence}</p>
           <p class="text-xs opacity-80">【中文對照】${q.sentenceZh}</p>
@@ -1121,7 +1178,7 @@ import defaultQuizQuestions from './questions.json' with { type: 'json' };
               </span>
             </div>
             <p class="text-xs text-slate-500 dark:text-slate-400 mt-2">
-              <strong class="text-slate-700 dark:text-slate-300">例句:</strong> ${item.sentenceEn.replace('____', `<u class="font-bold text-brand-600 dark:text-brand-400">${item.word}</u>`)}
+              <strong class="text-slate-700 dark:text-slate-300">例句:</strong> ${item.sentenceEn.replaceAll('____', `<u class="font-bold text-brand-600 dark:text-brand-400">${item.word}</u>`)}
             </p>
             <p class="text-xs text-slate-500 dark:text-slate-400 mt-2">
               歷史統計：答對 ${stats.correct} 次、答錯 ${stats.wrong} 次，正確率 ${getWordAccuracy(stats)}
