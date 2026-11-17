@@ -3222,5 +3222,117 @@
     "meaning": "限制條件",
     "sentenceEn": "The design team completed the project despite tight budget ____.",
     "sentenceZh": "儘管預算限制嚴格，設計團隊仍完成了專案。"
+  },
+  {
+    "id": 431,
+    "word": "indicated",
+    "pos": "(v. 過去式/過去分詞 / adj.)",
+    "meaning": "表明；顯示（已表明/被顯示）；表明的；顯示的",
+    "sentenceEn": "The report ____ a steady increase in sales. / The new route was clearly ____ on the map. / Please follow the ____ route to the conference room.",
+    "sentenceZh": "報告顯示銷售額穩定成長；新路線已清楚標示在地圖上；請依照標示的路線前往會議室。"
+  },
+  {
+    "id": 432,
+    "word": "specific",
+    "pos": "(adj.)",
+    "meaning": "具體的",
+    "sentenceEn": "Please provide ____ examples to support your proposal.",
+    "sentenceZh": "請提供具體的例子來支持你的提案。"
+  },
+  {
+    "id": 433,
+    "word": "indicate",
+    "pos": "(v.)",
+    "meaning": "顯示；表明",
+    "sentenceEn": "The latest figures ____ that customer satisfaction has improved.",
+    "sentenceZh": "最新數據顯示顧客滿意度已提升。"
+  },
+  {
+    "id": 434,
+    "word": "renovate",
+    "pos": "(v.)",
+    "meaning": "翻修",
+    "sentenceEn": "The company plans to ____ its headquarters next year.",
+    "sentenceZh": "公司計畫明年翻修總部。"
+  },
+  {
+    "id": 435,
+    "word": "renovated",
+    "pos": "(v. 過去式/過去分詞)",
+    "meaning": "翻修（已翻修/被翻修）",
+    "sentenceEn": "The firm ____ its downtown office last year. / The historic hotel has been ____ recently.",
+    "sentenceZh": "該公司去年翻修了市中心辦公室；這間歷史悠久的飯店最近已完成翻修。"
+  },
+  {
+    "id": 436,
+    "word": "appointment",
+    "pos": "(n.)",
+    "meaning": "預約（與專業人士面對面的）；任命",
+    "sentenceEn": "She made an ____ with the consultant to discuss her tax return. / His ____ as the new director was announced on Monday.",
+    "sentenceZh": "她預約了顧問討論報稅事宜；他獲任命為新任主管的消息於週一公布。"
+  },
+  {
+    "id": 437,
+    "word": "listing",
+    "pos": "(n.)",
+    "meaning": "刊登物；清單中的單一條目；刊登物件",
+    "sentenceEn": "The property ____ includes photographs, rental terms, and the agent's contact information.",
+    "sentenceZh": "這則房屋刊登資訊包含照片、租賃條件及仲介的聯絡方式。"
+  },
+  {
+    "id": 438,
+    "word": "estate",
+    "pos": "(n.)",
+    "meaning": "財產；所有權",
+    "sentenceEn": "The lawyer helped the family settle the ____ of the deceased client.",
+    "sentenceZh": "律師協助家屬處理已故委託人的財產。"
+  },
+  {
+    "id": 439,
+    "word": "estate agent",
+    "pos": "(n. 複合名詞)",
+    "meaning": "房屋仲介",
+    "sentenceEn": "The ____ showed the couple several homes near the train station.",
+    "sentenceZh": "房屋仲介帶這對夫妻看了幾間火車站附近的房子。"
+  },
+  {
+    "id": 440,
+    "word": "tenancy",
+    "pos": "(n.)",
+    "meaning": "租用；租賃",
+    "sentenceEn": "The agreement establishes a one-year ____ beginning in September.",
+    "sentenceZh": "這份合約訂定自九月起為期一年的租賃。"
+  },
+  {
+    "id": 441,
+    "word": "unless",
+    "pos": "(conj.)",
+    "meaning": "除非",
+    "sentenceEn": "The outdoor event will proceed ____ heavy rain is forecast.",
+    "sentenceZh": "除非預報有豪雨，否則戶外活動將照常舉行。"
+  },
+  {
+    "id": 442,
+    "word": "whether",
+    "pos": "(conj.)",
+    "meaning": "是否",
+    "sentenceEn": "Please confirm ____ you can attend the planning meeting.",
+    "sentenceZh": "請確認你是否能出席規劃會議。"
+  },
+  {
+    "id": 443,
+    "word": "although",
+    "pos": "(conj.)",
+    "meaning": "雖然；儘管",
+    "sentenceEn": "____ the project faced several delays, it was completed on schedule.",
+    "sentenceZh": "雖然專案遭遇數次延誤，仍如期完成。"
+  },
+  {
+    "id": 444,
+    "word": "should",
+    "pos": "(modal v.)",
+    "meaning": "萬一；應該",
+    "sentenceEn": "Employees ____ submit their expense reports by Friday. / ____ you need assistance, please contact the front desk.",
+    "sentenceZh": "員工應在週五前提交費用報告；萬一你需要協助，請聯絡服務櫃檯。"
   }
 ]
