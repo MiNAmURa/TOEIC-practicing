@@ -3334,5 +3334,181 @@
     "meaning": "萬一；應該",
     "sentenceEn": "Employees ____ submit their expense reports by Friday. / ____ you need assistance, please contact the front desk.",
     "sentenceZh": "員工應在週五前提交費用報告；萬一你需要協助，請聯絡服務櫃檯。"
+  },
+  {
+    "id": 445,
+    "word": "detective",
+    "pos": "(n.)",
+    "meaning": "偵探",
+    "sentenceEn": "The company hired a ____ to investigate the missing inventory.",
+    "sentenceZh": "公司聘請了一名偵探調查失蹤的庫存。"
+  },
+  {
+    "id": 446,
+    "word": "gunk",
+    "pos": "(n.)",
+    "meaning": "惡心的黏稠物；污垢",
+    "sentenceEn": "Please remove the sticky ____ from the equipment before storing it.",
+    "sentenceZh": "收起設備前，請先清除上面的黏稠污垢。"
+  },
+  {
+    "id": 447,
+    "word": "expert",
+    "pos": "(n.)",
+    "meaning": "專家",
+    "sentenceEn": "An accounting ____ reviewed the company's financial records.",
+    "sentenceZh": "一位會計專家審查了公司的財務紀錄。"
+  },
+  {
+    "id": 448,
+    "word": "flan",
+    "pos": "(n.)",
+    "meaning": "焦糖布丁；法式布丁塔",
+    "sentenceEn": "The restaurant serves caramel ____ for dessert.",
+    "sentenceZh": "這家餐廳供應焦糖布丁作為甜點。"
+  },
+  {
+    "id": 449,
+    "word": "Portuguese",
+    "pos": "(adj./n.)",
+    "meaning": "葡萄牙的；葡萄牙人；葡萄牙語",
+    "sentenceEn": "The company hired a ____ translator for its new office in Lisbon.",
+    "sentenceZh": "公司為里斯本的新辦公室聘請了一位葡萄牙語譯者。"
+  },
+  {
+    "id": 450,
+    "word": "tart",
+    "pos": "(n.)",
+    "meaning": "塔類糕餅",
+    "sentenceEn": "The bakery introduced a lemon ____ made with fresh fruit.",
+    "sentenceZh": "這家麵包店推出了以新鮮水果製作的檸檬塔。"
+  },
+  {
+    "id": 451,
+    "word": "scalper",
+    "pos": "(n.)",
+    "meaning": "黃牛；市場投機者",
+    "sentenceEn": "The venue warned customers not to buy tickets from a ____.",
+    "sentenceZh": "場館提醒顧客不要向黃牛購買票券。"
+  },
+  {
+    "id": 452,
+    "word": "expect",
+    "pos": "(v.)",
+    "meaning": "預料；預期；期待",
+    "sentenceEn": "We ____ the shipment to arrive before the end of the week.",
+    "sentenceZh": "我們預期貨物會在本週結束前送達。"
+  },
+  {
+    "id": 453,
+    "word": "anticipate",
+    "pos": "(v.)",
+    "meaning": "預測；預期；預先準備",
+    "sentenceEn": "The team ____ possible delays and arranged an earlier delivery.",
+    "sentenceZh": "團隊預想到可能的延誤，因此安排了較早的配送。"
+  },
+  {
+    "id": 454,
+    "word": "pharmacy",
+    "pos": "(n.)",
+    "meaning": "藥局",
+    "sentenceEn": "She stopped at the ____ to pick up her prescription.",
+    "sentenceZh": "她在藥局停留，領取自己的處方藥。"
+  },
+  {
+    "id": 455,
+    "word": "drugstore",
+    "pos": "(n.)",
+    "meaning": "藥妝店",
+    "sentenceEn": "You can buy toiletries and over-the-counter medicine at the ____.",
+    "sentenceZh": "你可以在藥妝店購買盥洗用品和非處方藥。"
+  },
+  {
+    "id": 456,
+    "word": "seminar",
+    "pos": "(n.)",
+    "meaning": "研討會",
+    "sentenceEn": "Employees are invited to attend a ____ on workplace safety.",
+    "sentenceZh": "員工受邀參加一場職場安全研討會。"
+  },
+  {
+    "id": 457,
+    "word": "delivery",
+    "pos": "(n.)",
+    "meaning": "（包裹、貨物）運送；配送",
+    "sentenceEn": "The customer received a text message confirming the ____ of the package.",
+    "sentenceZh": "顧客收到簡訊，確認包裹已配送。"
+  },
+  {
+    "id": 458,
+    "word": "deduce",
+    "pos": "(v.)",
+    "meaning": "推論；推斷",
+    "sentenceEn": "From the sales data, analysts can ____ which products are most popular.",
+    "sentenceZh": "分析師可以從銷售數據推論出哪些產品最受歡迎。"
+  },
+  {
+    "id": 459,
+    "word": "deduced",
+    "pos": "(v. 過去式/過去分詞)",
+    "meaning": "推論；推斷（已推論出）",
+    "sentenceEn": "The investigators ____ the cause of the delay from the maintenance logs.",
+    "sentenceZh": "調查人員從維修紀錄推論出延誤的原因。"
+  },
+  {
+    "id": 460,
+    "word": "deliver",
+    "pos": "(v.)",
+    "meaning": "運送；配送",
+    "sentenceEn": "The supplier will ____ the replacement parts tomorrow morning.",
+    "sentenceZh": "供應商明天早上會運送替換零件。"
+  },
+  {
+    "id": 461,
+    "word": "delivered",
+    "pos": "(v. 過去式/過去分詞)",
+    "meaning": "運送；配送（已送達／已配送）",
+    "sentenceEn": "The courier ____ the documents to the main office this morning.",
+    "sentenceZh": "快遞員今天早上將文件送到了總辦公室。"
+  },
+  {
+    "id": 462,
+    "word": "be responsible for",
+    "pos": "(phr.)",
+    "meaning": "對……負責",
+    "sentenceEn": "The project manager is ____ coordinating the entire team.",
+    "sentenceZh": "專案經理負責協調整個團隊。"
+  },
+  {
+    "id": 463,
+    "word": "refrain from",
+    "pos": "(phr.)",
+    "meaning": "克制；避免做某事",
+    "sentenceEn": "Visitors are asked to ____ using their phones during the presentation.",
+    "sentenceZh": "訪客在簡報期間請避免使用手機。"
+  },
+  {
+    "id": 464,
+    "word": "even though",
+    "pos": "(conj.)",
+    "meaning": "就算；儘管",
+    "sentenceEn": "____ the schedule was tight, the team completed the project on time.",
+    "sentenceZh": "儘管時程緊迫，團隊仍準時完成了專案。"
+  },
+  {
+    "id": 465,
+    "word": "get it together",
+    "pos": "(phr.)",
+    "meaning": "打起精神；振作一點",
+    "sentenceEn": "We need to ____ and finish preparing the presentation.",
+    "sentenceZh": "我們得振作起來，把簡報準備完畢。"
+  },
+  {
+    "id": 466,
+    "word": "undercover",
+    "pos": "(adj.)",
+    "meaning": "臥底的；秘密的（警察或情報工作）",
+    "sentenceEn": "An ____ investigator gathered evidence without revealing her identity.",
+    "sentenceZh": "一名臥底調查員在未透露身分的情況下蒐集證據。"
   }
 ]
